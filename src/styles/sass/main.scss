@@ -1,0 +1,71 @@
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+@font-face {
+  font-family: "borda"; /* The name you want to give to your font */
+  src: url("../../../public/fonts/bordafont/Borda.ttf") format("truetype");
+  src: url("../../../public/fonts/bordafont/Borda\ Bold.ttf") format("truetype");
+  // src: url('../bordafont/Borda\ Italic.ttf') format('truetype');
+  // src: url('../bordafont/Borda\ Bold\ Italic.ttf') format('truetype');
+  src: url("../../../public/fonts/bordafont/Borda\ DemiBold.ttf")
+    format("truetype");
+  // src: url('../bordafont/Borda\ DemiBold\ Italic.ttf') format('truetype');
+  src: url("../../../public/fonts/bordafont/Borda\ ExtraBold.ttf")
+    format("truetype");
+  // src: url('../bordafont/Borda\ ExtraBold\ Italic.ttf') format('truetype');
+  src: url("../../../public/fonts/bordafont/Borda\ Light.ttf")
+    format("truetype");
+  // src: url('../bordafont/Borda\ Light\ Italic.ttf') format('truetype');
+  src: url("../../../public/fonts/bordafont/Borda\ Medium.ttf")
+    format("truetype");
+  // src: url('../bordafont/Borda\ Medium\ Italic.ttf') format('truetype');
+}
+/*CSS Table Of Content Starts Here*/
+
+/*============================================ 
+# Template Name: SportStream
+# Version: 1.0
+# Date: 26/07/2023
+# Author: pixelaxis
+# Author URI: https://themeforest.net/user/pixelaxis
+# Description: SportStream - HTML Templates
+============================================*/
+
+/*======== scss compiles =========
+# mixin
+# variables
+# Typography
+# button 
+# animation
+# banner
+# blog
+# header
+# section
+# footer
+============================================*/
+
+/*CSS Table Of Content Ends Here*/
+// bootstrap
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../fonts/tabler-icons.min.css";
+
+//--Abstracts--//
+@import "_abstracts/mixins";
+@import "_abstracts/variables";
+//--Abstracts--//
+
+//--Base--//
+@import "_base/typography";
+//--Base--//
+
+//--Layout--//
+@import "_layout/header";
+@import "_layout/banner";
+@import "_layout/_section";
+@import "_layout/animation";
+@import "_layout/blog";
+@import "_layout/footer";
+//--Layout--//
+
+//--Components--//
+@import "_components/buttons";
+//--Components--//

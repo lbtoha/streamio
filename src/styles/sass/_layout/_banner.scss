@@ -1,0 +1,233 @@
+//banner version one
+.bn__thumb1 {
+  background: url(../../../../public/img/bn/banner1.jpg) no-repeat center center;
+  background: url(../../../../public/img/bn/banner1.jpg) no-repeat center center;
+  background: url(../../../../public/img/bn/banner1.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+}
+.bn__thumb2 {
+  background: url(../../../../public/img/bn/banner2.jpg) no-repeat center center;
+  background-size: cover;
+}
+.bn__thumb3 {
+  background: url(../../../../public/img/bn/banner3.jpg) no-repeat center center;
+  background-size: cover;
+}
+.bn__thumb4 {
+  background: url(../../../../public/img/bn/banner4.jpg) no-repeat center center;
+  background-size: cover;
+}
+.side__thumbs__custom {
+  height: 516px;
+  width: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include breakpoint(max-sm) {
+    height: 300px;
+  }
+}
+.mySwiper22 {
+  position: relative;
+}
+//banner content
+.banner__space {
+  padding-top: 113px;
+  @include breakpoint(max-lg) {
+    padding-top: 100px;
+  }
+  @include breakpoint(max-xs) {
+    padding-top: 90px;
+  }
+}
+.banner__slide {
+  padding: 100px 84px 120px;
+  &::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    @include breakpoint(max-sm) {
+      background: rgba(0, 0, 0, 0.4);
+    }
+  }
+  @include breakpoint(max-xxl) {
+    padding: 90px 40px 120px;
+  }
+  @include breakpoint(max-sm) {
+    padding: 90px 14px 100px;
+  }
+  @include breakpoint(max-sm) {
+    padding: 80px 14px 100px;
+  }
+}
+.banner__thumbside {
+  background: url(../../../../public/img/bn/bnside1.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  &:hover {
+    .bn__sidebarcontent {
+      bottom: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  @include breakpoint(max-lg) {
+    height: 400px;
+  }
+  @include breakpoint(max-sm) {
+    height: 300px;
+  }
+}
+.banner__content {
+  position: relative;
+  max-width: 560px;
+  .banner__btn {
+    gap: 10px;
+  }
+  @include breakpoint(max-xs) {
+    h1 {
+      font-size: 29px;
+      line-height: 1.4;
+    }
+  }
+}
+.bn__sidebarcontent {
+  position: absolute;
+  bottom: -100%;
+  transition: all 0.5s;
+  left: 0;
+  // background: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(
+    360deg,
+    rgba(24, 19, 19, 0.9) 0%,
+    rgba(7, 7, 7, 0) 100%
+  );
+  padding: 20px 20px 60px 60px;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  @include breakpoint(max-xxl) {
+    padding: 20px 10px 30px 30px;
+  }
+  @include breakpoint(max-xxs) {
+    padding: 20px 10px 20px 10px;
+  }
+}
+//banner content
+
+//banner contenttwo
+.banner__v2 {
+  overflow: hidden;
+}
+.banner__slidetwo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 142px 32px 342px;
+  position: relative;
+  @include breakpoint(max-xl) {
+    padding: 100px 32px 342px;
+  }
+  @include breakpoint(max-md) {
+    padding: 80px 24px 120px;
+  }
+}
+.bn__thumbv1 {
+  background: url(../../../../public/img/bn/v2-banner1.jpg) no-repeat center
+    center;
+  background-size: cover;
+}
+.bn__thumbv2 {
+  background: url(../../../../public/img/bn/v2-banner2.png) no-repeat center
+    center;
+  background-size: cover;
+}
+.bn__thumbv3 {
+  background: url(../../../../public/img/bn/v2-banner3.png) no-repeat center
+    center;
+  background-size: cover;
+}
+.bn__thumbv4 {
+  background: url(../../../../public/img/bn/banner3.jpg) no-repeat center center;
+  background-size: cover;
+}
+.bn__pagis {
+  position: absolute;
+  top: 30%;
+  right: 60px;
+  z-index: 99;
+  .cmn-pagination {
+    display: grid;
+    gap: 20px;
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      background: var(--base);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        content: "";
+        border: 1px solid var(--base);
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+    }
+    .swiper-pagination-bullet {
+      background: #fefefe;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+  }
+  @include breakpoint(max-md) {
+    top: 95%;
+    right: 50%;
+    transform: translateX(50%);
+    .cmn-pagination {
+      display: flex;
+    }
+  }
+}
+//banner contenttwo
+
+//trending abs
+.trending__abs {
+  margin-top: -200px;
+  z-index: 1;
+  .header__text {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .trending__slider {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+  @include breakpoint(max-xxxl) {
+    .trending__slider {
+      margin-right: 12px;
+      margin-left: 12px;
+    }
+    .header__text {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+  @include breakpoint(max-md) {
+    margin-top: -0px;
+    padding-top: 80px;
+  }
+}
+//trending abs
