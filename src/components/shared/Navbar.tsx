@@ -1,10 +1,8 @@
 "use client";
 import { IconSmartHome } from "@tabler/icons-react";
 import Image from "next/image";
-import { useState } from "react";
 
 const Navbar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     // <!-- Header Here -->
     <>
