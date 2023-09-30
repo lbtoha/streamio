@@ -1,7 +1,11 @@
-import Navbar from "@/components/shared/Navbar";
 import { poppins } from "@/utils/fonts";
 import "material-symbols";
 import { Metadata } from "next";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import "swiper/scss/scrollbar";
 import ".././styles/sass/main.scss";
 
 export const metadata: Metadata = {
@@ -17,10 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <main>
-          <Navbar />
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );

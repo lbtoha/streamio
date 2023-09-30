@@ -1,3 +1,10 @@
-import { createContext } from "vm";
+import React, { Dispatch, SetStateAction } from "react";
 
-export const navbarContext = createContext();
+type navbarContextType = {
+  isSidebarOpen: boolean;
+  setIsSidebarOpen: Dispatch<SetStateAction<boolean>>;
+};
+export const navbarContext = React.createContext<navbarContextType>({
+  isSidebarOpen: false,
+  setIsSidebarOpen: () => {},
+});

@@ -1,15 +1,44 @@
 "use client";
+import { navbarContext } from "@/utils/reactContext";
 import { IconSmartHome } from "@tabler/icons-react";
 import Image from "next/image";
+import { useContext, useEffect, useState } from "react";
 
 const Navbar = () => {
+  const { isSidebarOpen } = useContext(navbarContext);
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log(window.scrollY);
+      if (window.scrollY > 0) {
+        document
+          .querySelector(".header-wrapper")
+          ?.classList.remove("slideInUp");
+        document.body.classList.add("body-padding");
+      } else {
+        document.querySelector(".header-wrapper")?.classList.add("slideInUp");
+        document.body.classList.remove("body-padding");
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isSidebarOpen]);
   return (
     // <!-- Header Here -->
     <>
       <div className="header__section__attachment">
         <div className="container-fluid p-0-fluid p-0">
           <div className=" d-flex">
-            <div className="sidebar-wrapper mainbg">
+            <div
+              className={`sidebar-wrapper mainbg ${isSidebarOpen && "active"}`}
+            >
               <div className="d-flex logo__wrap align-items-center justify-content-between">
                 <a href="index.html" className="logo">
                   <Image
@@ -28,8 +57,11 @@ const Navbar = () => {
                   <li className="liclick">
                     <span className="d-flex align-items-center">
                       <a
+                        onClick={() => setIsMenuClicked(!isMenuClicked)}
                         href="javascript:void(0)"
-                        className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
+                        className={`mclick d-flex hcolor align-items-center w-100 justify-content-between ${
+                          isMenuClicked && "reply-active"
+                        }`}
                       >
                         <span className="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
                           <IconSmartHome className="ti ti-smart-home"></IconSmartHome>
@@ -42,7 +74,11 @@ const Navbar = () => {
                         </span>
                       </a>
                     </span>
-                    <div className="menucontent">
+                    <div
+                      className={` menucontent menucontent-show ${
+                        isMenuClicked ? "active" : ""
+                      }`}
+                    >
                       <ul>
                         <li>
                           <a href="index.html">Home One</a>
@@ -224,7 +260,11 @@ const Navbar = () => {
                 </ul>
               </div>
             </div>
-            <div className="header-wrapper mainbg">
+            <div
+              className={`header-wrapper mainbg menu-fixed ${
+                isSidebarOpen && "body-collapse"
+              }`}
+            >
               <ul className="main-menuone">
                 <li className="small__logo">
                   <a href="index.html">

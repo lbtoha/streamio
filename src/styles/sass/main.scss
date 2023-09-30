@@ -48,6 +48,9 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "../fonts/tabler-icons.min.css";
 
+// -- Audio
+@import "audio/audioplayer";
+
 //--Abstracts--//
 @import "_abstracts/mixins";
 @import "_abstracts/variables";
@@ -69,3 +72,8 @@
 //--Components--//
 @import "_components/buttons";
 //--Components--//
+
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+  display: none;
+}
