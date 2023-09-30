@@ -17,8 +17,13 @@ const Moods = () => {
           </a>
         </div>
         <div className="row g-4">
-          {moodsCardData.map(({ id, ...props }) => (
-            <MoodsCard key={id} {...props} />
+          {moodsCardData.slice(0, 6).map(({ id, ...props }) => (
+            <div
+              key={id}
+              className="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-md-4 col-sm-4"
+            >
+              <MoodsCard key={id} {...props} link="mood-details" />
+            </div>
           ))}
         </div>
       </div>

@@ -2,6 +2,7 @@
 import { navbarContext } from "@/utils/reactContext";
 import { IconSmartHome } from "@tabler/icons-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -40,14 +41,14 @@ const Navbar = () => {
               className={`sidebar-wrapper mainbg ${isSidebarOpen && "active"}`}
             >
               <div className="d-flex logo__wrap align-items-center justify-content-between">
-                <a href="index.html" className="logo">
+                <Link href="index.html" className="logo">
                   <Image
                     width={180}
                     height={52}
                     src="/img/logo/logo.png"
                     alt="img"
                   />
-                </a>
+                </Link>
                 <div className="closebtn d-none">
                   <i className="material-symbols-outlined">close</i>
                 </div>
@@ -56,7 +57,7 @@ const Navbar = () => {
                 <ul className="sidebar__menu">
                   <li className="liclick">
                     <span className="d-flex align-items-center">
-                      <a
+                      <Link
                         onClick={() => setIsMenuClicked(!isMenuClicked)}
                         href="javascript:void(0)"
                         className={`mclick d-flex hcolor align-items-center w-100 justify-content-between ${
@@ -72,7 +73,7 @@ const Navbar = () => {
                           <i className="ti ti-plus plus"></i>
                           <i className="ti ti-minus minus"></i>
                         </span>
-                      </a>
+                      </Link>
                     </span>
                     <div
                       className={` menucontent menucontent-show ${
@@ -81,62 +82,62 @@ const Navbar = () => {
                     >
                       <ul>
                         <li>
-                          <a href="index.html">Home One</a>
+                          <Link href="index.html">Home One</Link>
                         </li>
                         <li>
-                          <a href="index-2.html">Home Two</a>
+                          <Link href="index-2.html">Home Two</Link>
                         </li>
                       </ul>
                     </div>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="explore.html"
                       className="d-flex hcolor align-items-center gap-2"
                     >
                       <i className="ti ti-world"></i>
                       Explore
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="music.html"
                       className="d-flex hcolor align-items-center gap-2"
                     >
                       <i className="ti ti-music"></i>
                       Music
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="albums.html"
+                    <Link
+                      href="albums"
                       className="d-flex hcolor align-items-center gap-2"
                     >
                       <i className="ti ti-album"></i>
                       Albums
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="poodcasts.html"
                       className="d-flex hcolor align-items-center gap-2"
                     >
                       <i className="ti ti-headset"></i>
                       Podcasts
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="event.html"
                       className="d-flex hcolor align-items-center gap-2"
                     >
                       <i className="ti ti-calendar-event"></i>
                       Event
-                    </a>
+                    </Link>
                   </li>
                   <li className="liclick d-xl-none">
                     <span className="d-flex align-items-center">
-                      <a
+                      <Link
                         href="javascript:void(0)"
                         className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
                       >
@@ -148,28 +149,28 @@ const Navbar = () => {
                           <i className="ti ti-plus plus"></i>
                           <i className="ti ti-minus minus"></i>
                         </span>
-                      </a>
+                      </Link>
                     </span>
                     <div className="menucontent">
                       <ul>
                         <li>
-                          <a href="genres.html">Genres</a>
+                          <Link href="genres.html">Genres</Link>
                         </li>
                         <li>
-                          <a href="moods.html">Moods</a>
+                          <Link href="moods.html">Moods</Link>
                         </li>
                         <li>
-                          <a href="trending.html">Trending</a>
+                          <Link href="trending.html">Trending</Link>
                         </li>
                         <li>
-                          <a href="artists.html">Popular</a>
+                          <Link href="artists.html">Popular</Link>
                         </li>
                       </ul>
                     </div>
                   </li>
                   <li className="liclick d-xl-none">
                     <span className="d-flex align-items-center">
-                      <a
+                      <Link
                         href="javascript:void(0)"
                         className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
                       >
@@ -181,37 +182,37 @@ const Navbar = () => {
                           <i className="ti ti-plus plus"></i>
                           <i className="ti ti-minus minus"></i>
                         </span>
-                      </a>
+                      </Link>
                     </span>
                     <div className="menucontent">
                       <ul>
                         <li>
-                          <a href="signin.html">Sing In</a>
+                          <Link href="signin.html">Sing In</Link>
                         </li>
                         <li>
-                          <a href="signup.html">Sign Up</a>
+                          <Link href="signup.html">Sign Up</Link>
                         </li>
                         <li>
-                          <a href="reset-password.html">Reset Password</a>
+                          <Link href="reset-password.html">Reset Password</Link>
                         </li>
                         <li>
-                          <a href="faq.html">Faq</a>
+                          <Link href="faq.html">Faq</Link>
                         </li>
                         <li>
-                          <a href="contact.html">Contact</a>
+                          <Link href="contact.html">Contact</Link>
                         </li>
                         <li>
-                          <a href="privacy.html">Privacy policy</a>
+                          <Link href="privacy.html">Privacy policy</Link>
                         </li>
                         <li>
-                          <a href="error.html">404 Page</a>
+                          <Link href="error.html">404 Page</Link>
                         </li>
                       </ul>
                     </div>
                   </li>
                   <li className="liclick">
                     <span className="d-flex align-items-center">
-                      <a
+                      <Link
                         href="javascript:void(0)"
                         className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
                       >
@@ -223,36 +224,38 @@ const Navbar = () => {
                           <i className="ti ti-plus plus"></i>
                           <i className="ti ti-minus minus"></i>
                         </span>
-                      </a>
+                      </Link>
                     </span>
                     <div className="menucontent">
                       <ul>
                         <li>
-                          <a href="blog.html">Blog Page</a>
+                          <Link href="blog.html">Blog Page</Link>
                         </li>
                         <li>
-                          <a href="blog-details.html">Blog Details</a>
+                          <Link href="blog-details.html">Blog Details</Link>
                         </li>
                         <li>
-                          <a href="freature-show.html">Show Page</a>
+                          <Link href="freature-show.html">Show Page</Link>
                         </li>
                         <li>
-                          <a href="show-details.html">Show Details</a>
+                          <Link href="show-details.html">Show Details</Link>
                         </li>
                         <li>
-                          <a href="product.html">Product Page</a>
+                          <Link href="product.html">Product Page</Link>
                         </li>
                         <li>
-                          <a href="product-details.html">Product Details</a>
+                          <Link href="product-details.html">
+                            Product Details
+                          </Link>
                         </li>
                         <li>
-                          <a href="cart.html">Cart Page</a>
+                          <Link href="cart.html">Cart Page</Link>
                         </li>
                         <li>
-                          <a href="checkout.html">Check out</a>
+                          <Link href="checkout.html">Check out</Link>
                         </li>
                         <li>
-                          <a href="pricing.html">Pricing Plan</a>
+                          <Link href="pricing.html">Pricing Plan</Link>
                         </li>
                       </ul>
                     </div>
@@ -267,14 +270,14 @@ const Navbar = () => {
             >
               <ul className="main-menuone">
                 <li className="small__logo">
-                  <a href="index.html">
+                  <Link href="index.html">
                     <Image
                       width={68}
                       height={51}
                       src="/img/logo/favicon-small.png"
                       alt="img"
                     />
-                  </a>
+                  </Link>
                 </li>
                 <li className="search__show">
                   <form action="#0" className="d-flex align-items-center">
@@ -288,48 +291,48 @@ const Navbar = () => {
                   </form>
                 </li>
                 <li>
-                  <a href="genres.html">Genres</a>
+                  <Link href="genres.html">Genres</Link>
                 </li>
                 <li>
-                  <a href="moods.html">Moods</a>
+                  <Link href="moods.html">Moods</Link>
                 </li>
                 <li>
-                  <a href="trending.html">Trending</a>
+                  <Link href="trending.html">Trending</Link>
                 </li>
                 <li>
-                  <a href="artists.html">Popular</a>
+                  <Link href="artists.html">Popular</Link>
                 </li>
                 <li className="liclick xl__devicecustomize max-xl-none">
                   <span className="d-flex align-items-center">
-                    <a
+                    <Link
                       href="javascript:void(0)"
                       className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
                     >
                       <i className="ti ti-dots"></i>
-                    </a>
+                    </Link>
                   </span>
                   <div className="menucontent">
                     <ul>
                       <li>
-                        <a href="signin.html">Sing In</a>
+                        <Link href="signin.html">Sing In</Link>
                       </li>
                       <li>
-                        <a href="signup.html">Sign Up</a>
+                        <Link href="signup.html">Sign Up</Link>
                       </li>
                       <li>
-                        <a href="reset-password.html">Reset Password</a>
+                        <Link href="reset-password.html">Reset Password</Link>
                       </li>
                       <li>
-                        <a href="faq.html">Faq</a>
+                        <Link href="faq.html">Faq</Link>
                       </li>
                       <li>
-                        <a href="contact.html">Contact</a>
+                        <Link href="contact.html">Contact</Link>
                       </li>
                       <li>
-                        <a href="privacy.html">Privacy policy</a>
+                        <Link href="privacy.html">Privacy policy</Link>
                       </li>
                       <li>
-                        <a href="error.html">404 Page</a>
+                        <Link href="error.html">404 Page</Link>
                       </li>
                     </ul>
                   </div>
@@ -337,12 +340,12 @@ const Navbar = () => {
               </ul>
               <div className="menu__right__components d-flex align-items-center">
                 <div className="menu__components d-flex align-items-center">
-                  <a href="cart.html" className="shop__tolley">
+                  <Link href="cart.html" className="shop__tolley">
                     <i className="ti ti-shopping-cart pra fs-30"></i>
                     <span className="shop__badge">3</span>
-                  </a>
+                  </Link>
                   <div className="dropdown profie__dropdown">
-                    <a
+                    <Link
                       href="#0"
                       className="link user__active d-flex align-items-center"
                       data-bs-toggle="dropdown"
@@ -360,7 +363,7 @@ const Navbar = () => {
                         David Malan
                         <i className="ti ti-chevron-down"></i>
                       </span>
-                    </a>
+                    </Link>
                     <div
                       className="dropdown-menu dropdown-menu-end"
                       data-popper-placement="bottom-end"
@@ -388,7 +391,7 @@ const Navbar = () => {
                         </div>
                         <ul className="list">
                           <li className="mb-16">
-                            <a
+                            <Link
                               href="profile.html"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
@@ -397,10 +400,10 @@ const Navbar = () => {
                                 {" "}
                                 Profile{" "}
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           <li className="mb-16">
-                            <a
+                            <Link
                               href="javascript:void(0)"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
@@ -409,12 +412,12 @@ const Navbar = () => {
                                 {" "}
                                 Theme{" "}
                               </span>
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                         <ul className="list">
                           <li className="mb-16">
-                            <a
+                            <Link
                               href="javascript:void(0)"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
@@ -423,10 +426,10 @@ const Navbar = () => {
                                 {" "}
                                 Help{" "}
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           <li className="mb-16">
-                            <a
+                            <Link
                               href="javascript:void(0)"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
@@ -435,10 +438,10 @@ const Navbar = () => {
                                 {" "}
                                 Send Feedback{" "}
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           <li className="mb-16">
-                            <a
+                            <Link
                               href="javascript:void(0)"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
@@ -447,10 +450,10 @@ const Navbar = () => {
                                 {" "}
                                 Settings{" "}
                               </span>
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a
+                            <Link
                               href="javascript:void(0)"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
@@ -459,14 +462,14 @@ const Navbar = () => {
                                 {" "}
                                 Log Out{" "}
                               </span>
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
                     </div>
                   </div>
                   <div className="dropdown notification__dropdown">
-                    <a
+                    <Link
                       href="#"
                       className="link glose__icon"
                       data-bs-toggle="dropdown"
@@ -474,14 +477,14 @@ const Navbar = () => {
                       aria-expanded="true"
                     >
                       <i className="ti ti-bell"></i>
-                    </a>
+                    </Link>
                     <div
                       className="dropdown-menu dropdown-menu-end "
                       data-popper-placement="bottom-end"
                     >
                       <ul className="list">
                         <li className="mb-16">
-                          <a href="#0" className="link d-flex dropdown-item">
+                          <Link href="#0" className="link d-flex dropdown-item">
                             <Image
                               width={200}
                               height={200}
@@ -500,10 +503,10 @@ const Navbar = () => {
                                 10 Min ago
                               </span>
                             </span>
-                          </a>
+                          </Link>
                         </li>
                         <li className="mb-16">
-                          <a href="#0" className="link d-flex dropdown-item">
+                          <Link href="#0" className="link d-flex dropdown-item">
                             <Image
                               width={200}
                               height={200}
@@ -522,10 +525,10 @@ const Navbar = () => {
                                 1 days ago
                               </span>
                             </span>
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a href="#0" className="link d-flex dropdown-item">
+                          <Link href="#0" className="link d-flex dropdown-item">
                             <Image
                               width={200}
                               height={200}
@@ -544,7 +547,7 @@ const Navbar = () => {
                                 2 Month ago
                               </span>
                             </span>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
