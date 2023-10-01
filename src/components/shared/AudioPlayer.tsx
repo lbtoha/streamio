@@ -1,13 +1,43 @@
 "use client";
 import useAudioPlayer from "@/hooks/useAudioPlayer";
+import { useEffect, useState } from "react";
 
 const AudioPlayer = ({
   audio = "http://physical-authority.surge.sh/music/2.mp3",
 }: {
   audio?: string;
 }) => {
-  const { playToggle, audioRef, handlePlayToggle, handleProgress } =
-    useAudioPlayer();
+  const {
+    playToggle,
+    audioRef,
+    progressBarRef,
+    progress,
+    duration,
+    currentTime,
+    handlePlayToggle,
+    handleFastReverse,
+    handleFastForward,
+    handleProgressBarMouseDown,
+    handleProgressBarMouseUp,
+    handleProgressBarMouseLeave,
+    handleProgressBarInteraction,
+    handleProgressBarMouseMove,
+    handleProgress,
+  } = useAudioPlayer();
+
+  // formate the duration in second
+  const [durationInMin, setDurationInMin] = useState("");
+
+  useEffect(() => {
+    const minutes: number = Math.floor(duration / 60);
+    const remainingSeconds: number = Math.floor(duration % 60);
+    const newDuration = `${minutes}:${remainingSeconds} `.replace(
+      /:0(\d) min$/,
+      ":$1 min"
+    );
+    setDurationInMin(newDuration);
+  }, [duration, audio]);
+
   return (
     <div className="pause__block pause__abs">
       <div className={`audioplayer ${playToggle && "audioplayer-playing"}`}>
@@ -27,15 +57,30 @@ const AudioPlayer = ({
         >
           <a href="javascript:;"></a>
         </div>
-        <div className="audioplayer-time audioplayer-time-current">00:00</div>
-        <div className="audioplayer-bar">
+        <div className="audioplayer-time audioplayer-time-current">
+          {currentTime}
+        </div>
+        <div
+          className="audioplayer-bar"
+          ref={progressBarRef}
+          onClick={handleProgressBarInteraction}
+          onMouseDown={handleProgressBarMouseDown}
+          onMouseUp={handleProgressBarMouseUp}
+          onMouseMove={handleProgressBarMouseMove}
+          onMouseLeave={handleProgressBarMouseLeave}
+        >
           <div
             className="audioplayer-bar-loaded"
             style={{ width: "95.7206%" }}
           ></div>
-          <div className="audioplayer-bar-played"></div>
+          <div
+            className="audioplayer-bar-played"
+            style={{ width: `${progress}%` }}
+          ></div>
         </div>
-        <div className="audioplayer-time audioplayer-time-duration">03:21</div>
+        <div className="audioplayer-time audioplayer-time-duration">
+          {durationInMin}
+        </div>
         <div className="audioplayer-volume">
           <div className="audioplayer-volume-button" title="">
             <a href="#"></a>
