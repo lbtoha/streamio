@@ -5,11 +5,6 @@ const LatestPost = () => {
   return (
     // <!--genres section-->
     <section className="mr-24 ml-24 pb-100">
-      <div className="container-flud p-0">
-        <div className="header__text mb-30">
-          <h2>Latest Post</h2>
-        </div>
-      </div>
       <div className="trending__selected mb-30 d-flex align-items-center">
         <ul className="nav nav-tabs" id="myTab" role="tablist">
           <li className="nav-item" role="presentation">

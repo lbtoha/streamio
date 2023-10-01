@@ -7,7 +7,6 @@ import Podcasts from "@/components/pages/home/Podcast";
 import Product from "@/components/pages/home/Product";
 import Trending from "@/components/pages/home/Trending";
 import Workout from "@/components/pages/home/Workout";
-import Footer from "@/components/shared/Footer";
 import MainBody from "@/components/shared/MainBody";
 
 const page = () => {
@@ -22,7 +21,6 @@ const page = () => {
       <Podcasts />
       <Product />
       <LatestPost />
-      <Footer />
     </MainBody>
   );
 };

@@ -14,15 +14,18 @@ const AudioPlayer = ({
     progress,
     duration,
     currentTime,
+    isSeeking,
     handlePlayToggle,
+    handleProgress,
+    setPlayToggle,
+    seekToTime,
     handleFastReverse,
     handleFastForward,
     handleProgressBarMouseDown,
     handleProgressBarMouseUp,
-    handleProgressBarMouseLeave,
     handleProgressBarInteraction,
     handleProgressBarMouseMove,
-    handleProgress,
+    handleProgressBarMouseLeave,
   } = useAudioPlayer();
 
   // formate the duration in second
@@ -71,7 +74,7 @@ const AudioPlayer = ({
         >
           <div
             className="audioplayer-bar-loaded"
-            style={{ width: "95.7206%" }}
+            style={{ width: "100%" }}
           ></div>
           <div
             className="audioplayer-bar-played"

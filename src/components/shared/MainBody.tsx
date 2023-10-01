@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { navbarContext } from "../../utils/reactContext";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const MainBody = ({ children }: { children: React.ReactNode }) => {
@@ -22,6 +23,7 @@ const MainBody = ({ children }: { children: React.ReactNode }) => {
         </div>
         {/* <!--close menu end-->    */}
         {children}
+        <Footer />
       </div>
     </navbarContext.Provider>
   );

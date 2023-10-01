@@ -1,6 +1,5 @@
 import CommonDetails from "@/components/pages/albumb-details/CommonDetails";
 import ConveterHead from "@/components/pages/albumb-details/ConveterHead";
-import Footer from "@/components/shared/Footer";
 import MainBody from "@/components/shared/MainBody";
 import { Metadata } from "next";
 
@@ -14,7 +13,6 @@ const albumDetails = () => {
       <CommonDetails>
         <ConveterHead name="Florida Georgia" songTitle="Girls in The Hood" />
       </CommonDetails>
-      <Footer />
     </MainBody>
   );
 };

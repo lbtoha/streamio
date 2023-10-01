@@ -1,7 +1,6 @@
 import PopularArtists from "@/components/pages/artists/PopularArtists";
 import FeaturedShows from "@/components/pages/home/FeaturedShows";
 import BreadCrumb from "@/components/shared/BreadCrum";
-import Footer from "@/components/shared/Footer";
 import MainBody from "@/components/shared/MainBody";
 import { Metadata } from "next";
 
@@ -15,7 +14,6 @@ const artists = () => {
       <BreadCrumb page="Popular Artists" />
       <PopularArtists />
       <FeaturedShows />
-      <Footer />
     </MainBody>
   );
 };

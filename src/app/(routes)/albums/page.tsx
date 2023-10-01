@@ -1,7 +1,6 @@
 import PopularAlbums from "@/components/pages/albums/PopularAlbums";
 import Trending from "@/components/pages/albums/Trending";
 import BreadCrumb from "@/components/shared/BreadCrum";
-import Footer from "@/components/shared/Footer";
 import MainBody from "@/components/shared/MainBody";
 import { Metadata } from "next";
 
@@ -15,7 +14,6 @@ const albums = () => {
       <BreadCrumb page="Albums" />
       <Trending />
       <PopularAlbums />
-      <Footer />
     </MainBody>
   );
 };

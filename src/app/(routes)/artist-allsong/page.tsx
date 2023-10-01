@@ -1,6 +1,5 @@
 import SongUpgrade from "@/components/pages/albumb-allsong/SongUpgrade";
 import Artist from "@/components/pages/artist-allsong/Artist";
-import Footer from "@/components/shared/Footer";
 import MainBody from "@/components/shared/MainBody";
 import { Metadata } from "next";
 import { songUpgradeData } from "../../../../public/data/songUpgrdeData";
@@ -14,7 +13,6 @@ const artistAllSong = () => {
     <MainBody>
       <Artist />
       <SongUpgrade artistSong={songUpgradeData} sectionTitle="Most Popular" />
-      <Footer />
     </MainBody>
   );
 };

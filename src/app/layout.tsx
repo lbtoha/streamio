@@ -1,3 +1,6 @@
+import AddToPlaylistModal from "@/components/shared/AddToPlaylistModal";
+import DeletePostModal from "@/components/shared/DeletePostModal";
+import SharedModal from "@/components/shared/SharedModal";
 import { poppins } from "@/utils/fonts";
 import "material-symbols";
 import { Metadata } from "next";
@@ -22,6 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <main>{children}</main>
+        <AddToPlaylistModal />
+        <SharedModal />
+        <DeletePostModal />
       </body>
     </html>
   );

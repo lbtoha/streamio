@@ -1,6 +1,5 @@
 import SongUpgrade from "@/components/pages/albumb-allsong/SongUpgrade";
 import TopSinger from "@/components/pages/albumb-allsong/TopSinger";
-import Footer from "@/components/shared/Footer";
 import MainBody from "@/components/shared/MainBody";
 import { Metadata } from "next";
 import { songUpgradeData } from "../../../../public/data/songUpgrdeData";
@@ -14,7 +13,6 @@ const albumAllSong = () => {
     <MainBody>
       <TopSinger />
       <SongUpgrade sectionTitle="Mix All Songs" artistSong={songUpgradeData} />
-      <Footer />
     </MainBody>
   );
 };
