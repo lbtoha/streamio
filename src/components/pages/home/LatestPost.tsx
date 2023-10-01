@@ -17,7 +17,7 @@ const LatestPost = () => {
           </a>
         </div>
         <div className="row g-4">
-          {latestPostData.map(({ id, ...props }) => (
+          {latestPostData.slice(0, 3).map(({ id, ...props }) => (
             <LatestPostCard key={id} {...props} />
           ))}
         </div>

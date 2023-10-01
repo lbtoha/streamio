@@ -1,75 +1,14 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
 import Image from "next/image";
+import React from "react";
 
-const CommonDetails = () => {
+const CommonDetails = ({ children }: { children: React.ReactNode }) => {
   return (
     // <!--common details-->
     <section className="genres__details custom__space pb-100 mr-24 ml-24">
       <div className="bebgadd__box">
         <div className="container">
-          <div className="conveter__head pt-30 mb-40 d-flex align-items-center">
-            <div className="left__box">
-              <div className="d-flex mb-24 align-items-center gap-3">
-                <Image
-                  width={52}
-                  height={52}
-                  src="/img/details/conveter.jpg"
-                  className="round50"
-                  alt="img"
-                />
-                <span className="fs-16 fw-500 bodyfont white">
-                  Chester Bennington
-                </span>
-              </div>
-              <h2 className="white mb-16">44m</h2>
-              <div className="d-flex conveter__follow align-items-center">
-                <a href="#0" className="cmbtn d-flex gap-2">
-                  <span>
-                    <i className="ti ti-user-plus fs-24 base"></i>
-                  </span>
-                  <span>Follow</span>
-                </a>
-                <span className="fs-16 fw-500 bodyfont white">
-                  03 days ago in Tomb
-                </span>
-              </div>
-            </div>
-            <div className="dropdown">
-              <button
-                className="dropdown-toggle"
-                type="button"
-                id="drops1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <i className="ti ti-dots white"></i>
-              </button>
-              <ul className="dropdown-menu" aria-labelledby="drops1">
-                <li className="mb-2">
-                  <a
-                    className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
-                    href="javascript:void(0)"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                  >
-                    <i className="ti ti-playlist-add fs-30 base"></i>
-                    Add To Playlist
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
-                    href="javascript:void(0)"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal2"
-                  >
-                    <i className="ti ti-share fs-30 base"></i>
-                    Share
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          {children}
           <div className="conveter__barwrap d-flex align-items-center">
             <Image
               width={252}

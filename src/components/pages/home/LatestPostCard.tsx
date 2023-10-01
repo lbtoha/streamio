@@ -6,8 +6,9 @@ type Props = {
   date: string;
   comment: number;
   title: string;
+  type: string;
 };
-const LatestPostCard = ({ image, date, comment, title }: Props) => {
+const LatestPostCard = ({ image, date, comment, title, type }: Props) => {
   return (
     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6">
       <div className="latest__item overhid ralt">
@@ -15,7 +16,7 @@ const LatestPostCard = ({ image, date, comment, title }: Props) => {
           <Image src={image} className="w-100 transition overhid" alt="img" />
           <AudioPlayer audio="" />
           <a href="javascript:void(0)" className="l__badge">
-            Features
+            {type}
           </a>
         </div>
         <div className="content">

@@ -12,7 +12,7 @@ const albumDetails = () => {
   return (
     <MainBody>
       <CommonDetails>
-        <ConveterHead name="Chester Bennington" songTitle="44m" />
+        <ConveterHead name="Florida Georgia" songTitle="Girls in The Hood" />
       </CommonDetails>
       <Footer />
     </MainBody>
