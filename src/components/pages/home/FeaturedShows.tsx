@@ -19,7 +19,7 @@ const FeaturedShows = () => {
           </a>
         </div>
         <div className="row g-4">
-          {featureShowData.map(({ id, ...props }) => (
+          {featureShowData.slice(0, 2).map(({ id, ...props }) => (
             <FeatureShowLeftCard key={id} {...props} />
           ))}
           <div className="col-xxl-4 col-xl-4 col-lg-4">

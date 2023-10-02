@@ -20,7 +20,7 @@ const SongUpgradeTableRow = ({
       <td>
         <a
           href="albumb-details.html"
-          className="upgrade__left d-flex align-items-center"
+          className="upgrade__left d-flex align-items-center gap-3"
         >
           <span className="fs-16 fw-500 d-block bodyfont white">
             {index <= 9 ? `0${index}` : index}
