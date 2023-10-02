@@ -1,17 +1,28 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 //@ts-ignore
+import { StaticImageData } from "next/image";
+//@ts-ignore
 import { Navigation, Scrollbar } from "swiper";
-import { productData } from "../../../../public/data/productDta";
 import ProductSliderCard from "./ProductSliderCard";
 
-const Product = () => {
+type Props = {
+  sectionTitle: string;
+  componentData: {
+    id: string;
+    image: StaticImageData;
+    productTitle: string;
+    productPrice: number;
+    name: string;
+  }[];
+};
+const Product = ({ sectionTitle, componentData }: Props) => {
   return (
     // <!--Product section-->
     <section className="product__section pr-24 pl-24 pb-100">
       <div className="container-fluid p-0">
         <div className="header__text mb-24 d-flex align-items-center justify-content-between flex-wrap gap-2">
-          <h2>Product</h2>
+          <h2>{sectionTitle}</h2>
           <a
             href="product-details.html"
             className="view__btn white d-flex align-items-center gap-2"
@@ -53,7 +64,7 @@ const Product = () => {
           className="swiper products__slider"
         >
           <div className="swiper-wrapper">
-            {productData.map(({ id, ...props }) => (
+            {componentData.map(({ id, ...props }) => (
               <SwiperSlide key={id}>
                 <ProductSliderCard {...props} />
               </SwiperSlide>

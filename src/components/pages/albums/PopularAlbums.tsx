@@ -1,16 +1,28 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 //@ts-ignore
+import { StaticImageData } from "next/image";
+//@ts-ignore
 import { Navigation, Scrollbar } from "swiper";
-import { moodsCardData } from "../../../../public/data/moodsCardData";
 import MoodsCard from "../home/MoodsCard";
-const PopularAlbums = () => {
+
+type Props = {
+  sectionTitle: string;
+  sliderData: {
+    id: string;
+    image: StaticImageData;
+    title: string;
+    subTitle: string;
+    song: string;
+  }[];
+};
+const PopularAlbums = ({ sectionTitle, sliderData }: Props) => {
   return (
     // <!--genres section-->
     <section className="genres__section pr-24 pl-24 pb-100">
       <div className="container-fluid">
         <div className="header__text mb-30">
-          <h2>Popular Albums</h2>
+          <h2>{sectionTitle}</h2>
         </div>
         <Swiper
           modules={[Navigation, Scrollbar]}
@@ -45,10 +57,10 @@ const PopularAlbums = () => {
           className="swiper products__slider"
         >
           <div className="swiper-wrapper">
-            {moodsCardData.map(({ id, ...props }) => (
+            {sliderData.map(({ id, ...props }) => (
               <SwiperSlide key={id}>
                 <div className="swiper-slide">
-                  <MoodsCard {...props} link="" />
+                  <MoodsCard {...props} link="music-details" />
                 </div>
               </SwiperSlide>
             ))}
