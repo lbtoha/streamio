@@ -2,7 +2,13 @@ import AudioPlayer from "@/components/shared/AudioPlayer";
 import Image from "next/image";
 import React from "react";
 
-const CommonDetails = ({ children }: { children: React.ReactNode }) => {
+const CommonDetails = ({
+  image = "/img/trending/audio-albumb.jpg",
+  children,
+}: {
+  image?: string;
+  children: React.ReactNode;
+}) => {
   return (
     // <!--common details-->
     <section className="genres__details custom__space pb-100 mr-24 ml-24">
@@ -10,12 +16,7 @@ const CommonDetails = ({ children }: { children: React.ReactNode }) => {
         <div className="container">
           {children}
           <div className="conveter__barwrap d-flex align-items-center">
-            <Image
-              width={252}
-              height={273}
-              src="/img/trending/audio-albumb.jpg"
-              alt="img"
-            />
+            <Image width={252} height={273} src={image} alt="img" />
             <div className="online__audiowrap">
               <div className="audio__probar">
                 <Image
@@ -101,7 +102,6 @@ const CommonDetails = ({ children }: { children: React.ReactNode }) => {
                 id="home-tab-pane"
                 role="tabpanel"
                 aria-labelledby="home-tab"
-                tabindex="0"
               >
                 <div className="description__boxes">
                   <span className="fs-16 bodyfont fw-400 white mt-16 d-block mb-2">
@@ -182,7 +182,6 @@ const CommonDetails = ({ children }: { children: React.ReactNode }) => {
                 id="profile-tab-pane"
                 role="tabpanel"
                 aria-labelledby="profile-tab"
-                tabindex="0"
               >
                 <div className="description__boxes">
                   <ul className="mb-20 mt-16">
@@ -374,7 +373,7 @@ const CommonDetails = ({ children }: { children: React.ReactNode }) => {
                 name="comment"
                 id="comment"
                 className="mb-30"
-                rows="5"
+                rows={5}
                 placeholder="Add Coment"
               ></textarea>
               <span className="w-100 d-flex align-items-center justify-content-end">

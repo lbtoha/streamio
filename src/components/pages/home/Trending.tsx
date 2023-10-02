@@ -5,10 +5,12 @@ import { Navigation, Scrollbar } from "swiper";
 import { trendingsliderData } from "../../../../public/data/trendingSliderData";
 import TrendingSliderCard from "./TrendingSliderCard";
 
-const Trending = () => {
+const Trending = ({ classList }: { classList?: string }) => {
   return (
     // <!--Trending section-->
-    <section className="trending__section ralt pr-24 pl-24 pt-100 pb-100">
+    <section
+      className={`trending__section ralt pr-24 pl-24 pt-100 pb-100 ${classList}`}
+    >
       <div className="container-fluid p-0">
         <div className="header__text mb-24 d-flex align-items-center justify-content-between flex-wrap gap-2">
           <h2>Trending Songs</h2>
