@@ -1,37 +1,18 @@
 "use client";
-import { StaticImageData } from "next/image";
 //@ts-ignore
-import { ReactNode } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 //@ts-ignore
 import { Navigation, Scrollbar } from "swiper";
+import { moreEpisodesData } from "../../../../public/data/moreEpicodesData";
+import SliderCard from "./SliderCard";
 
-type Props = {
-  classList?: string;
-  sectionTitle: string;
-  children: (props: {
-    image: StaticImageData;
-    title: string;
-    location: string;
-    listeners: number;
-  }) => ReactNode;
-  sliderData: {
-    id: string;
-    image: StaticImageData;
-    title: string;
-    location: string;
-    listeners: number;
-  }[];
-};
-const Trending = ({ classList, sectionTitle, sliderData, children }: Props) => {
+const Trending = () => {
   return (
     // <!--Trending section-->
-    <section
-      className={`trending__section ralt pr-24 pl-24 pt-100 pb-100 ${classList}`}
-    >
+    <section className={`trending__section ralt pr-24 pl-24 pt-100 pb-100`}>
       <div className="container-fluid p-0">
         <div className="header__text mb-24 d-flex align-items-center justify-content-between flex-wrap gap-2">
-          <h2>{sectionTitle}</h2>
+          <h2>More Episodes</h2>
           <a
             href="trending.html"
             className="view__btn white d-flex align-items-center gap-2"
@@ -73,8 +54,10 @@ const Trending = ({ classList, sectionTitle, sliderData, children }: Props) => {
           className="swiper trending__slider"
         >
           <div className="swiper-wrapper">
-            {sliderData.map(({ id, ...props }) => (
-              <SwiperSlide key={id}>{children({ ...props })}</SwiperSlide>
+            {moreEpisodesData.map(({ id, ...props }) => (
+              <SwiperSlide key={id}>
+                <SliderCard {...props} />
+              </SwiperSlide>
             ))}
           </div>
           <div className="d-flex gap-4 mt-40 align-items-center">

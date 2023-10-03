@@ -55,7 +55,9 @@ const Podcasts = () => {
           <div className="swiper-wrapper">
             {podCastData.map(({ id, ...props }) => (
               <SwiperSlide key={id}>
-                <PodcastSliderCard {...props} />
+                <div className="swiper-slide trending__item round16 p-8">
+                  <PodcastSliderCard {...props} />
+                </div>
               </SwiperSlide>
             ))}
           </div>

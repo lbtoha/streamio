@@ -5,7 +5,7 @@ import LatestPost from "@/components/pages/home/LatestPost";
 import Moods from "@/components/pages/home/Moods";
 import Podcasts from "@/components/pages/home/Podcast";
 import Product from "@/components/pages/home/Product";
-import Trending from "@/components/pages/home/Trending";
+import TrendingSlider from "@/components/pages/home/TrendingSlider";
 import Workout from "@/components/pages/home/Workout";
 import MainBody from "@/components/shared/MainBody";
 import { productData } from "../../../public/data/productDta";
@@ -14,7 +14,7 @@ const page = () => {
   return (
     <MainBody>
       <Banner />
-      <Trending />
+      <TrendingSlider />
       <Moods />
       <Artists />
       <Workout />

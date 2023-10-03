@@ -1,3 +1,4 @@
+"use client";
 import AudioPlayer from "@/components/shared/AudioPlayer";
 import Image, { StaticImageData } from "next/image";
 
