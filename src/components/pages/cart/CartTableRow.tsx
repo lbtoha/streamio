@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CartTableRow = () => {
   return (
@@ -37,9 +38,9 @@ const CartTableRow = () => {
       <td>
         <span className="d-flex align-items-center gap-3">
           $75.80{" "}
-          <a href="#0" className="iconx">
+          <Link href="#0" className="iconx">
             <i className="ti ti-x"></i>
-          </a>
+          </Link>
         </span>
       </td>
     </tr>

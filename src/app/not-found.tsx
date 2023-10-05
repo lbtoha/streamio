@@ -1,5 +1,6 @@
 import BreadCrumSingle from "@/components/shared/BreadCrumSingle";
 import Image from "next/image";
+import Link from "next/link";
 
 const NotFound = () => {
   return (
@@ -24,9 +25,9 @@ const NotFound = () => {
                     The page you are looking for could not be found. Please
                     check the link you followed to get here and try again.
                   </p>
-                  <a href="/" className="cmn--btn">
+                  <Link href="/" className="cmn--btn">
                     <span>Home</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

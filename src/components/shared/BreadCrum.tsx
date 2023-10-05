@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const BreadCrumb = ({ page }: { page: string }) => {
   return (
     // <!--breadcrumnd banner-->
@@ -5,9 +7,9 @@ const BreadCrumb = ({ page }: { page: string }) => {
       <div className="container-flud p-0">
         <ul className="breadcrund__content mb-40 d-flex gap-1 flex-wrap align-items-center">
           <li className="fs-16 bodyfont fw-500">
-            <a href="index.html" className="pra">
+            <Link href="index" className="pra">
               Home
-            </a>
+            </Link>
           </li>
           <li>
             <i className="ti ti-chevron-right white"></i>

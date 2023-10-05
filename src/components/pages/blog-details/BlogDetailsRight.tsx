@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const BlogDetailsRight = () => {
   return (
@@ -20,40 +21,40 @@ const BlogDetailsRight = () => {
           <span className="fs-20 fw-500 d-block mb-16 white">Categories</span>
           <ul className="cates">
             <li>
-              <a
+              <Link
                 href="#0"
                 className="d-flex fs-16 fw-400 white bodyfont align-items-center gap-2"
               >
                 <i className="ti ti-checkbox fs-20"></i>
                 Desing System
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#0"
                 className="d-flex fs-16 fw-400 white bodyfont align-items-center gap-2"
               >
                 <i className="ti ti-checkbox fs-20"></i>
                 Lifestyle
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#0"
                 className="d-flex fs-16 fw-400 white bodyfont align-items-center gap-2"
               >
                 <i className="ti ti-checkbox fs-20"></i>
                 Colors & Typography
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#0"
                 className="d-flex fs-16 fw-400 white bodyfont align-items-center gap-2"
               >
                 <i className="ti ti-checkbox fs-20"></i>
                 Uncategorized
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -61,7 +62,7 @@ const BlogDetailsRight = () => {
           <span className="fs-20 fw-500 d-block mb-16 white">Recent Post</span>
           <ul className="recent__post">
             <li>
-              <a href="#0" className="d-flex align-items-center">
+              <Link href="#0" className="d-flex align-items-center">
                 <Image
                   width={90}
                   height={92}
@@ -76,10 +77,10 @@ const BlogDetailsRight = () => {
                     Journeying through Genres and Cultures&ldquo;
                   </span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#0" className="d-flex align-items-center">
+              <Link href="#0" className="d-flex align-items-center">
                 <Image
                   width={90}
                   height={92}
@@ -94,10 +95,10 @@ const BlogDetailsRight = () => {
                     Serenading the Senses: How Music Shapes
                   </span>
                 </div>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#0" className="d-flex align-items-center">
+              <Link href="#0" className="d-flex align-items-center">
                 <Image
                   width={90}
                   height={92}
@@ -112,7 +113,7 @@ const BlogDetailsRight = () => {
                     How Music Shapes Our Perceptions&ldquo;
                   </span>
                 </div>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -130,9 +131,9 @@ const BlogDetailsRight = () => {
                 <span className="headfont white  d-block mb-24">
                   (987-260-955-750)
                 </span>
-                <a href="#0" className="cmn--btn">
+                <Link href="#0" className="cmn--btn">
                   <span>Contact Us</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

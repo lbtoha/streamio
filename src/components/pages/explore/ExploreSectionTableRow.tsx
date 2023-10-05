@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Props = {
   singerImage: StaticImageData;
@@ -22,7 +23,7 @@ const ExploreSectionTableRow = ({
     <>
       <tr className="bgnone__music">
         <td>
-          <a href="#0" className="upgrade__left d-flex align-items-center">
+          <Link href="#0" className="upgrade__left d-flex align-items-center">
             <Image src={singerImage} className="round50" alt="img" />
             <span className="fs-16 fw-500 bodyfont white d-block">
               {singerName}
@@ -30,17 +31,17 @@ const ExploreSectionTableRow = ({
                 {share}
               </span>
             </span>
-          </a>
+          </Link>
         </td>
         <td className="d__custom">
-          <a href="#0" className="d-block white fs-14 bodyfont">
+          <Link href="#0" className="d-block white fs-14 bodyfont">
             The Best of Sade
-          </a>
+          </Link>
         </td>
         <td className="d__custom">
-          <a href="#0" className="d-block white fs-14 bodyfont">
+          <Link href="#0" className="d-block white fs-14 bodyfont">
             April 07, 2023
-          </a>
+          </Link>
         </td>
         <td>
           <div className="d-flex align-items-center justify-content-end gap-2">
@@ -56,7 +57,7 @@ const ExploreSectionTableRow = ({
               </button>
               <ul className="dropdown-menu" aria-labelledby="drops1">
                 <li className="mb-2">
-                  <a
+                  <Link
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
                     href="javascript:void(0)"
                     data-bs-toggle="modal"
@@ -64,10 +65,10 @@ const ExploreSectionTableRow = ({
                   >
                     <i className="ti ti-trash base2 fs-24"></i>
                     Delet Post
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-2">
-                  <a
+                  <Link
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
                     href="javascript:void(0)"
                     data-bs-toggle="modal"
@@ -75,10 +76,10 @@ const ExploreSectionTableRow = ({
                   >
                     <i className="ti ti-message-report fs-24"></i>
                     Report
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
                     href="javascript:void(0)"
                     data-bs-toggle="modal"
@@ -86,7 +87,7 @@ const ExploreSectionTableRow = ({
                   >
                     <i className="ti ti-playlist-add fs-24 base"></i>
                     Add To Playlist
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -95,7 +96,7 @@ const ExploreSectionTableRow = ({
       </tr>
       <tr className="citem__border">
         <td data-bs-toggle="modal" data-bs-target="#exampleModalaudio">
-          <a href="#0" className="upgrade__left d-flex align-items-center">
+          <Link href="#0" className="upgrade__left d-flex align-items-center">
             <Image src={songThumbnail} alt="img" />
             <span className="fs-16 fw-500 bodyfont white d-block">
               {songTitle}
@@ -103,17 +104,17 @@ const ExploreSectionTableRow = ({
                 {songSubtitle}
               </span>
             </span>
-          </a>
+          </Link>
         </td>
         <td className="d__custom">
-          <a href="#0" className="d-block white fs-14 bodyfont">
+          <Link href="#0" className="d-block white fs-14 bodyfont">
             The Best of Sade
-          </a>
+          </Link>
         </td>
         <td className="d__custom">
-          <a href="#0" className="d-block white fs-14 bodyfont">
+          <Link href="#0" className="d-block white fs-14 bodyfont">
             April 07, 2023
-          </a>
+          </Link>
         </td>
         <td>
           <div className="d-flex align-items-center justify-content-end gap-2">

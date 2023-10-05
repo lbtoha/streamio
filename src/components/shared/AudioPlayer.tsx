@@ -1,5 +1,6 @@
 "use client";
 import useAudioPlayer from "@/hooks/useAudioPlayer";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const AudioPlayer = ({
@@ -58,7 +59,7 @@ const AudioPlayer = ({
           className="audioplayer-playpause"
           title=""
         >
-          <a href="javascript:;"></a>
+          <Link href="javascript:;"></Link>
         </div>
         <div className="audioplayer-time audioplayer-time-current">
           {currentTime}
@@ -86,7 +87,7 @@ const AudioPlayer = ({
         </div>
         <div className="audioplayer-volume">
           <div className="audioplayer-volume-button" title="">
-            <a href="#"></a>
+            <Link href="#"></Link>
           </div>
           <div className="audioplayer-volume-adjust">
             <div>

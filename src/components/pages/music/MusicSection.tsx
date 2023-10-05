@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { topSongData } from "../../../../public/data/topSongData";
 import MoodsCard from "../home/MoodsCard";
 
@@ -130,9 +131,9 @@ const MusicSection = () => {
         </div>
       </div>
       <div className="text-center mt-60">
-        <a href="workout-allsong.html" className="cmn__simple2">
+        <Link href="workout-allsong" className="cmn__simple2">
           Load More
-        </a>
+        </Link>
       </div>
     </section>
   );

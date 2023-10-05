@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 //@ts-ignore
 import { Navigation, Thumbs } from "swiper";
@@ -172,13 +173,13 @@ const ProductDetailsSection = () => {
                     </span>
                   </p>
                 </form>
-                <a href="#0" className="buybtn gap-3">
+                <Link href="#0" className="buybtn gap-3">
                   <i className="ti ti-shopping-cart-plus"></i>
                   Buy Now
-                </a>
-                <a href="#0" className="buybtn2">
+                </Link>
+                <Link href="#0" className="buybtn2">
                   <i className="ti ti-heart fs-26"></i>
-                </a>
+                </Link>
               </div>
               <div className="por__categoris mt-30">
                 <span className="fs-18 mb-16 d-flex align-items-center gap-3 fw-500 bodyfont white">

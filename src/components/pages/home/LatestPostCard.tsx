@@ -1,5 +1,6 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Props = {
   image: StaticImageData;
@@ -15,27 +16,27 @@ const LatestPostCard = ({ image, date, comment, title, type }: Props) => {
         <div className="thumb ralt mb-16 transition overhid">
           <Image src={image} className="w-100 transition overhid" alt="img" />
           <AudioPlayer audio="" />
-          <a href="javascript:void(0)" className="l__badge">
+          <Link href="javascript:void(0)" className="l__badge">
             {type}
-          </a>
+          </Link>
         </div>
         <div className="content">
           <div className="d-flex align-items-center justify-content-between">
             <span className="cmn__date ralt fw-500 bodyfont fs-14 base2 d-block mb-16">
               {date}
             </span>
-            <a
+            <Link
               href="javascript:void(0)"
               className="d-flex white w-500 bodyfont align-items-center gap-3"
             >
               <i className="ti ti-message-minus base fs-20"></i>
               {comment}
-            </a>
+            </Link>
           </div>
           <h4>
-            <a href="blog-details.html" className="white">
+            <Link href="blog-details" className="white">
               {title}
-            </a>
+            </Link>
           </h4>
         </div>
       </div>

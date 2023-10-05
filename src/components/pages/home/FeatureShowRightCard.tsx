@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Props = {
   image: StaticImageData;
@@ -17,34 +18,34 @@ const FeatureShowRightCard = ({ image, totalEpisodes, title }: Props) => {
           Total Episode: {totalEpisodes}
         </span>
         <h5 className="mb-20">
-          <a href="#0" className="white">
+          <Link href="#0" className="white">
             {title}
-          </a>
+          </Link>
         </h5>
         <div className="d-flex align-items-center justify-content-between">
           <ul className="show__listen d-flex align-items-center">
             <li>
-              <a
+              <Link
                 href="javascript:void(0)"
                 className="d-flex align-items-center fs-12 fw-500 white gap-2"
               >
                 <i className="ti ti-headphones"></i>
                 Listen Now
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="javascript:void(0)"
                 className="d-flex align-items-center fw-500 white gap-2"
               >
                 <i className="ti ti-address-book"></i>
                 Browse All
-              </a>
+              </Link>
             </li>
           </ul>
-          <a href="show-details.html" className="cmn__arrow40">
+          <Link href="show-details" className="cmn__arrow40">
             <i className="ti ti-arrow-narrow-right fs-24 arrowrotate"></i>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

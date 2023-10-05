@@ -1,13 +1,18 @@
 "use client";
 import { navbarContext } from "@/utils/reactContext";
-import { IconSmartHome } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
+import { mainNavbarData, sideBarData } from "../../../public/data/navBarData";
+import NavbarDropdown from "./NavbarDropdown";
 
 const Navbar = () => {
   const { isSidebarOpen } = useContext(navbarContext);
-  const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const [path, setPath] = useState("/");
+  const [isSubDropDownOpen, setSubDropDownOpen] = useState(false);
+
+  const pathName = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +46,7 @@ const Navbar = () => {
               className={`sidebar-wrapper mainbg ${isSidebarOpen && "active"}`}
             >
               <div className="d-flex logo__wrap align-items-center justify-content-between">
-                <Link href="index.html" className="logo">
+                <Link href="index" className="logo">
                   <Image
                     width={180}
                     height={52}
@@ -55,211 +60,31 @@ const Navbar = () => {
               </div>
               <div className="sidebar__wrapbox">
                 <ul className="sidebar__menu">
-                  <li className="liclick">
-                    <span className="d-flex align-items-center">
-                      <Link
-                        onClick={() => setIsMenuClicked(!isMenuClicked)}
-                        href="javascript:void(0)"
-                        className={`mclick d-flex hcolor align-items-center w-100 justify-content-between ${
-                          isMenuClicked && "reply-active"
-                        }`}
-                      >
-                        <span className="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
-                          <IconSmartHome className="ti ti-smart-home"></IconSmartHome>
-                          Home
-                        </span>
-                        <span className="d-flex click__title align-items-center">
-                          {/* <i className="ti ti-IconX IconX"></i> */}
-                          <i className="ti ti-plus plus"></i>
-                          <i className="ti ti-minus minus"></i>
-                        </span>
-                      </Link>
-                    </span>
-                    <div
-                      className={` menucontent menucontent-show ${
-                        isMenuClicked ? "active" : ""
-                      }`}
-                    >
-                      <ul>
+                  {/*==============side menu===== */}
+                  {sideBarData.map(
+                    ({ id, menuTitle, icon, className, path, menuItems }) => {
+                      return menuItems ? (
+                        <NavbarDropdown
+                          className={className}
+                          key={id}
+                          icon={icon}
+                          path={path}
+                          menuTitle={menuTitle}
+                          menuItems={menuItems}
+                        />
+                      ) : (
                         <li>
-                          <Link href="index.html">Home One</Link>
-                        </li>
-                        <li>
-                          <Link href="index-2.html">Home Two</Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <Link
-                      href="explore.html"
-                      className="d-flex hcolor align-items-center gap-2"
-                    >
-                      <i className="ti ti-world"></i>
-                      Explore
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="music.html"
-                      className="d-flex hcolor align-items-center gap-2"
-                    >
-                      <i className="ti ti-music"></i>
-                      Music
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="albums"
-                      className="d-flex hcolor align-items-center gap-2"
-                    >
-                      <i className="ti ti-album"></i>
-                      Albums
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="poodcasts.html"
-                      className="d-flex hcolor align-items-center gap-2"
-                    >
-                      <i className="ti ti-headset"></i>
-                      Podcasts
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="event.html"
-                      className="d-flex hcolor align-items-center gap-2"
-                    >
-                      <i className="ti ti-calendar-event"></i>
-                      Event
-                    </Link>
-                  </li>
-                  <li className="liclick d-xl-none">
-                    <span className="d-flex align-items-center">
-                      <Link
-                        href="javascript:void(0)"
-                        className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
-                      >
-                        <span className="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
-                          <i className="ti ti-clipboard-text"></i>
-                          Recent
-                        </span>
-                        <span className="d-flex click__title align-items-center">
-                          <i className="ti ti-plus plus"></i>
-                          <i className="ti ti-minus minus"></i>
-                        </span>
-                      </Link>
-                    </span>
-                    <div className="menucontent">
-                      <ul>
-                        <li>
-                          <Link href="genres.html">Genres</Link>
-                        </li>
-                        <li>
-                          <Link href="moods.html">Moods</Link>
-                        </li>
-                        <li>
-                          <Link href="trending.html">Trending</Link>
-                        </li>
-                        <li>
-                          <Link href="artists.html">Popular</Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li className="liclick d-xl-none">
-                    <span className="d-flex align-items-center">
-                      <Link
-                        href="javascript:void(0)"
-                        className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
-                      >
-                        <span className="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
-                          <i className="ti ti-clipboard-text"></i>
-                          Others
-                        </span>
-                        <span className="d-flex click__title align-items-center">
-                          <i className="ti ti-plus plus"></i>
-                          <i className="ti ti-minus minus"></i>
-                        </span>
-                      </Link>
-                    </span>
-                    <div className="menucontent">
-                      <ul>
-                        <li>
-                          <Link href="signin.html">Sing In</Link>
-                        </li>
-                        <li>
-                          <Link href="signup.html">Sign Up</Link>
-                        </li>
-                        <li>
-                          <Link href="reset-password.html">Reset Password</Link>
-                        </li>
-                        <li>
-                          <Link href="faq.html">Faq</Link>
-                        </li>
-                        <li>
-                          <Link href="contact.html">Contact</Link>
-                        </li>
-                        <li>
-                          <Link href="privacy.html">Privacy policy</Link>
-                        </li>
-                        <li>
-                          <Link href="error.html">404 Page</Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li className="liclick">
-                    <span className="d-flex align-items-center">
-                      <Link
-                        href="javascript:void(0)"
-                        className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
-                      >
-                        <span className="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
-                          <i className="ti ti-clipboard-text"></i>
-                          Pages
-                        </span>
-                        <span className="d-flex click__title align-items-center">
-                          <i className="ti ti-plus plus"></i>
-                          <i className="ti ti-minus minus"></i>
-                        </span>
-                      </Link>
-                    </span>
-                    <div className="menucontent">
-                      <ul>
-                        <li>
-                          <Link href="blog.html">Blog Page</Link>
-                        </li>
-                        <li>
-                          <Link href="blog-details.html">Blog Details</Link>
-                        </li>
-                        <li>
-                          <Link href="freature-show.html">Show Page</Link>
-                        </li>
-                        <li>
-                          <Link href="show-details.html">Show Details</Link>
-                        </li>
-                        <li>
-                          <Link href="product.html">Product Page</Link>
-                        </li>
-                        <li>
-                          <Link href="product-details.html">
-                            Product Details
+                          <Link
+                            href={path}
+                            className="d-flex hcolor align-items-center gap-2"
+                          >
+                            {icon}
+                            {menuTitle}
                           </Link>
                         </li>
-                        <li>
-                          <Link href="cart.html">Cart Page</Link>
-                        </li>
-                        <li>
-                          <Link href="checkout.html">Check out</Link>
-                        </li>
-                        <li>
-                          <Link href="pricing.html">Pricing Plan</Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
+                      );
+                    }
+                  )}
                 </ul>
               </div>
             </div>
@@ -268,9 +93,10 @@ const Navbar = () => {
                 isSidebarOpen && "body-collapse"
               }`}
             >
+              {/*==============main menu===== */}
               <ul className="main-menuone">
                 <li className="small__logo">
-                  <Link href="index.html">
+                  <Link href="index">
                     <Image
                       width={68}
                       height={51}
@@ -290,57 +116,54 @@ const Navbar = () => {
                     />
                   </form>
                 </li>
-                <li>
-                  <Link href="genres.html">Genres</Link>
-                </li>
-                <li>
-                  <Link href="moods.html">Moods</Link>
-                </li>
-                <li>
-                  <Link href="trending.html">Trending</Link>
-                </li>
-                <li>
-                  <Link href="artists.html">Popular</Link>
-                </li>
-                <li className="liclick xl__devicecustomize max-xl-none">
-                  <span className="d-flex align-items-center">
-                    <Link
-                      href="javascript:void(0)"
-                      className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
-                    >
-                      <i className="ti ti-dots"></i>
-                    </Link>
-                  </span>
-                  <div className="menucontent">
-                    <ul>
-                      <li>
-                        <Link href="signin.html">Sing In</Link>
+                {mainNavbarData.map(
+                  ({ id, menuTitle, icon, path, menuItems }) => {
+                    return menuItems ? (
+                      <li className="liclick xl__devicecustomize max-xl-none">
+                        <span className="d-flex align-items-center">
+                          <Link
+                            onClick={() =>
+                              setSubDropDownOpen(!isSubDropDownOpen)
+                            }
+                            href="javascript:void(0)"
+                            className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
+                          >
+                            <i className="ti ti-dots"></i>
+                          </Link>
+                        </span>
+                        <div
+                          className={`menucontent ${
+                            isSubDropDownOpen ? "active" : ""
+                          }`}
+                        >
+                          <ul>
+                            {menuItems.map(({ id, title, path }) => {
+                              return (
+                                <li key={id}>
+                                  <Link href={path}>{title}</Link>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
                       </li>
+                    ) : (
                       <li>
-                        <Link href="signup.html">Sign Up</Link>
+                        <Link
+                          href={path}
+                          className="d-flex hcolor align-items-center gap-2"
+                        >
+                          {icon}
+                          {menuTitle}
+                        </Link>
                       </li>
-                      <li>
-                        <Link href="reset-password.html">Reset Password</Link>
-                      </li>
-                      <li>
-                        <Link href="faq.html">Faq</Link>
-                      </li>
-                      <li>
-                        <Link href="contact.html">Contact</Link>
-                      </li>
-                      <li>
-                        <Link href="privacy.html">Privacy policy</Link>
-                      </li>
-                      <li>
-                        <Link href="error.html">404 Page</Link>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
+                    );
+                  }
+                )}
               </ul>
               <div className="menu__right__components d-flex align-items-center">
                 <div className="menu__components d-flex align-items-center">
-                  <Link href="cart.html" className="shop__tolley">
+                  <Link href="cart" className="shop__tolley">
                     <i className="ti ti-shopping-cart pra fs-30"></i>
                     <span className="shop__badge">3</span>
                   </Link>
@@ -392,7 +215,7 @@ const Navbar = () => {
                         <ul className="list">
                           <li className="mb-16">
                             <Link
-                              href="profile.html"
+                              href="profile"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
                               <i className="bi bi-bell fs-20"></i>

@@ -1,5 +1,6 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
 import Image from "next/image";
+import Link from "next/link";
 
 const BlogDetailsLeft = () => {
   return (
@@ -15,27 +16,27 @@ const BlogDetailsLeft = () => {
               alt="img"
             />
             <AudioPlayer />
-            <a href="#0" className="l__badge">
+            <Link href="#0" className="l__badge">
               Features
-            </a>
+            </Link>
           </div>
           <div className="content">
             <div className="d-flex align-items-center justify-content-between">
               <span className="cmn__date ralt fw-500 bodyfont fs-14 base2 d-block mb-16">
                 March 17, 2023
               </span>
-              <a
+              <Link
                 href="#0"
                 className="d-flex white w-500 bodyfont align-items-center gap-3"
               >
                 <i className="ti ti-message-minus base fs-20"></i>
                 15
-              </a>
+              </Link>
             </div>
             <h2 className="mb-10">
-              <a href="#0" className="white">
+              <Link href="#0" className="white">
                 How Podcast Helps You to Gather Your Audience in a Platform
-              </a>
+              </Link>
             </h2>
             <p className="fs-16 fw-400 mb-10 bodyfont pra">
               Music has an extraordinary power to touch our souls and transcend
@@ -129,37 +130,37 @@ const BlogDetailsLeft = () => {
               <ul className="tag d-flex align-items-center">
                 <li className="fs-24 me-1 fw-400 white headfont">Tag:</li>
                 <li>
-                  <a href="#0" className="tagbtn white fs-14">
+                  <Link href="#0" className="tagbtn white fs-14">
                     Graphic River
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#0" className="tagbtn white fs-14">
+                  <Link href="#0" className="tagbtn white fs-14">
                     Graphic River
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#0" className="tagbtn white fs-14">
+                  <Link href="#0" className="tagbtn white fs-14">
                     Graphic River
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <ul className="tag d-flex align-items-center">
                 <li className="fs-24 me-1 fw-400 white headfont">Share:</li>
                 <li>
-                  <a href="#0" className="sicon white">
+                  <Link href="#0" className="sicon white">
                     <i className="ti pra fz-24 ti-brand-facebook"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#0" className="sicon white">
+                  <Link href="#0" className="sicon white">
                     <i className="ti pra fz-24 ti-brand-twitch"></i>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#0" className="sicon white">
+                  <Link href="#0" className="sicon white">
                     <i className="ti pra fz-24 ti-brand-instagram"></i>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -192,13 +193,13 @@ const BlogDetailsLeft = () => {
                     </p>
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
-                        <a
+                        <Link
                           href="javascript:void(0)"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
                           <i className="ti ti-share-3 fs-24"></i>
                           <span className="white fs-14">Reply</span>
-                        </a>
+                        </Link>
                       </div>
                       <div className="reply__content mt-10">
                         <div className="d-flex small__author justify-content-end align-items-center">
@@ -252,13 +253,13 @@ const BlogDetailsLeft = () => {
                     </p>
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
-                        <a
+                        <Link
                           href="javascript:void(0)"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
                           <i className="ti ti-share-3 fs-24"></i>
                           <span className="white fs-14">Reply</span>
-                        </a>
+                        </Link>
                       </div>
                       <div className="reply__content mt-10">
                         <div className="d-flex small__author justify-content-end align-items-center">

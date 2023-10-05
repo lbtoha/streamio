@@ -1,6 +1,7 @@
 "use client";
 import AudioPlayer from "@/components/shared/AudioPlayer";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Props = {
   image: StaticImageData;
@@ -15,28 +16,28 @@ const TrendingCard = ({ image, title, location, listeners }: Props) => {
         <div className="thumb ralt overhid transition">
           <Image src={image} className="transition" alt="img" />
           <div className="trending__bbar d-flex align-items-center justify-content-around">
-            <a
+            <Link
               href="javascript:void(0)"
               className="d-flex fs-16 fw-500 white align-items-center gap-3"
             >
               <i className="ti ti-list-tree"></i>
               37
-            </a>
-            <a
+            </Link>
+            <Link
               href="javascript:void(0)"
               className="d-flex fs-16 fw-500 white align-items-center gap-3"
             >
               <i className="ti ti-headphones"></i>
               {listeners}
-            </a>
+            </Link>
           </div>
           <AudioPlayer audio="http://physical-authority.surge.sh/music/2.mp3" />
         </div>
         <div className="content mt-16">
           <h5>
-            <a href="trending-details.html" className="white d-block mb-1">
+            <Link href="trending-details" className="white d-block mb-1">
               {title}
-            </a>
+            </Link>
             <span className="d-block transition fs-16 fw-500 pra2">
               {location}
             </span>

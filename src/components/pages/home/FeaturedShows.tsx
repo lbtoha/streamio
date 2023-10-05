@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { featureShowData } from "../../../../public/data/featureShowData";
 import { featureShowRightData } from "../../../../public/data/featureShowRightData";
 import FeatureShowLeftCard from "./FeatureShowLeftCard";
@@ -10,13 +11,13 @@ const FeaturedShows = () => {
       <div className="container-fluid p-0">
         <div className="header__text mb-24 d-flex align-items-center justify-content-between flex-wrap gap-2">
           <h2>Featured Shows</h2>
-          <a
-            href="freature-show.html"
+          <Link
+            href="freature-show"
             className="view__btn white d-flex align-items-center gap-2"
           >
             View All
             <i className="ti ti-arrow-narrow-right"></i>
-          </a>
+          </Link>
         </div>
         <div className="row g-4">
           {featureShowData.slice(0, 2).map(({ id, ...props }) => (

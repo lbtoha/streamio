@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const PrivacyPolicy = () => {
   return (
     <section className="privacy__section pr-24 pl-24 pb-80">
@@ -7,9 +9,9 @@ const PrivacyPolicy = () => {
             <h3 className="white mb-40 text-center">Privacy policy</h3>
             <p className="pra fs-16 bodyfont mb-30">
               As an AI language model, I don&apos;t have access to{" "}
-              <a href="#0" className="base">
+              <Link href="#0" className="base">
                 Web Page
-              </a>{" "}
+              </Link>{" "}
               privacy policies of individual companies or websites. However, I
               can provide you with a general overview of what a music-related
               privacy policy might include. Keep in mind that actual privacy
@@ -24,12 +26,12 @@ const PrivacyPolicy = () => {
               </span>
               <p className="fs-16 bodyfont pra">
                 Our website address is:{" "}
-                <a
+                <Link
                   href="https://themeforest.net/user/pixelaxis"
                   className="base"
                 >
                   https://themeforest.net/user/pixelaxis
-                </a>
+                </Link>
               </p>
             </div>
             <div className="privacy__box mb-24">

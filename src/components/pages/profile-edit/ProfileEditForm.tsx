@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ProfileEditForm = () => {
   return (
     <section className="profile__section custom__space mt-40 pr-24 pl-24 pb-80">
@@ -120,12 +122,12 @@ const ProfileEditForm = () => {
                   </div>
                   <div className="col-lg-12">
                     <div className="cover__grp profile__cancel d-flex justify-content-end">
-                      <a
+                      <Link
                         href="#0"
                         className="fs-16 cancel__btn fw-500 bodyfont d-block pra"
                       >
                         Cancel
-                      </a>
+                      </Link>
                       <button type="submit" className="cmn--btn">
                         <span>Save profile</span>
                       </button>

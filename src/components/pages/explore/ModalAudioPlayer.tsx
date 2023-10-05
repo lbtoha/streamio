@@ -1,5 +1,6 @@
 "use client";
 import useAudioPlayer from "@/hooks/useAudioPlayer";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const ModalAudioPlayer = ({
@@ -52,31 +53,28 @@ const ModalAudioPlayer = ({
     if (progressBarv) {
       const rect = progressBarv.getBoundingClientRect();
       const clickPosition = event.clientX - rect.left;
-      console.log(clickPosition);
 
       // Calculate the new volume based on the click position and progress bar width
       const newVolume = clickPosition / rect.width;
-      console.log(newVolume);
+
       // Set the new volume in state
-      setVolume(newVolume);
 
       if (audioRef.current) {
         audioRef.current.volume = newVolume;
       }
     }
   };
-  console.log(volume);
 
   return (
     <>
       <div className="d-flex middle__audioboxes align-items-center">
         <div className="d-flex align-items-center switch">
-          <a href="#0" className="white">
+          <Link href="#0" className="white">
             <i className="ti ti-switch"></i>
-          </a>
-          <a href="#0" className="white lefttrun">
+          </Link>
+          <Link href="#0" className="white lefttrun">
             <i className="ti ti-player-skip-back"></i>
-          </a>
+          </Link>
         </div>
         <div className={`audioplayer ${playToggle && "audioplayer-playing"}`}>
           <audio
@@ -93,7 +91,7 @@ const ModalAudioPlayer = ({
             className="audioplayer-playpause"
             title=""
           >
-            <a href="#"></a>
+            <Link href="#"></Link>
           </div>
           <div className="audioplayer-time audioplayer-time-current">
             {currentTime}
@@ -121,7 +119,7 @@ const ModalAudioPlayer = ({
           </div>
           <div className="audioplayer-volume">
             <div className="audioplayer-volume-button" title="">
-              <a href="#"></a>
+              <Link href="#"></Link>
             </div>
             <div
               ref={vref}
@@ -134,20 +132,20 @@ const ModalAudioPlayer = ({
             </div>
           </div>
         </div>
-        <a href="#0" className="white righttrun">
+        <Link href="#0" className="white righttrun">
           <i className="ti ti-player-skip-forward pra"></i>
-        </a>
-        <a href="#0" className="white righttrun">
+        </Link>
+        <Link href="#0" className="white righttrun">
           <i className="ti ti-repeat pra"></i>
-        </a>
+        </Link>
       </div>
       <div className="d-flex small__center align-items-center">
-        <a href="#0" className="white">
+        <Link href="#0" className="white">
           <i className="ti ti-multiplier-1x pra circle__add"></i>
-        </a>
-        <a href="#0" className="white">
+        </Link>
+        <Link href="#0" className="white">
           <i className="ti ti-playlist fs-20 pra"></i>
-        </a>
+        </Link>
         <button
           type="button"
           className="btn pra cross__btnsnone"

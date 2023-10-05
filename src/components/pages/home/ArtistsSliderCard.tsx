@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Props = {
   image: StaticImageData;
@@ -14,15 +15,15 @@ const ArtistsSliderCard = ({ image, title, location }: Props) => {
         <div className="artist__popup d-flex align-items-center justify-content-between">
           <div className="content">
             <h5 className="mb-1">
-              <a href="artist-allsong.html" className="white">
+              <Link href="artist-allsong" className="white">
                 {title}
-              </a>
+              </Link>
             </h5>
             <span className="fs-16 fw-500 pra3 d-block">{location}</span>
           </div>
-          <a href="artist-allsong.html" className="cmn__arrow">
+          <Link href="artist-allsong" className="cmn__arrow">
             <i className="ti ti-arrow-narrow-right arrowrotate"></i>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

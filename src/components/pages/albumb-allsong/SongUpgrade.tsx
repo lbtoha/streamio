@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import Link from "next/link";
 import SongUpgradeTableRow from "./SongUpgradeTableRow";
 type Props = {
   sectionTitle: string;
@@ -51,9 +52,9 @@ const SongUpgrade = ({ sectionTitle, artistSong }: Props) => {
           </div>
         </div>
         <div className="text-center mt-40">
-          <a href="#0" className="cmn__simple2">
+          <Link href="#0" className="cmn__simple2">
             Load More
-          </a>
+          </Link>
         </div>
       </div>
     </section>

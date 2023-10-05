@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { songUpgradeData } from "../../../../public/data/songUpgrdeData";
 import SongUpgradeTableRow from "../albumb-allsong/SongUpgradeTableRow";
 
@@ -63,9 +64,9 @@ const SongUpdateSection = () => {
               </table>
             </div>
             <div className="text-center mt-40">
-              <a href="#0" className="cmn__simple2">
+              <Link href="#0" className="cmn__simple2">
                 Load More
-              </a>
+              </Link>
             </div>
           </div>
         </div>

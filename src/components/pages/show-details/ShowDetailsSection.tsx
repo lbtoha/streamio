@@ -1,5 +1,6 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
 import Image from "next/image";
+import Link from "next/link";
 
 const ShowDetailsSection = () => {
   return (
@@ -24,12 +25,12 @@ const ShowDetailsSection = () => {
                 Have Podcast AdvertiSign Up & Runnung in Minutes
               </h2>
               <div className="d-flex conveter__follow align-items-center">
-                <a href="#0" className="cmbtn d-flex gap-2">
+                <Link href="#0" className="cmbtn d-flex gap-2">
                   <span>
                     <i className="ti ti-user-plus fs-24 base"></i>
                   </span>
                   <span>Follow</span>
-                </a>
+                </Link>
                 <span className="fs-16 fw-500 bodyfont white">
                   03 days ago in Tomb
                 </span>
@@ -47,7 +48,7 @@ const ShowDetailsSection = () => {
               </button>
               <ul className="dropdown-menu" aria-labelledby="drops1">
                 <li className="mb-2">
-                  <a
+                  <Link
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
                     href="javascript:void(0)"
                     data-bs-toggle="modal"
@@ -55,10 +56,10 @@ const ShowDetailsSection = () => {
                   >
                     <i className="ti ti-playlist-add fs-30 base"></i>
                     Add To Playlist
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
                     href="javascript:void(0)"
                     data-bs-toggle="modal"
@@ -66,7 +67,7 @@ const ShowDetailsSection = () => {
                   >
                     <i className="ti ti-share fs-30 base"></i>
                     Share
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -89,33 +90,33 @@ const ShowDetailsSection = () => {
               </div>
               <div className="d-flex mt-80 like__dislike justify-content-between w-100 align-items-center">
                 <div className="d-flex align-items-center gap-4">
-                  <a href="#0" className="cmbtn d-flex gap-2">
+                  <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
                       <i className="ti ti-thumb-up fs-24 base"></i>
                     </span>
                     <span>Like</span>
-                  </a>
-                  <a href="#0" className="cmbtn d-flex gap-2">
+                  </Link>
+                  <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
                       <i className="ti ti-thumb-down fs-24 base"></i>
                     </span>
                     <span>Dislike</span>
-                  </a>
+                  </Link>
                 </div>
                 <AudioPlayer />
                 <div className="d-flex align-items-center gap-4">
-                  <a href="#0" className="cmbtn d-flex gap-2">
+                  <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
                       <i className="ti ti-share fs-24 base"></i>
                     </span>
                     <span>Share</span>
-                  </a>
-                  <a href="#0" className="cmbtn d-flex gap-2">
+                  </Link>
+                  <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
                       <i className="ti ti-share-3 fs-24 base"></i>
                     </span>
                     <span>Re Post</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -209,37 +210,37 @@ const ShowDetailsSection = () => {
             <ul className="tag d-flex align-items-center">
               <li className="fs-24 me-1 fw-400 white headfont">Tag:</li>
               <li>
-                <a href="#0" className="tagbtn white fs-14">
+                <Link href="#0" className="tagbtn white fs-14">
                   Graphic River
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#0" className="tagbtn white fs-14">
+                <Link href="#0" className="tagbtn white fs-14">
                   Graphic River
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#0" className="tagbtn white fs-14">
+                <Link href="#0" className="tagbtn white fs-14">
                   Graphic River
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="tag d-flex align-items-center">
               <li className="fs-24 me-1 fw-400 white headfont">Share:</li>
               <li>
-                <a href="#0" className="sicon white">
+                <Link href="#0" className="sicon white">
                   <i className="ti pra fz-24 ti-brand-facebook"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#0" className="sicon white">
+                <Link href="#0" className="sicon white">
                   <i className="ti pra fz-24 ti-brand-twitch"></i>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#0" className="sicon white">
+                <Link href="#0" className="sicon white">
                   <i className="ti pra fz-24 ti-brand-instagram"></i>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

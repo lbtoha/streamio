@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { featureShowData } from "../../../../public/data/featureShowData";
 import FeatureShowLeftCard from "../home/FeatureShowLeftCard";
 
@@ -14,9 +15,9 @@ const FeatureShowSection = () => {
           ))}
         </div>
         <div className="text-center mt-100">
-          <a href="#0" className="cmn__simple2">
+          <Link href="#0" className="cmn__simple2">
             Load More
-          </a>
+          </Link>
         </div>
       </div>
     </section>

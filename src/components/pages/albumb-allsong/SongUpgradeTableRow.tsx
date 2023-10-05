@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Props = {
   title: string;
@@ -18,8 +19,8 @@ const SongUpgradeTableRow = ({
   return (
     <tr>
       <td>
-        <a
-          href="albumb-details.html"
+        <Link
+          href="albumb-details"
           className="upgrade__left d-flex align-items-center gap-3"
         >
           <span className="fs-16 fw-500 d-block bodyfont white">
@@ -32,17 +33,17 @@ const SongUpgradeTableRow = ({
               {singer}
             </span>
           </span>
-        </a>
+        </Link>
       </td>
       <td className="d__custom">
-        <a href="albumb-details.html" className="d-block white fs-14 bodyfont">
+        <Link href="albumb-details" className="d-block white fs-14 bodyfont">
           The Best of Sade
-        </a>
+        </Link>
       </td>
       <td className="d__custom">
-        <a href="albumb-details.html" className="d-block white fs-14 bodyfont">
+        <Link href="albumb-details" className="d-block white fs-14 bodyfont">
           April 07, 2023
-        </a>
+        </Link>
       </td>
       <td>
         <div className="d-flex align-items-center justify-content-end gap-2">
@@ -61,7 +62,7 @@ const SongUpgradeTableRow = ({
             </button>
             <ul className="dropdown-menu" aria-labelledby="drops1">
               <li className="mb-2">
-                <a
+                <Link
                   className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
                   href="javascript:void(0)"
                   data-bs-toggle="modal"
@@ -69,10 +70,10 @@ const SongUpgradeTableRow = ({
                 >
                   <i className="ti ti-playlist-add fs-30 base"></i>
                   Add To Playlist
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
                   href="javascript:void(0)"
                   data-bs-toggle="modal"
@@ -80,7 +81,7 @@ const SongUpgradeTableRow = ({
                 >
                   <i className="ti ti-share fs-30 base"></i>
                   Share
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

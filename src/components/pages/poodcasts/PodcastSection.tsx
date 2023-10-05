@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { podCastData } from "../../../../public/data/podCastData";
 import PodcastCard from "./PodcastCard";
 
@@ -86,9 +87,9 @@ const PodcastSection = () => {
               ))}
             </div>
             <div className="text-center mt-40">
-              <a href="podcast-allsong.html" className="cmn__simple2">
+              <Link href="podcast-allsong" className="cmn__simple2">
                 Load More
-              </a>
+              </Link>
             </div>
           </div>
           <div
@@ -106,9 +107,9 @@ const PodcastSection = () => {
               ))}
             </div>
             <div className="text-center mt-40">
-              <a href="#0" className="cmn__simple2">
+              <Link href="#0" className="cmn__simple2">
                 Load More
-              </a>
+              </Link>
             </div>
           </div>
           <div
@@ -126,9 +127,9 @@ const PodcastSection = () => {
               ))}
             </div>
             <div className="text-center mt-40">
-              <a href="#0" className="cmn__simple2">
+              <Link href="#0" className="cmn__simple2">
                 Load More
-              </a>
+              </Link>
             </div>
           </div>
         </div>

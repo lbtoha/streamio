@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { productData } from "../../../../public/data/productDta";
 import ProductCard from "./ProductCard";
 
@@ -89,9 +90,9 @@ const AllProducts = () => {
               ))}
             </div>
             <div className="text-center mt-60">
-              <a href="product-details.html" className="cmn__simple2">
+              <Link href="product-details" className="cmn__simple2">
                 Load More
-              </a>
+              </Link>
             </div>
           </div>
           <div
@@ -107,9 +108,9 @@ const AllProducts = () => {
               ))}
             </div>
             <div className="text-center mt-60">
-              <a href="product-details.html" className="cmn__simple2">
+              <Link href="product-details" className="cmn__simple2">
                 Load More
-              </a>
+              </Link>
             </div>
           </div>
           <div
@@ -125,9 +126,9 @@ const AllProducts = () => {
               ))}
             </div>
             <div className="text-center mt-60">
-              <a href="product-details.html" className="cmn__simple2">
+              <Link href="product-details" className="cmn__simple2">
                 Load More
-              </a>
+              </Link>
             </div>
           </div>
         </div>

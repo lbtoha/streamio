@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 const PricingPlan = () => {
@@ -74,12 +75,12 @@ const PricingPlan = () => {
                   Unlimited Max Upload
                 </li>
               </ul>
-              <a
+              <Link
                 href="#0"
                 className="pricing__btn blackbg d-block base fs-16 fw-500 bodyfont w-100 text-center"
               >
                 Get Started Now
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 col-sm-6">
@@ -126,12 +127,12 @@ const PricingPlan = () => {
                   Unlimited Max Upload
                 </li>
               </ul>
-              <a
+              <Link
                 href="#0"
                 className="pricing__btn basebg2 d-block white fs-16 fw-500 bodyfont w-100 text-center"
               >
                 Get Started Now
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 col-sm-6">
@@ -178,12 +179,12 @@ const PricingPlan = () => {
                   Unlimited Max Upload
                 </li>
               </ul>
-              <a
+              <Link
                 href="#0"
                 className="pricing__btn blackbg d-block base3 fs-16 fw-500 bodyfont w-100 text-center"
               >
                 Get Started Now
-              </a>
+              </Link>
             </div>
           </div>
         </div>

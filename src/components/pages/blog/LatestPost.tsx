@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { latestPostData } from "../../../../public/data/latestPostData";
 import LatestPostCard from "../home/LatestPostCard";
 
@@ -80,9 +81,9 @@ const LatestPost = () => {
               ))}
             </div>
             <div className="text-center mt-40">
-              <a href="#0" className="cmn__simple2">
+              <Link href="#0" className="cmn__simple2">
                 Load More
-              </a>
+              </Link>
             </div>
           </div>
           <div
@@ -98,9 +99,9 @@ const LatestPost = () => {
               ))}
             </div>
             <div className="text-center mt-40">
-              <a href="#0" className="cmn__simple2">
+              <Link href="#0" className="cmn__simple2">
                 Load More
-              </a>
+              </Link>
             </div>
           </div>
           <div
@@ -116,9 +117,9 @@ const LatestPost = () => {
               ))}
             </div>
             <div className="text-center mt-40">
-              <a href="blog-details.html" className="cmn__simple2">
+              <Link href="blog-details" className="cmn__simple2">
                 Load More
-              </a>
+              </Link>
             </div>
           </div>
           <div
@@ -134,9 +135,9 @@ const LatestPost = () => {
               ))}
             </div>
             <div className="text-center mt-40">
-              <a href="#0" className="cmn__simple2">
+              <Link href="#0" className="cmn__simple2">
                 Load More
-              </a>
+              </Link>
             </div>
           </div>
         </div>

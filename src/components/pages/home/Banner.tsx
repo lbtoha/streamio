@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 //@ts-ignore
 import { FreeMode, Navigation, Thumbs } from "swiper";
@@ -44,12 +45,12 @@ const Banner = () => {
                       transport us to different times and places
                     </p>
                     <div className="banner__btn ps-1 d-flex align-items-center">
-                      <a href="signin.html" className="cmn--btn">
+                      <Link href="signin" className="cmn--btn">
                         <span>Buy Now</span>
-                      </a>
-                      <a href="trending.html" className="cmn--btn cmn--btntwo">
+                      </Link>
+                      <Link href="trending" className="cmn--btn cmn--btntwo">
                         <span>Learn More</span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -64,12 +65,12 @@ const Banner = () => {
                       transport us to different times and places
                     </p>
                     <div className="banner__btn ps-1 d-flex align-items-center">
-                      <a href="signin.html" className="cmn--btn">
+                      <Link href="signin" className="cmn--btn">
                         <span>Buy Now</span>
-                      </a>
-                      <a href="trending.html" className="cmn--btn cmn--btntwo">
+                      </Link>
+                      <Link href="trending" className="cmn--btn cmn--btntwo">
                         <span>Learn More</span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -84,12 +85,12 @@ const Banner = () => {
                       transport us to different times and places
                     </p>
                     <div className="banner__btn ps-1 d-flex align-items-center">
-                      <a href="signin.html" className="cmn--btn">
+                      <Link href="signin" className="cmn--btn">
                         <span>Buy Now</span>
-                      </a>
-                      <a href="trending.html" className="cmn--btn cmn--btntwo">
+                      </Link>
+                      <Link href="trending" className="cmn--btn cmn--btntwo">
                         <span>Learn More</span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -104,12 +105,12 @@ const Banner = () => {
                       transport us to different times and places
                     </p>
                     <div className="banner__btn ps-1 d-flex align-items-center">
-                      <a href="signin.html" className="cmn--btn">
+                      <Link href="signin" className="cmn--btn">
                         <span>Buy Now</span>
-                      </a>
-                      <a href="trending.html" className="cmn--btn cmn--btntwo">
+                      </Link>
+                      <Link href="trending" className="cmn--btn cmn--btntwo">
                         <span>Learn More</span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </SwiperSlide>

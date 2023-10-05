@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { exploreSectionData } from "../../../../public/data/exploreSectionData";
 import { songUpgradeData } from "../../../../public/data/songUpgrdeData";
 import { weeklytopTrackData } from "../../../../public/data/weeklyTopTracksData";
@@ -50,13 +51,13 @@ const ProfileSection = () => {
                 <span className="fs-14 fw-500 d-block white mb-3">
                   duhvr847y439
                 </span>
-                <a
+                <Link
                   href="#0"
                   className="d-flex fs-14 fw-500 bodyfont base2 align-items-center gap-2"
                 >
                   <i className="ti ti-edit"></i>
                   Edit Profile
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -199,9 +200,9 @@ const ProfileSection = () => {
                       </table>
                     </div>
                     <div className="text-center mt-40">
-                      <a href="#0" className="cmn__simple2">
+                      <Link href="#0" className="cmn__simple2">
                         Load More
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -241,20 +242,20 @@ const ProfileSection = () => {
                         </span>
                       </div>
                     </div>
-                    <a
+                    <Link
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-gender-female fs-24 base"></i>
                       Male
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-share-3 fs-24 base"></i>
                       Social Links
-                    </a>
+                    </Link>
                   </div>
                   <div className="weekly__tracks">
                     <h3 className="mb-24 white">Weekly Top Tracks</h3>
@@ -291,9 +292,9 @@ const ProfileSection = () => {
                       </tbody>
                     </table>
                     <div className="text-center mt-40">
-                      <a href="#0" className="cmn__simple2">
+                      <Link href="#0" className="cmn__simple2">
                         Load More
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -333,20 +334,20 @@ const ProfileSection = () => {
                         </span>
                       </div>
                     </div>
-                    <a
+                    <Link
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-gender-female fs-24 base"></i>
                       Male
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-share-3 fs-24 base"></i>
                       Social Links
-                    </a>
+                    </Link>
                   </div>
                   <div className="weekly__tracks">
                     <h3 className="mb-24 white">Weekly Top Tracks</h3>
@@ -383,9 +384,9 @@ const ProfileSection = () => {
                       </tbody>
                     </table>
                     <div className="text-center mt-40">
-                      <a href="#0" className="cmn__simple2">
+                      <Link href="#0" className="cmn__simple2">
                         Load More
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -425,20 +426,20 @@ const ProfileSection = () => {
                         </span>
                       </div>
                     </div>
-                    <a
+                    <Link
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-gender-female fs-24 base"></i>
                       Male
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-share-3 fs-24 base"></i>
                       Social Links
-                    </a>
+                    </Link>
                   </div>
                   <div className="weekly__tracks">
                     <h3 className="mb-24 white">Weekly Top Tracks</h3>
@@ -461,12 +462,12 @@ const ProfileSection = () => {
               <div className="row g-4">
                 <div className="col-lg-7">
                   <div className="no__tracksfound">
-                    <a href="#0" className="boxes text-center">
+                    <Link href="#0" className="boxes text-center">
                       <i className="ti ti-playlist-off"></i>
                       <span className="fs-16 fw-500 white d-block">
                         No tracks found
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="col-lg-5">
@@ -505,20 +506,20 @@ const ProfileSection = () => {
                         </span>
                       </div>
                     </div>
-                    <a
+                    <Link
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-gender-female fs-24 base"></i>
                       Male
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-share-3 fs-24 base"></i>
                       Social Links
-                    </a>
+                    </Link>
                   </div>
                   <div className="weekly__tracks">
                     <h3 className="mb-24 white">Weekly Top Tracks</h3>
@@ -541,12 +542,12 @@ const ProfileSection = () => {
               <div className="row g-4">
                 <div className="col-lg-7">
                   <div className="no__tracksfound">
-                    <a href="#0" className="boxes text-center">
+                    <Link href="#0" className="boxes text-center">
                       <i className="ti ti-playlist-off"></i>
                       <span className="fs-16 fw-500 white d-block">
                         No tracks found
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="col-lg-5">
@@ -585,20 +586,20 @@ const ProfileSection = () => {
                         </span>
                       </div>
                     </div>
-                    <a
+                    <Link
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-gender-female fs-24 base"></i>
                       Male
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-share-3 fs-24 base"></i>
                       Social Links
-                    </a>
+                    </Link>
                   </div>
                   <div className="weekly__tracks">
                     <h3 className="mb-24 white">Weekly Top Tracks</h3>
@@ -621,12 +622,12 @@ const ProfileSection = () => {
               <div className="row g-4">
                 <div className="col-lg-7">
                   <div className="no__tracksfound">
-                    <a href="#0" className="boxes text-center">
+                    <Link href="#0" className="boxes text-center">
                       <i className="ti ti-playlist-off"></i>
                       <span className="fs-16 fw-500 white d-block">
                         No tracks found
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="col-lg-5">
@@ -665,20 +666,20 @@ const ProfileSection = () => {
                         </span>
                       </div>
                     </div>
-                    <a
+                    <Link
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-gender-female fs-24 base"></i>
                       Male
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-share-3 fs-24 base"></i>
                       Social Links
-                    </a>
+                    </Link>
                   </div>
                   <div className="weekly__tracks">
                     <h3 className="mb-24 white">Weekly Top Tracks</h3>
@@ -701,12 +702,12 @@ const ProfileSection = () => {
               <div className="row g-4">
                 <div className="col-lg-7">
                   <div className="no__tracksfound">
-                    <a href="#0" className="boxes text-center">
+                    <Link href="#0" className="boxes text-center">
                       <i className="ti ti-playlist-off"></i>
                       <span className="fs-16 fw-500 white d-block">
                         No tracks found
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="col-lg-5">
@@ -745,20 +746,20 @@ const ProfileSection = () => {
                         </span>
                       </div>
                     </div>
-                    <a
+                    <Link
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-gender-female fs-24 base"></i>
                       Male
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-share-3 fs-24 base"></i>
                       Social Links
-                    </a>
+                    </Link>
                   </div>
                   <div className="weekly__tracks">
                     <h3 className="mb-24 white">Weekly Top Tracks</h3>
@@ -781,12 +782,12 @@ const ProfileSection = () => {
               <div className="row g-4">
                 <div className="col-lg-7">
                   <div className="no__tracksfound">
-                    <a href="#0" className="boxes text-center">
+                    <Link href="#0" className="boxes text-center">
                       <i className="ti ti-playlist-off"></i>
                       <span className="fs-16 fw-500 white d-block">
                         No tracks found
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="col-lg-5">
@@ -825,20 +826,20 @@ const ProfileSection = () => {
                         </span>
                       </div>
                     </div>
-                    <a
+                    <Link
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-gender-female fs-24 base"></i>
                       Male
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
                       <i className="ti ti-share-3 fs-24 base"></i>
                       Social Links
-                    </a>
+                    </Link>
                   </div>
                   <div className="weekly__tracks">
                     <h3 className="mb-24 white">Weekly Top Tracks</h3>

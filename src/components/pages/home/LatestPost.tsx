@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { latestPostData } from "../../../../public/data/latestPostData";
 import LatestPostCard from "./LatestPostCard";
 
@@ -8,13 +9,13 @@ const LatestPost = () => {
       <div className="container-fluid p-0">
         <div className="header__text mb-24 d-flex align-items-center justify-content-between flex-wrap gap-2">
           <h2>Latest Posts</h2>
-          <a
-            href="blog.html"
+          <Link
+            href="blog"
             className="view__btn white d-flex align-items-center gap-2"
           >
             View All
             <i className="ti ti-arrow-narrow-right"></i>
-          </a>
+          </Link>
         </div>
         <div className="row g-4">
           {latestPostData.slice(0, 3).map(({ id, ...props }) => (

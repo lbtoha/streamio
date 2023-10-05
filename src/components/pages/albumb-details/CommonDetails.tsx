@@ -1,5 +1,6 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const CommonDetails = ({
@@ -28,35 +29,35 @@ const CommonDetails = ({
               </div>
               <div className="d-flex mt-80 like__dislike justify-content-between w-100 align-items-center">
                 <div className="d-flex align-items-center gap-4">
-                  <a href="#0" className="cmbtn d-flex gap-2">
+                  <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
                       <i className="ti ti-thumb-up fs-24 base"></i>
                     </span>
                     <span>Like</span>
-                  </a>
-                  <a href="#0" className="cmbtn d-flex gap-2">
+                  </Link>
+                  <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
                       <i className="ti ti-thumb-down fs-24 base"></i>
                     </span>
                     <span>Dislike</span>
-                  </a>
+                  </Link>
                 </div>
                 <div className="pause__block">
                   <AudioPlayer />
                 </div>
                 <div className="d-flex align-items-center gap-4">
-                  <a href="#0" className="cmbtn d-flex gap-2">
+                  <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
                       <i className="ti ti-share fs-24 base"></i>
                     </span>
                     <span>Share</span>
-                  </a>
-                  <a href="#0" className="cmbtn d-flex gap-2">
+                  </Link>
+                  <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
                       <i className="ti ti-share-3 fs-24 base"></i>
                     </span>
                     <span>Re Post</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -141,38 +142,38 @@ const CommonDetails = ({
                       Recently Listened By
                     </span>
                     <div className="d-flex listend__thumb">
-                      <a href="#0">
+                      <Link href="#0">
                         <Image
                           width={44}
                           height={44}
                           src="/img/details/listen1.png"
                           alt="user"
                         />
-                      </a>
-                      <a href="#0">
+                      </Link>
+                      <Link href="#0">
                         <Image
                           width={44}
                           height={44}
                           src="/img/details/listen2.png"
                           alt="user"
                         />
-                      </a>
-                      <a href="#0">
+                      </Link>
+                      <Link href="#0">
                         <Image
                           width={44}
                           height={44}
                           src="/img/details/listen3.png"
                           alt="user"
                         />
-                      </a>
-                      <a href="#0">
+                      </Link>
+                      <Link href="#0">
                         <Image
                           width={44}
                           height={44}
                           src="/img/details/listen4.png"
                           alt="user"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -203,38 +204,38 @@ const CommonDetails = ({
                       Recently Listened By
                     </span>
                     <div className="d-flex listend__thumb">
-                      <a href="#0">
+                      <Link href="#0">
                         <Image
                           width={44}
                           height={44}
                           src="/img/details/listen1.png"
                           alt="user"
                         />
-                      </a>
-                      <a href="#0">
+                      </Link>
+                      <Link href="#0">
                         <Image
                           width={44}
                           height={44}
                           src="/img/details/listen2.png"
                           alt="user"
                         />
-                      </a>
-                      <a href="#0">
+                      </Link>
+                      <Link href="#0">
                         <Image
                           width={44}
                           height={44}
                           src="/img/details/listen3.png"
                           alt="user"
                         />
-                      </a>
-                      <a href="#0">
+                      </Link>
+                      <Link href="#0">
                         <Image
                           width={44}
                           height={44}
                           src="/img/details/listen4.png"
                           alt="user"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -271,13 +272,13 @@ const CommonDetails = ({
                     </p>
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
-                        <a
+                        <Link
                           href="javascript:void(0)"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
                           <i className="ti ti-share-3 fs-24"></i>
                           <span className="white fs-14">Reply</span>
-                        </a>
+                        </Link>
                       </div>
                       <div className="reply__content mt-10">
                         <div className="d-flex small__author justify-content-end align-items-center">
@@ -331,13 +332,13 @@ const CommonDetails = ({
                     </p>
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
-                        <a
+                        <Link
                           href="javascript:void(0)"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
                           <i className="ti ti-share-3 fs-24"></i>
                           <span className="white fs-14">Reply</span>
-                        </a>
+                        </Link>
                       </div>
                       <div className="reply__content mt-10">
                         <div className="d-flex small__author justify-content-end align-items-center">

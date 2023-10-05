@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const SignInForm = () => {
   return (
     <section className="signin__section pr-24 pl-24 pb-80">
@@ -50,9 +52,9 @@ const SignInForm = () => {
                           Remember me
                         </label>
                       </div>
-                      <a href="#0" className="base fs-14 fw-500 bodyfont">
+                      <Link href="#0" className="base fs-14 fw-500 bodyfont">
                         Forget Password?
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="col-lg-12">
@@ -63,9 +65,9 @@ const SignInForm = () => {
                     </div>
                     <p className="ffs-16 text-center bodyfont pra fw-500">
                       Don’t have an account?{" "}
-                      <a href="signup.html" className="base">
+                      <Link href="signup" className="base">
                         Sign up now!
-                      </a>
+                      </Link>
                     </p>
                   </div>
                 </div>

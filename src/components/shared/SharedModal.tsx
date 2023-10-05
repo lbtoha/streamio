@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import AudioPlayer from "./AudioPlayer";
 
 const SharedModal = () => {
@@ -73,44 +74,44 @@ const SharedModal = () => {
                 </div>
                 <ul className="custom__social d-flex align-center gap-2">
                   <li>
-                    <a href="#0">
+                    <Link href="#0">
                       <i className="ti ti-brand-facebook white"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#0">
+                    <Link href="#0">
                       <i className="ti ti-brand-twitch"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#0">
+                    <Link href="#0">
                       <i className="ti ti-brand-instagram"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#0">
+                    <Link href="#0">
                       <i className="ti ti-brand-whatsapp"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#0">
+                    <Link href="#0">
                       <i className="ti ti-brand-youtube"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#0">
+                    <Link href="#0">
                       <i className="ti ti-brand-discord"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#0">
+                    <Link href="#0">
                       <i className="ti ti-brand-wikipedia"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#0">
+                    <Link href="#0">
                       <i className="ti ti-brand-behance"></i>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
                 <input
@@ -146,14 +147,14 @@ const SharedModal = () => {
                     </span>
                     <div className="d-flex align-items-center gap-2 d-flex align-items-center">
                       <AudioPlayer />
-                      <a href="#0" className="song__bar">
+                      <Link href="#0" className="song__bar">
                         <Image
                           width={942}
                           height={87}
                           src="/img/details/song-bar.png"
                           alt="img"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

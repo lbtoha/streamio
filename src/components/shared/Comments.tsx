@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Comments = () => {
   return (
@@ -35,13 +36,13 @@ const Comments = () => {
                     </p>
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
-                        <a
+                        <Link
                           href="javascript:void(0)"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
                           <i className="ti ti-share-3 fs-24"></i>
                           <span className="white fs-14">Reply</span>
-                        </a>
+                        </Link>
                       </div>
                       <div className="reply__content mt-10">
                         <div className="d-flex small__author justify-content-end align-items-center">
@@ -95,13 +96,13 @@ const Comments = () => {
                     </p>
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
-                        <a
+                        <Link
                           href="javascript:void(0)"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
                           <i className="ti ti-share-3 fs-24"></i>
                           <span className="white fs-14">Reply</span>
-                        </a>
+                        </Link>
                       </div>
                       <div className="reply__content mt-10">
                         <div className="d-flex small__author justify-content-end align-items-center">

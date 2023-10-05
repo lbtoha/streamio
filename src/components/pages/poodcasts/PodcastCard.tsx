@@ -1,5 +1,6 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Props = {
   image: StaticImageData;
@@ -21,15 +22,15 @@ const PodcastCard = ({ image, title, views, song, subTitle }: Props) => {
         <div className="artist__popup d-flex align-items-center justify-content-between">
           <div className="content">
             <h5 className="mb-1">
-              <a href="podcast-allsong.html" className="white">
+              <Link href="podcast-allsong" className="white">
                 {title}
-              </a>
+              </Link>
             </h5>
             <span className="fs-16 fw-500 pra3 d-block">{subTitle}</span>
           </div>
-          <a href="podcast-allsong.html" className="cmn__arrow">
+          <Link href="podcast-allsong" className="cmn__arrow">
             <i className="ti ti-arrow-narrow-right arrowrotate"></i>
-          </a>
+          </Link>
         </div>
         <AudioPlayer audio={song} />
       </div>

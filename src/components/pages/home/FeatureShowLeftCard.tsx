@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Props = {
   image: StaticImageData;
@@ -30,35 +31,35 @@ const FeatureShowLeftCard = ({
             </span>
           </div>
           <h4 className="mb-16">
-            <a href="show-details.html" className="white">
+            <Link href="show-details" className="white">
               {title}
-            </a>
+            </Link>
           </h4>
           <p className="pra bodyfont d-block mb-28">{description}</p>
           <div className="d-flex align-items-center justify-content-between">
             <ul className="show__listen d-flex align-items-center">
               <li>
-                <a
+                <Link
                   href="javascript:void(0)"
                   className="d-flex align-items-center fs-14 fw-500 white gap-2"
                 >
                   <i className="ti ti-headphones"></i>
                   Listen Now
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="javascript:void(0)"
                   className="d-flex align-items-center fs-14 fw-500 white gap-2"
                 >
                   <i className="ti ti-address-book"></i>
                   Browse All
-                </a>
+                </Link>
               </li>
             </ul>
-            <a href="show-details.html" className="cmn__arrow40">
+            <Link href="show-details" className="cmn__arrow40">
               <i className="ti ti-arrow-narrow-right arrowrotate"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

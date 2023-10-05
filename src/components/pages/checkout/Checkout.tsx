@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Checkout = () => {
   return (
     <section className="checkout__section pr-24 pl-24 pb-80">
@@ -218,9 +220,9 @@ const Checkout = () => {
                     </label>
                   </div>
                 </div>
-                <a href="#0" className="cmn--btn ms-1">
+                <Link href="#0" className="cmn--btn ms-1">
                   <span>Place Order</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

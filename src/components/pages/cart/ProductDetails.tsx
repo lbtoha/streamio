@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ProductDetails = () => {
   return (
@@ -53,9 +54,9 @@ const ProductDetails = () => {
                     <td>
                       <span className="d-flex align-items-center gap-3">
                         $75.80{" "}
-                        <a href="#0" className="iconx">
+                        <Link href="#0" className="iconx">
                           <i className="ti ti-x"></i>
-                        </a>
+                        </Link>
                       </span>
                     </td>
                   </tr>
@@ -94,9 +95,9 @@ const ProductDetails = () => {
                     <td>
                       <span className="d-flex align-items-center gap-3">
                         $40.70{" "}
-                        <a href="#0" className="iconx">
+                        <Link href="#0" className="iconx">
                           <i className="ti ti-x"></i>
-                        </a>
+                        </Link>
                       </span>
                     </td>
                   </tr>
@@ -135,9 +136,9 @@ const ProductDetails = () => {
                     <td>
                       <span className="d-flex align-items-center gap-3">
                         $75.80{" "}
-                        <a href="#0" className="iconx">
+                        <Link href="#0" className="iconx">
                           <i className="ti ti-x"></i>
-                        </a>
+                        </Link>
                       </span>
                     </td>
                   </tr>
@@ -152,20 +153,20 @@ const ProductDetails = () => {
                     <input type="text" placeholder="Enter Coupon Code" />
                     <button type="submit">Apply Coupon</button>
                   </form>
-                  <a href="#0" className="updatcart">
+                  <Link href="#0" className="updatcart">
                     Update Cart
-                  </a>
+                  </Link>
                 </div>
                 <div className="coupon__price text-center">
-                  <a href="#0" className="carttoal">
+                  <Link href="#0" className="carttoal">
                     Cart Total
-                  </a>
+                  </Link>
                   <span className="fs-24 d-block mt-60 mb-60 fw-600 bodyfont white">
                     $75..00
                   </span>
-                  <a href="checkout.html" className="cehckout">
+                  <Link href="checkout" className="cehckout">
                     Checkout
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -13,54 +14,51 @@ const Footer = () => {
                 <div className="link__attach d-flex">
                   <ul className="link">
                     <li className="mb-16">
-                      <a
+                      <Link
                         href="javascript:void(0)"
                         className="fs-16 fw-400 bodyfont pra"
                       >
                         About
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-16">
-                      <a
-                        href="profile.html"
+                      <Link
+                        href="profile"
                         className="fs-16 fw-400 bodyfont pra"
                       >
                         My Profile
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="artist-allsong.html"
+                      <Link
+                        href="artist-allsong"
                         className="fs-16 fw-400 bodyfont pra"
                       >
                         Artists
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <ul className="link">
                     <li className="mb-16">
-                      <a
-                        href="pricing.html"
+                      <Link
+                        href="pricing"
                         className="fs-16 fw-400 bodyfont pra"
                       >
                         Pricing Plan
-                      </a>
+                      </Link>
                     </li>
                     <li className="mb-16">
-                      <a
-                        href="poodcasts.html"
+                      <Link
+                        href="poodcasts"
                         className="fs-16 fw-400 bodyfont pra"
                       >
                         Podcasts
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="event.html"
-                        className="fs-16 fw-400 bodyfont pra"
-                      >
+                      <Link href="event" className="fs-16 fw-400 bodyfont pra">
                         Events
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -84,7 +82,7 @@ const Footer = () => {
                   Databest - powerful Podcasts expert on processing marketing
                   data
                 </p>
-                <a href="index.html" className="d-block mb-60">
+                <Link href="index" className="d-block mb-60">
                   <Image
                     width={68}
                     height={51}
@@ -92,7 +90,7 @@ const Footer = () => {
                     alt="img"
                   />
                   <h3 className="white">Streamio</h3>
-                </a>
+                </Link>
                 <p className="pra level__message bodyfont fs-16">
                   Level up your cases with tons of data
                 </p>
@@ -104,66 +102,66 @@ const Footer = () => {
                 <div className="link__attach mb-60 d-flex">
                   <ul className="link">
                     <li className="mb-16">
-                      <a
+                      <Link
                         href="javascript:void(0)"
                         className="fs-16 fw-400 bodyfont pra"
                       >
                         UA: +3 567 897 483
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="javascript:void(0)"
                         className="fs-16 fw-400 bodyfont pra"
                       >
                         ronyui3630.com
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <ul className="link">
                     <li className="mb-16">
-                      <a
+                      <Link
                         href="javascript:void(0)"
                         className="fs-16 fw-400 bodyfont pra"
                       >
                         www.Pixelaxic.com
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         href="javascript:void(0)"
                         className="fs-16 fw-400 bodyfont pra"
                       >
                         Ukraine, Odessa
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
                 <ul className="social d-flex align-items-center">
                   <li>
-                    <a href="javascript:void(0)">
+                    <Link href="javascript:void(0)">
                       <i className="ti ti-brand-facebook"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="javascript:void(0)">
+                    <Link href="javascript:void(0)">
                       <i className="ti ti-brand-twitch"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="javascript:void(0)">
+                    <Link href="javascript:void(0)">
                       <i className="ti ti-brand-instagram"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="javascript:void(0)">
+                    <Link href="javascript:void(0)">
                       <i className="ti ti-brand-discord"></i>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="javascript:void(0)">
+                    <Link href="javascript:void(0)">
                       <i className="ti ti-brand-youtube"></i>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -176,24 +174,24 @@ const Footer = () => {
             <span className="white design__side">
               {" "}
               Designed By{" "}
-              <a
+              <Link
                 href="https://themeforest.net/user/pixelaxis"
                 className="base2"
               >
                 Pixelaxis
-              </a>
+              </Link>
             </span>
           </p>
           <ul className="privacy d-flex align-items-center gap-4">
             <li>
-              <a href="privacy.html" className="fs-14 fw-400 bodyfont white">
+              <Link href="privacy" className="fs-14 fw-400 bodyfont white">
                 Privacy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="privacy.html" className="fs-14 fw-400 bodyfont white">
+              <Link href="privacy" className="fs-14 fw-400 bodyfont white">
                 Terms & Conditions
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

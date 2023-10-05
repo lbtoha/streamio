@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const PodcastAllSongSection = () => {
   return (
@@ -36,18 +37,18 @@ const PodcastAllSongSection = () => {
               members.
             </p>
             <div className="d-flex mt-24 align-items-center gap-4">
-              <a href="signin.html" className="cmbtn d-flex gap-2">
+              <Link href="signin" className="cmbtn d-flex gap-2">
                 <span>
                   <i className="ti ti-player-play fs-24 base"></i>
                 </span>
                 <span>Play</span>
-              </a>
-              <a href="signin.html" className="cmbtn d-flex gap-2">
+              </Link>
+              <Link href="signin" className="cmbtn d-flex gap-2">
                 <span>
                   <i className="ti ti-share fs-24 base"></i>
                 </span>
                 <span>Share</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

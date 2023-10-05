@@ -1,6 +1,7 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 //@ts-ignore
+import Link from "next/link";
 import { Navigation, Scrollbar } from "swiper";
 import { podCastData } from "../../../../public/data/podCastData";
 import PodcastSliderCard from "./PodcastSliderCard";
@@ -12,13 +13,13 @@ const Podcasts = () => {
       <div className="container-fluid p-0">
         <div className="header__text mb-24 d-flex align-items-center justify-content-between flex-wrap gap-2">
           <h2>Podcasts</h2>
-          <a
-            href="podcast-allsong.html"
+          <Link
+            href="podcast-allsong"
             className="view__btn white d-flex align-items-center gap-2"
           >
             View All
             <i className="ti ti-arrow-narrow-right"></i>
-          </a>
+          </Link>
         </div>
         <Swiper
           modules={[Navigation, Scrollbar]}

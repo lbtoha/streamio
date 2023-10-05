@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const ConveterHead = ({
   name,
@@ -22,12 +23,12 @@ const ConveterHead = ({
         </div>
         <h2 className="white mb-16">{songTitle}</h2>
         <div className="d-flex conveter__follow align-items-center">
-          <a href="#0" className="cmbtn d-flex gap-2">
+          <Link href="#0" className="cmbtn d-flex gap-2">
             <span>
               <i className="ti ti-user-plus fs-24 base"></i>
             </span>
             <span>Follow</span>
-          </a>
+          </Link>
           <span className="fs-16 fw-500 bodyfont white">
             03 days ago in Tomb
           </span>
@@ -45,7 +46,7 @@ const ConveterHead = ({
         </button>
         <ul className="dropdown-menu" aria-labelledby="drops1">
           <li className="mb-2">
-            <a
+            <Link
               className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
               href="javascript:void(0)"
               data-bs-toggle="modal"
@@ -53,10 +54,10 @@ const ConveterHead = ({
             >
               <i className="ti ti-playlist-add fs-30 base"></i>
               Add To Playlist
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
               href="javascript:void(0)"
               data-bs-toggle="modal"
@@ -64,7 +65,7 @@ const ConveterHead = ({
             >
               <i className="ti ti-share fs-30 base"></i>
               Share
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

@@ -26,13 +26,13 @@ const GenresSliderCard = ({ image, title, subTitle, song, link }: Props) => {
             {title}
           </Link>
         </h5>
-        <a
-          href="genres-details.html"
+        <Link
+          href="genres-details"
           className="d-flex fs-14 bodyfont fw-500 pra align-items-center gap-2"
         >
           <i className="ti ti-playlist playlist fs-24"></i>
           {subTitle}
-        </a>
+        </Link>
       </div>
     </div>
   );

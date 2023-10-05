@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 //@ts-ignore
 import { StaticImageData } from "next/image";
 //@ts-ignore
+import Link from "next/link";
 import { Navigation, Scrollbar } from "swiper";
 import ProductSliderCard from "./ProductSliderCard";
 
@@ -23,13 +24,13 @@ const Product = ({ sectionTitle, componentData }: Props) => {
       <div className="container-fluid p-0">
         <div className="header__text mb-24 d-flex align-items-center justify-content-between flex-wrap gap-2">
           <h2>{sectionTitle}</h2>
-          <a
-            href="product-details.html"
+          <Link
+            href="product-details"
             className="view__btn white d-flex align-items-center gap-2"
           >
             View All
             <i className="ti ti-arrow-narrow-right"></i>
-          </a>
+          </Link>
         </div>
         <Swiper
           modules={[Navigation, Scrollbar]}
