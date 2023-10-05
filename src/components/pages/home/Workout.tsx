@@ -1,7 +1,7 @@
 import { workoutCardData } from "../../../../public/data/workoutData";
 import MoodsCard from "./MoodsCard";
 
-const Workout = () => {
+const Workout = ({ start, end }: { start?: number; end?: number }) => {
   return (
     // <!--workout section-->
     <section className="workout__section pr-24 pl-24 pb-100">
@@ -17,7 +17,7 @@ const Workout = () => {
           </a>
         </div>
         <div className="row g-4">
-          {workoutCardData.map(({ id, ...props }) => (
+          {workoutCardData.slice(start, end).map(({ id, ...props }) => (
             <div
               key={id}
               className="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-md-4 col-sm-4"

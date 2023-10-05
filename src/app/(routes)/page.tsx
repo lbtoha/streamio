@@ -17,7 +17,7 @@ const page = () => {
       <TrendingSlider />
       <Moods />
       <Artists />
-      <Workout />
+      <Workout start={0} end={6} />
       <FeaturedShows />
       <Podcasts />
       <Product sectionTitle="Product" componentData={productData} />

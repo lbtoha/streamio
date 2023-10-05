@@ -1,7 +1,7 @@
 import ProfileSection from "@/components/pages/profile/ProfileSection";
 import MainBody from "@/components/shared/MainBody";
 
-const profileEdit = () => {
+const profile = () => {
   return (
     <MainBody>
       <ProfileSection />
@@ -9,4 +9,4 @@ const profileEdit = () => {
   );
 };
 
-export default profileEdit;
+export default profile;
