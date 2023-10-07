@@ -1,5 +1,6 @@
+import { workoutCardData } from "@/../public/data/workoutData";
+import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Link from "next/link";
-import { workoutCardData } from "../../../../public/data/workoutData";
 import MoodsCard from "./MoodsCard";
 
 const Workout = ({ start, end }: { start?: number; end?: number }) => {
@@ -14,7 +15,7 @@ const Workout = ({ start, end }: { start?: number; end?: number }) => {
             className="view__btn white d-flex align-items-center gap-2"
           >
             View All
-            <i className="ti ti-arrow-narrow-right"></i>
+            <IconArrowNarrowRight />
           </Link>
         </div>
         <div className="row g-4">

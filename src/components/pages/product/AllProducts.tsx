@@ -1,8 +1,22 @@
+import { productData } from "@/../public/data/productDta";
+import SelectBox from "@/components/shared/SelectBox";
+import { IconSearch } from "@tabler/icons-react";
 import Link from "next/link";
-import { productData } from "../../../../public/data/productDta";
 import ProductCard from "./ProductCard";
 
 const AllProducts = () => {
+  const artists = [
+    { label: "Tom Cook" },
+    { label: "Tanya Fox" },
+    { label: "Hellen Schmidt" },
+  ];
+
+  const genres = [
+    { label: "All Artists" },
+    { label: "New Artists" },
+    { label: "Expert Artists" },
+  ];
+
   return (
     <section className="trending__section pr-24 pl-24 pb-100">
       <div className="container-flud p-0">
@@ -16,19 +30,11 @@ const AllProducts = () => {
           >
             <input type="text" placeholder="Search..." />
             <button type="submit">
-              <i className="ti ti-search"></i>
+              <IconSearch />
             </button>
           </form>
-          <select name="artists">
-            <option value="1">All Artists</option>
-            <option value="1">New Artists</option>
-            <option value="1">Expert Artists</option>
-          </select>
-          <select name="artists">
-            <option value="1">All Genres</option>
-            <option value="1">Genres 2</option>
-            <option value="1">Genres 3</option>
-          </select>
+          <SelectBox options={artists} />
+          <SelectBox options={genres} />
         </div>
         <ul className="nav nav-tabs" id="myTab" role="tablist">
           <li className="nav-item" role="presentation">
@@ -82,7 +88,6 @@ const AllProducts = () => {
             id="home-tab-pane"
             role="tabpanel"
             aria-labelledby="home-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {productData.map(({ id, ...props }) => (
@@ -100,7 +105,6 @@ const AllProducts = () => {
             id="profile-tab-pane"
             role="tabpanel"
             aria-labelledby="profile-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {productData.map(({ id, ...props }) => (
@@ -118,7 +122,6 @@ const AllProducts = () => {
             id="contact-tab-pane"
             role="tabpanel"
             aria-labelledby="contact-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {productData.map(({ id, ...props }) => (

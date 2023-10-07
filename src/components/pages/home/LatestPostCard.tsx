@@ -1,4 +1,5 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
+import { IconMessageMinus } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -16,7 +17,7 @@ const LatestPostCard = ({ image, date, comment, title, type }: Props) => {
         <div className="thumb ralt mb-16 transition overhid">
           <Image src={image} className="w-100 transition overhid" alt="img" />
           <AudioPlayer audio="" />
-          <Link href="javascript:void(0)" className="l__badge">
+          <Link href="#" className="l__badge">
             {type}
           </Link>
         </div>
@@ -26,10 +27,10 @@ const LatestPostCard = ({ image, date, comment, title, type }: Props) => {
               {date}
             </span>
             <Link
-              href="javascript:void(0)"
+              href="#"
               className="d-flex white w-500 bodyfont align-items-center gap-3"
             >
-              <i className="ti ti-message-minus base fs-20"></i>
+              <IconMessageMinus className="base fs-20" />
               {comment}
             </Link>
           </div>

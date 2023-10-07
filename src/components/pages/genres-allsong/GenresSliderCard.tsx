@@ -1,4 +1,5 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
+import { IconPlaylist } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -30,7 +31,7 @@ const GenresSliderCard = ({ image, title, subTitle, song, link }: Props) => {
           href="genres-details"
           className="d-flex fs-14 bodyfont fw-500 pra align-items-center gap-2"
         >
-          <i className="ti ti-playlist playlist fs-24"></i>
+          <IconPlaylist className="playlist fs-24" />
           {subTitle}
         </Link>
       </div>

@@ -53,7 +53,7 @@ const SignUpForm = () => {
                         <input
                           className="form-check-input"
                           type="checkbox"
-                          value=""
+                          defaultValue=""
                           id="flexCheckDefault"
                         />
                         <label

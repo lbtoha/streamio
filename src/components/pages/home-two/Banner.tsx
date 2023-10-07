@@ -1,7 +1,7 @@
 "use client";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 //@ts-ignore
-import Link from "next/link";
 import { Autoplay, Pagination } from "swiper";
 
 const Banner = () => {

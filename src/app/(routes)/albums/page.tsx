@@ -1,9 +1,9 @@
+import { topSongData } from "@/../public/data/topSongData";
 import PopularAlbums from "@/components/pages/albums/PopularAlbums";
 import Trending from "@/components/pages/albums/Trending";
 import BreadCrumb from "@/components/shared/BreadCrum";
 import MainBody from "@/components/shared/MainBody";
 import { Metadata } from "next";
-import { topSongData } from "../../../../public/data/topSongData";
 
 export const metadata: Metadata = {
   title: "Create Next App",

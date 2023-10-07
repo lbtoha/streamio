@@ -1,3 +1,4 @@
+import { IconCheck, IconSearch } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,7 +14,7 @@ const BlogDetailsRight = () => {
           >
             <input type="text" placeholder="Search" />
             <button type="submit">
-              <i className="ti ti-search"></i>
+              <IconSearch />
             </button>
           </form>
         </div>
@@ -25,7 +26,7 @@ const BlogDetailsRight = () => {
                 href="#0"
                 className="d-flex fs-16 fw-400 white bodyfont align-items-center gap-2"
               >
-                <i className="ti ti-checkbox fs-20"></i>
+                <IconCheck className="fs-20" />
                 Desing System
               </Link>
             </li>
@@ -34,7 +35,7 @@ const BlogDetailsRight = () => {
                 href="#0"
                 className="d-flex fs-16 fw-400 white bodyfont align-items-center gap-2"
               >
-                <i className="ti ti-checkbox fs-20"></i>
+                <IconCheck className="fs-20" />
                 Lifestyle
               </Link>
             </li>
@@ -43,7 +44,7 @@ const BlogDetailsRight = () => {
                 href="#0"
                 className="d-flex fs-16 fw-400 white bodyfont align-items-center gap-2"
               >
-                <i className="ti ti-checkbox fs-20"></i>
+                <IconCheck className="fs-20" />
                 Colors & Typography
               </Link>
             </li>
@@ -52,7 +53,7 @@ const BlogDetailsRight = () => {
                 href="#0"
                 className="d-flex fs-16 fw-400 white bodyfont align-items-center gap-2"
               >
-                <i className="ti ti-checkbox fs-20"></i>
+                <IconCheck className="fs-20" />
                 Uncategorized
               </Link>
             </li>

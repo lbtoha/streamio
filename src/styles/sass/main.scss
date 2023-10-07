@@ -46,7 +46,6 @@
 /*CSS Table Of Content Ends Here*/
 // bootstrap
 @import "~bootstrap/dist/css/bootstrap.min.css";
-@import "../fonts/tabler-icons.min.css";
 
 // -- Audio
 @import "audio/audioplayer";
@@ -76,4 +75,8 @@
 audio::-webkit-media-controls-timeline,
 video::-webkit-media-controls-timeline {
   display: none;
+}
+
+img {
+  height: auto !important;
 }

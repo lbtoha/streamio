@@ -1,3 +1,4 @@
+import { IconShoppingCartPlus } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -18,7 +19,7 @@ const ProductCard = ({ image, productPrice, productTitle, name }: Props) => {
             href="cart"
             className="product__badge text-uppercase fw-500 d-flex align-items-center justify-content-center fs-16 bodyfont white"
           >
-            <i className="ti ti-shopping-cart-plus"></i>
+            <IconShoppingCartPlus />
             Add To Cart
           </Link>
         </div>

@@ -1,3 +1,4 @@
+import { IconDots, IconPlaylistAdd, IconShare } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -58,28 +59,28 @@ const SongUpgradeTableRow = ({
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <i className="ti ti-dots white"></i>
+              <IconDots className="white" />
             </button>
             <ul className="dropdown-menu" aria-labelledby="drops1">
               <li className="mb-2">
                 <Link
                   className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
-                  href="javascript:void(0)"
+                  href="#"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
                 >
-                  <i className="ti ti-playlist-add fs-30 base"></i>
+                  <IconPlaylistAdd className="fs-30 base" />
                   Add To Playlist
                 </Link>
               </li>
               <li>
                 <Link
                   className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
-                  href="javascript:void(0)"
+                  href="#"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal2"
                 >
-                  <i className="ti ti-share fs-30 base"></i>
+                  <IconShare className="fs-30 base" />
                   Share
                 </Link>
               </li>

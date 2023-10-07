@@ -9,8 +9,6 @@ const MainBody = ({ children }: { children: React.ReactNode }) => {
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
-    console.log("click to toggle sidebar");
-    console.log(isSidebarOpen);
   };
 
   return (

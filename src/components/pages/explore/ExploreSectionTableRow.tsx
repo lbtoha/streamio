@@ -1,3 +1,10 @@
+import {
+  IconClockHour3,
+  IconDots,
+  IconMessageReport,
+  IconPlaylistAdd,
+  IconTrash,
+} from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -53,39 +60,39 @@ const ExploreSectionTableRow = ({
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i className="ti ti-dots white"></i>
+                <IconDots className="white " />
               </button>
               <ul className="dropdown-menu" aria-labelledby="drops1">
                 <li className="mb-2">
                   <Link
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
-                    href="javascript:void(0)"
+                    href="#"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal2"
                   >
-                    <i className="ti ti-trash base2 fs-24"></i>
+                    <IconTrash className="base2 fs-24" />
                     Delet Post
                   </Link>
                 </li>
                 <li className="mb-2">
                   <Link
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
-                    href="javascript:void(0)"
+                    href="#"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal3"
                   >
-                    <i className="ti ti-message-report fs-24"></i>
+                    <IconMessageReport className="fs-24" />
                     Report
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
-                    href="javascript:void(0)"
+                    href="#"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
                   >
-                    <i className="ti ti-playlist-add fs-24 base"></i>
+                    <IconPlaylistAdd className="fs-24 base" />
                     Add To Playlist
                   </Link>
                 </li>
@@ -119,7 +126,7 @@ const ExploreSectionTableRow = ({
         <td>
           <div className="d-flex align-items-center justify-content-end gap-2">
             <span>
-              <i className="ti ti-clock-hour-3 fs-22 pra"></i>
+              <IconClockHour3 className="fs-22 pra" />
             </span>
             <span className="pra latest__time bodyfont fs-14">
               {songDuration}

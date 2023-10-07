@@ -1,3 +1,4 @@
+import { IconChevronRight } from "@tabler/icons-react";
 import Link from "next/link";
 
 const BreadCrumSingle = ({ page }: { page: string }) => {
@@ -12,7 +13,7 @@ const BreadCrumSingle = ({ page }: { page: string }) => {
             </Link>
           </li>
           <li>
-            <i className="ti ti-chevron-right white"></i>
+            <IconChevronRight className="white" />
           </li>
           <li className="white fw-500 fs-16 bodyfont">{page}</li>
         </ul>

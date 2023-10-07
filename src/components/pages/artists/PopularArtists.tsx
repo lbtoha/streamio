@@ -1,7 +1,20 @@
-import { artistCardData } from "../../../../public/data/artistsCardData";
+import { artistCardData } from "@/../public/data/artistsCardData";
+import SelectBox from "@/components/shared/SelectBox";
+import { IconSearch } from "@tabler/icons-react";
 import ArtistsSliderCard from "../home/ArtistsSliderCard";
 
 const PopularArtists = () => {
+  const artists = [
+    { label: "Tom Cook" },
+    { label: "Tanya Fox" },
+    { label: "Hellen Schmidt" },
+  ];
+
+  const genres = [
+    { label: "All Artists" },
+    { label: "New Artists" },
+    { label: "Expert Artists" },
+  ];
   return (
     // <!--genres section-->
     <section className="trending__section pr-24 pl-24 pb-100">
@@ -13,19 +26,11 @@ const PopularArtists = () => {
           >
             <input type="text" placeholder="Search..." />
             <button type="submit">
-              <i className="ti ti-search"></i>
+              <IconSearch />
             </button>
           </form>
-          <select name="artists">
-            <option value="1">All Artists</option>
-            <option value="1">New Artists</option>
-            <option value="1">Expert Artists</option>
-          </select>
-          <select name="genres">
-            <option value="1">All Artists</option>
-            <option value="1">New Artists</option>
-            <option value="1">Expert Artists</option>
-          </select>
+          <SelectBox options={artists} />
+          <SelectBox options={genres} />
         </div>
         <ul className="nav nav-tabs" id="myTab" role="tablist">
           <li className="nav-item" role="presentation">
@@ -79,7 +84,6 @@ const PopularArtists = () => {
             id="home-tab-pane"
             role="tabpanel"
             aria-labelledby="home-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {artistCardData.slice(0, 8).map(({ id, ...props }) => (
@@ -97,7 +101,6 @@ const PopularArtists = () => {
             id="profile-tab-pane"
             role="tabpanel"
             aria-labelledby="profile-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {artistCardData.slice(0, 4).map(({ id, ...props }) => (
@@ -115,7 +118,6 @@ const PopularArtists = () => {
             id="contact-tab-pane"
             role="tabpanel"
             aria-labelledby="contact-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {artistCardData.slice(0, 4).map(({ id, ...props }) => (

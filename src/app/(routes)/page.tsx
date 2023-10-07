@@ -1,3 +1,4 @@
+import { productData } from "@/../public/data/productDta";
 import Artists from "@/components/pages/home/Artists";
 import Banner from "@/components/pages/home/Banner";
 import FeaturedShows from "@/components/pages/home/FeaturedShows";
@@ -8,7 +9,6 @@ import Product from "@/components/pages/home/Product";
 import TrendingSlider from "@/components/pages/home/TrendingSlider";
 import Workout from "@/components/pages/home/Workout";
 import MainBody from "@/components/shared/MainBody";
-import { productData } from "../../../public/data/productDta";
 
 const page = () => {
   return (

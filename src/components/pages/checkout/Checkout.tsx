@@ -86,7 +86,7 @@ const Checkout = () => {
                         <input
                           className="form-check-input"
                           type="checkbox"
-                          value=""
+                          defaultValue=""
                           id="flexCheckDefault"
                         />
                         <label
@@ -100,7 +100,7 @@ const Checkout = () => {
                         <input
                           className="form-check-input"
                           type="checkbox"
-                          value=""
+                          defaultValue=""
                           id="flexCheckDefault2"
                         />
                         <label
@@ -124,7 +124,7 @@ const Checkout = () => {
                       <textarea
                         name="description"
                         id="message"
-                        rows="5"
+                        rows={5}
                         placeholder="Order Notes"
                       ></textarea>
                     </div>
@@ -181,7 +181,7 @@ const Checkout = () => {
                     <input
                       className="form-check-input"
                       type="checkbox"
-                      value=""
+                      defaultValue=""
                       id="flexCheckDefault"
                     />
                     <label
@@ -195,7 +195,7 @@ const Checkout = () => {
                     <input
                       className="form-check-input"
                       type="checkbox"
-                      value=""
+                      defaultValue=""
                       id="flexCheckDefault2"
                     />
                     <label
@@ -209,7 +209,7 @@ const Checkout = () => {
                     <input
                       className="form-check-input"
                       type="checkbox"
-                      value=""
+                      defaultValue=""
                       id="flexCheckDefault3"
                     />
                     <label

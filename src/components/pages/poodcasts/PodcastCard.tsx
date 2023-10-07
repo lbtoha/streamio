@@ -1,4 +1,5 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
+import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -29,7 +30,7 @@ const PodcastCard = ({ image, title, views, song, subTitle }: Props) => {
             <span className="fs-16 fw-500 pra3 d-block">{subTitle}</span>
           </div>
           <Link href="podcast-allsong" className="cmn__arrow">
-            <i className="ti ti-arrow-narrow-right arrowrotate"></i>
+            <IconArrowNarrowRight className="arrowrotate" />
           </Link>
         </div>
         <AudioPlayer audio={song} />

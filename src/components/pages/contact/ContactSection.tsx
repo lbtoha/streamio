@@ -71,7 +71,7 @@ const ContactSection = () => {
                       <textarea
                         name="description"
                         id="message"
-                        rows="5"
+                        rows={5}
                         placeholder="Type Your Keyboard"
                       ></textarea>
                     </div>

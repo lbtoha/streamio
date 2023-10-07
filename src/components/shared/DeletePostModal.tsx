@@ -3,7 +3,6 @@ const DeletePostModal = () => {
     <div
       className="modal overlayadd fade"
       id="exampleModal2"
-      tabindex="-1"
       aria-hidden="true"
     >
       <div className="modal-dialog modal-dialog-centered modal-md">

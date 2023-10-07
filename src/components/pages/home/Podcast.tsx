@@ -1,9 +1,14 @@
 "use client";
+import { podCastData } from "@/../public/data/podCastData";
+import {
+  IconArrowNarrowRight,
+  IconChevronLeft,
+  IconChevronRight,
+} from "@tabler/icons-react";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 //@ts-ignore
-import Link from "next/link";
 import { Navigation, Scrollbar } from "swiper";
-import { podCastData } from "../../../../public/data/podCastData";
 import PodcastSliderCard from "./PodcastSliderCard";
 
 const Podcasts = () => {
@@ -18,7 +23,7 @@ const Podcasts = () => {
             className="view__btn white d-flex align-items-center gap-2"
           >
             View All
-            <i className="ti ti-arrow-narrow-right"></i>
+            <IconArrowNarrowRight />
           </Link>
         </div>
         <Swiper
@@ -65,11 +70,11 @@ const Podcasts = () => {
           <div className="d-flex gap-4 mt-40 align-items-center">
             <div className="gap-1 d-flex">
               <div className="cmn-button-prev2">
-                <i className="ti ti-chevron-left"></i>
+                <IconChevronLeft />
               </div>
               <div className="cmn-pagination"></div>
               <div className="cmn-button-next2">
-                <i className="ti ti-chevron-right"></i>
+                <IconChevronRight />
               </div>
             </div>
             <div className="swiper-scrollbar"></div>

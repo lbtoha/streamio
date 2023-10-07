@@ -1,5 +1,5 @@
 "use client";
-import { trendingsliderData } from "../../../../public/data/trendingSliderData";
+import { trendingsliderData } from "@/../public/data/trendingSliderData";
 import Trending from "../home/Trending";
 import TrendingSliderCard from "../home/TrendingSliderCard";
 

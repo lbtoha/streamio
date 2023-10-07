@@ -18,20 +18,16 @@ const NavbarDropdown = ({
   icon,
   path,
 }: Props) => {
-  const [activePath, setActivePath] = useState("home");
   const [isSubMenuOpen, setSubMenuOpen] = useState(false);
 
-  console.log(path, activePath);
   return (
     <li
       onClick={() => setSubMenuOpen(!isSubMenuOpen)}
-      className={`liclick ${className} ${
-        path === activePath ? "reply-active" : ""
-      }`}
+      className={`liclick ${className}`}
     >
       <span className="d-flex align-items-center">
         <Link
-          href="javascript:void(0)"
+          href="#"
           className={`mclick d-flex hcolor align-items-center w-100 justify-content-between `}
         >
           <span className="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
@@ -51,7 +47,7 @@ const NavbarDropdown = ({
         <ul>
           {menuItems.map(({ id, title, path, parentPath }) => {
             return (
-              <li onClick={() => setActivePath(parentPath)} key={id}>
+              <li key={id}>
                 <Link href={path}>{title}</Link>
               </li>
             );

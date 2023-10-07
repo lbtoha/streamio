@@ -1,8 +1,21 @@
+import { podCastData } from "@/../public/data/podCastData";
+import SelectBox from "@/components/shared/SelectBox";
+import { IconSearch } from "@tabler/icons-react";
 import Link from "next/link";
-import { podCastData } from "../../../../public/data/podCastData";
 import PodcastCard from "./PodcastCard";
 
 const PodcastSection = () => {
+  const newItems = [
+    {
+      label: "Newest Items",
+    },
+    {
+      label: "New Artists",
+    },
+    {
+      label: "Expert Artists",
+    },
+  ];
   return (
     <section className="trending__section pr-24 pl-24 pb-100">
       <div className="container-flud p-0">
@@ -16,14 +29,10 @@ const PodcastSection = () => {
           >
             <input type="text" placeholder="Search..." />
             <button type="submit">
-              <i className="ti ti-search"></i>
+              <IconSearch />
             </button>
           </form>
-          <select name="artists">
-            <option value="1">Newest Items</option>
-            <option value="1">New Artists</option>
-            <option value="1">Expert Artists</option>
-          </select>
+          <SelectBox options={newItems} />
         </div>
         <ul className="nav nav-tabs" id="myTab" role="tablist">
           <li className="nav-item" role="presentation">
@@ -77,7 +86,6 @@ const PodcastSection = () => {
             id="home-tab-pane"
             role="tabpanel"
             aria-labelledby="home-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {podCastData.slice(0, 8).map(({ id, ...props }) => (
@@ -97,7 +105,6 @@ const PodcastSection = () => {
             id="profile-tab-pane"
             role="tabpanel"
             aria-labelledby="profile-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {podCastData.slice(0, 4).map(({ id, ...props }) => (
@@ -117,7 +124,6 @@ const PodcastSection = () => {
             id="contact-tab-pane"
             role="tabpanel"
             aria-labelledby="contact-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {podCastData.slice(0, 4).map(({ id, ...props }) => (

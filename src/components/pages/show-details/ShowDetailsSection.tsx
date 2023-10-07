@@ -1,4 +1,16 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
+import {
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandTwitch,
+  IconDots,
+  IconPlaylistAdd,
+  IconShare,
+  IconShare3,
+  IconThumbDown,
+  IconThumbUp,
+  IconUserPlus,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -27,7 +39,7 @@ const ShowDetailsSection = () => {
               <div className="d-flex conveter__follow align-items-center">
                 <Link href="#0" className="cmbtn d-flex gap-2">
                   <span>
-                    <i className="ti ti-user-plus fs-24 base"></i>
+                    <IconUserPlus className="fs-24 base" />
                   </span>
                   <span>Follow</span>
                 </Link>
@@ -44,28 +56,28 @@ const ShowDetailsSection = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <i className="ti ti-dots white"></i>
+                <IconDots className="white " />
               </button>
               <ul className="dropdown-menu" aria-labelledby="drops1">
                 <li className="mb-2">
                   <Link
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
-                    href="javascript:void(0)"
+                    href="#"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
                   >
-                    <i className="ti ti-playlist-add fs-30 base"></i>
+                    <IconPlaylistAdd className="fs-30 base" />
                     Add To Playlist
                   </Link>
                 </li>
                 <li>
                   <Link
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
-                    href="javascript:void(0)"
+                    href="#"
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal2"
                   >
-                    <i className="ti ti-share fs-30 base"></i>
+                    <IconShare className="fs-30 base" />
                     Share
                   </Link>
                 </li>
@@ -92,13 +104,13 @@ const ShowDetailsSection = () => {
                 <div className="d-flex align-items-center gap-4">
                   <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
-                      <i className="ti ti-thumb-up fs-24 base"></i>
+                      <IconThumbUp className="fs-24 base" />
                     </span>
                     <span>Like</span>
                   </Link>
                   <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
-                      <i className="ti ti-thumb-down fs-24 base"></i>
+                      <IconThumbDown className="fs-24 base" />
                     </span>
                     <span>Dislike</span>
                   </Link>
@@ -107,13 +119,13 @@ const ShowDetailsSection = () => {
                 <div className="d-flex align-items-center gap-4">
                   <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
-                      <i className="ti ti-share fs-24 base"></i>
+                      <IconShare className="fs-24 base" />
                     </span>
                     <span>Share</span>
                   </Link>
                   <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
-                      <i className="ti ti-share-3 fs-24 base"></i>
+                      <IconShare3 className="fs-24 base" />
                     </span>
                     <span>Re Post</span>
                   </Link>
@@ -229,17 +241,17 @@ const ShowDetailsSection = () => {
               <li className="fs-24 me-1 fw-400 white headfont">Share:</li>
               <li>
                 <Link href="#0" className="sicon white">
-                  <i className="ti pra fz-24 ti-brand-facebook"></i>
+                  <IconBrandFacebook className="pra fz-24" />
                 </Link>
               </li>
               <li>
                 <Link href="#0" className="sicon white">
-                  <i className="ti pra fz-24 ti-brand-twitch"></i>
+                  <IconBrandTwitch className="pra fz-24" />
                 </Link>
               </li>
               <li>
                 <Link href="#0" className="sicon white">
-                  <i className="ti pra fz-24 ti-brand-instagram"></i>
+                  <IconBrandInstagram className="pra fz-24" />
                 </Link>
               </li>
             </ul>

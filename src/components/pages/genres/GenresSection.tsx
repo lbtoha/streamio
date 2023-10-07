@@ -1,4 +1,4 @@
-import { genresAllSongsSliderData } from "../../../../public/data/genresAllSongsSliderData";
+import { genresAllSongsSliderData } from "@/../public/data/genresAllSongsSliderData";
 import GenresSliderCard from "../genres-allsong/GenresSliderCard";
 
 const GenresSection = () => {

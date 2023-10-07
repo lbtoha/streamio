@@ -1,6 +1,7 @@
+import { exploreSectionData } from "@/../public/data/exploreSectionData";
+import { weeklytopTrackData } from "@/../public/data/weeklyTopTracksData";
+import { IconPlus } from "@tabler/icons-react";
 import Image from "next/image";
-import { exploreSectionData } from "../../../../public/data/exploreSectionData";
-import { weeklytopTrackData } from "../../../../public/data/weeklyTopTracksData";
 import ExploreSectionTableRow from "./ExploreSectionTableRow";
 import WeeklyTopTrack from "./WeeklyTopTrack";
 
@@ -25,7 +26,7 @@ const ExploreSection = () => {
                   </span>
                   <div className="bbgadd">
                     <div className="boxes">
-                      <i className="ti ti-plus upload-button"></i>
+                      <IconPlus className="upload-button" />
                       <input
                         className="file-upload"
                         type="file"

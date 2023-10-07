@@ -6,6 +6,7 @@ import SharedModal from "@/components/shared/SharedModal";
 import { poppins } from "@/utils/fonts";
 import "material-symbols";
 import { Metadata } from "next";
+import { Suspense } from "react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
@@ -13,6 +14,7 @@ import "swiper/css/thumbs";
 import "swiper/scss/scrollbar";
 import ".././styles/sass/main.scss";
 import "../styles/all.min.css";
+import Loader from "./Loader";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,7 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <main>{children}</main>
+        <main>
+          <Suspense fallback={<Loader />}>{children}</Suspense>
+        </main>
         <AddToPlaylistModal />
         <SharedModal />
         <DeletePostModal />

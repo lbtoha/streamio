@@ -6,8 +6,7 @@ const AudioPlayerModal = () => {
     <div
       className="modal backdrop profile-completeness-modal fade"
       id="exampleModalaudio"
-      tabindex="-1"
-      aria-hidden="true"
+      aria-hidden={true}
     >
       <div className="modal-dialog width__maintain modal-dialog-centered modal-bottom">
         <div className="modal-content">

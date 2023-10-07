@@ -1,3 +1,4 @@
+import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -22,7 +23,7 @@ const ArtistsSliderCard = ({ image, title, location }: Props) => {
             <span className="fs-16 fw-500 pra3 d-block">{location}</span>
           </div>
           <Link href="artist-allsong" className="cmn__arrow">
-            <i className="ti ti-arrow-narrow-right arrowrotate"></i>
+            <IconArrowNarrowRight className="arrowrotate" />
           </Link>
         </div>
       </div>

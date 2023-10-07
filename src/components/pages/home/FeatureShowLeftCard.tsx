@@ -1,3 +1,8 @@
+import {
+  IconAddressBook,
+  IconArrowNarrowRight,
+  IconHeadphones,
+} from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -40,25 +45,25 @@ const FeatureShowLeftCard = ({
             <ul className="show__listen d-flex align-items-center">
               <li>
                 <Link
-                  href="javascript:void(0)"
+                  href="#"
                   className="d-flex align-items-center fs-14 fw-500 white gap-2"
                 >
-                  <i className="ti ti-headphones"></i>
+                  <IconHeadphones />
                   Listen Now
                 </Link>
               </li>
               <li>
                 <Link
-                  href="javascript:void(0)"
+                  href="#"
                   className="d-flex align-items-center fs-14 fw-500 white gap-2"
                 >
-                  <i className="ti ti-address-book"></i>
+                  <IconAddressBook />
                   Browse All
                 </Link>
               </li>
             </ul>
             <Link href="show-details" className="cmn__arrow40">
-              <i className="ti ti-arrow-narrow-right arrowrotate"></i>
+              <IconArrowNarrowRight className="arrowrotate" />
             </Link>
           </div>
         </div>

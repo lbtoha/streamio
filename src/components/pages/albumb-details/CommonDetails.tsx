@@ -1,4 +1,10 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
+import {
+  IconShare,
+  IconShare3,
+  IconThumbDown,
+  IconThumbUp,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -31,13 +37,13 @@ const CommonDetails = ({
                 <div className="d-flex align-items-center gap-4">
                   <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
-                      <i className="ti ti-thumb-up fs-24 base"></i>
+                      <IconThumbUp className="fs-24 base" />
                     </span>
                     <span>Like</span>
                   </Link>
                   <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
-                      <i className="ti ti-thumb-down fs-24 base"></i>
+                      <IconThumbDown className="fs-24 base" />
                     </span>
                     <span>Dislike</span>
                   </Link>
@@ -48,13 +54,13 @@ const CommonDetails = ({
                 <div className="d-flex align-items-center gap-4">
                   <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
-                      <i className="ti ti-share fs-24 base"></i>
+                      <IconShare className="fs-24 base" />
                     </span>
                     <span>Share</span>
                   </Link>
                   <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
-                      <i className="ti ti-share-3 fs-24 base"></i>
+                      <IconShare3 className="fs-24 base" />
                     </span>
                     <span>Re Post</span>
                   </Link>
@@ -273,10 +279,10 @@ const CommonDetails = ({
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
                         <Link
-                          href="javascript:void(0)"
+                          href="#"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
-                          <i className="ti ti-share-3 fs-24"></i>
+                          <IconShare3 className="fs-24" />
                           <span className="white fs-14">Reply</span>
                         </Link>
                       </div>
@@ -333,10 +339,10 @@ const CommonDetails = ({
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
                         <Link
-                          href="javascript:void(0)"
+                          href="#"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
-                          <i className="ti ti-share-3 fs-24"></i>
+                          <IconShare3 className="fs-24 " />
                           <span className="white fs-14">Reply</span>
                         </Link>
                       </div>

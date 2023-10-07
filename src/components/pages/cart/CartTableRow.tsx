@@ -1,3 +1,4 @@
+import { IconMinus, IconPlus, IconX } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,7 +18,7 @@ const CartTableRow = () => {
         <form action="#0">
           <p className="qty align-items-center">
             <button className="qtyplus" aria-hidden="true">
-              <i className="ti ti-plus"></i>
+              <IconPlus />
             </button>
             <input
               type="number"
@@ -26,10 +27,10 @@ const CartTableRow = () => {
               min="1"
               max="10"
               step="1"
-              value="01"
+              defaultValue="01"
             />
             <button className="qtyminus" aria-hidden="true">
-              <i className="ti ti-minus"></i>
+              <IconMinus />
             </button>
           </p>
         </form>
@@ -39,7 +40,7 @@ const CartTableRow = () => {
         <span className="d-flex align-items-center gap-3">
           $75.80{" "}
           <Link href="#0" className="iconx">
-            <i className="ti ti-x"></i>
+            <IconX />
           </Link>
         </span>
       </td>

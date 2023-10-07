@@ -1,4 +1,5 @@
 "use client";
+import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -117,10 +118,10 @@ const Banner = () => {
               </Swiper>
               <div className="bn__navigationnew gap-1 d-flex align-items-center">
                 <div className="swiper-button-next">
-                  <i className="ti ti-chevron-left"></i>
+                  <IconChevronLeft />
                 </div>
                 <div className="swiper-button-prev">
-                  <i className="ti ti-chevron-right"></i>
+                  <IconChevronRight />
                 </div>
               </div>
             </div>

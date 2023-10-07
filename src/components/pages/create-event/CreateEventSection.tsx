@@ -1,29 +1,22 @@
 "use client";
+import EventSelectBox from "@/components/shared/EventSelectBox";
+import { IconUpload } from "@tabler/icons-react";
 import Image from "next/image";
-import { ChangeEvent, useRef, useState } from "react";
 
 const CreateEventSection = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const eventSelection = [
+    { label: "Online" },
+    { label: "Ofline" },
+    { label: "Everyday" },
+  ];
 
-  const ref = useRef(null);
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
+  const timeSelection = [
+    { label: "(GHT-11:00) Midway Island" },
+    { label: "(GHT-12:00) Midway Island" },
+    { label: "(GHT-01:00) Midway Island" },
+  ];
 
-      reader.onload = (event) => {
-        const imageUrl = event.target?.result as string;
-
-        setSelectedImage(imageUrl);
-      };
-
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const handleClick = () => {
-    ref.current?.click();
-  };
+  const ticketsSelection = [{ label: "Yes" }, { label: "NO" }];
 
   return (
     <section className="event__section custom__space pr-24 pl-24 pb-80">
@@ -37,32 +30,18 @@ const CreateEventSection = () => {
                     width={1080}
                     height={208}
                     className="profile-pic arrow"
-                    src={
-                      selectedImage
-                        ? selectedImage
-                        : "/img/details/coverphoto.jpg"
-                    }
+                    src="/img/details/coverphoto.jpg"
                     alt="img"
                   />
                   <div className="thingkin">
-                    <i
-                      onClick={handleClick}
-                      className="ti ti-upload upload-button d-block pra fs-30"
-                    ></i>
+                    <IconUpload className="upload-button d-block pra fs-30" />
                     <input
-                      ref={ref}
-                      onChange={handleChange}
                       className="file-upload mt-10"
                       type="file"
                       placeholder="Event Cover"
                       accept="image //*"
                     />
-                    <h4
-                      onClick={handleClick}
-                      className="white mt-10 upload-button"
-                    >
-                      Event Cover
-                    </h4>
+                    <h4 className="white mt-10 upload-button">Event Cover</h4>
                   </div>
                 </div>
               </div>
@@ -84,11 +63,7 @@ const CreateEventSection = () => {
                       <label className="mb-16 fs-18 d-block fw-500 white bodyfont">
                         Event Details <span className="base2">*</span>
                       </label>
-                      <select name="event__select">
-                        <option value="1">Online</option>
-                        <option value="2">Ofline</option>
-                        <option value="3">Everyday</option>
-                      </select>
+                      <EventSelectBox options={eventSelection} />
                     </div>
                   </div>
                   <div className="col-lg-12">
@@ -157,11 +132,7 @@ const CreateEventSection = () => {
                       <label className="mb-16 fs-18 d-block fw-500 white bodyfont">
                         TimeZone <span className="base2">*</span>
                       </label>
-                      <select name="event__select">
-                        <option value="1">(GHT-11:00) Midway Island</option>
-                        <option value="2">(GHT-12:00) Midway Island</option>
-                        <option value="3">(GHT-01:00) Midway Island</option>
-                      </select>
+                      <EventSelectBox options={timeSelection} />
                     </div>
                   </div>
                   <div className="col-lg-12">
@@ -169,10 +140,7 @@ const CreateEventSection = () => {
                       <label className="mb-16 fs-18 d-block fw-500 white bodyfont">
                         Sell Tickets <span className="base2">*</span>
                       </label>
-                      <select name="event__select">
-                        <option value="1">No</option>
-                        <option value="2">Yes</option>
-                      </select>
+                      <EventSelectBox options={ticketsSelection} />
                     </div>
                   </div>
                   <div className="col-lg-12">
@@ -186,7 +154,7 @@ const CreateEventSection = () => {
                       <textarea
                         name="description"
                         id="message"
-                        rows="5"
+                        rows={5}
                         placeholder="Type Event Description"
                       ></textarea>
                     </div>
@@ -198,7 +166,7 @@ const CreateEventSection = () => {
                       </label>
                       <div className="fileupload ralt">
                         <span className="fs-16 fw-400 gap-2 d-grid justify-content-center text-center bodyfont pra">
-                          <i className="ti ti-upload fs-30 pra"></i>
+                          <IconUpload className="fs-30 pra" />
                           Select a Video File to import
                         </span>
                         <input type="file" className="up__fileup" />

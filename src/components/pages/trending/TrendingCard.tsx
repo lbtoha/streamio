@@ -1,5 +1,6 @@
 "use client";
 import AudioPlayer from "@/components/shared/AudioPlayer";
+import { IconHeadphones, IconListTree } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -17,17 +18,17 @@ const TrendingCard = ({ image, title, location, listeners }: Props) => {
           <Image src={image} className="transition" alt="img" />
           <div className="trending__bbar d-flex align-items-center justify-content-around">
             <Link
-              href="javascript:void(0)"
+              href="#"
               className="d-flex fs-16 fw-500 white align-items-center gap-3"
             >
-              <i className="ti ti-list-tree"></i>
+              <IconListTree />
               37
             </Link>
             <Link
-              href="javascript:void(0)"
+              href="#"
               className="d-flex fs-16 fw-500 white align-items-center gap-3"
             >
-              <i className="ti ti-headphones"></i>
+              <IconHeadphones />
               {listeners}
             </Link>
           </div>

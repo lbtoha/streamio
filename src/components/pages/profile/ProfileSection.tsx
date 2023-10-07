@@ -1,8 +1,16 @@
+import { exploreSectionData } from "@/../public/data/exploreSectionData";
+import { songUpgradeData } from "@/../public/data/songUpgrdeData";
+import { weeklytopTrackData } from "@/../public/data/weeklyTopTracksData";
+import {
+  IconCamera,
+  IconEdit,
+  IconGenderFemale,
+  IconPlaylistOff,
+  IconPlus,
+  IconShare3,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import { exploreSectionData } from "../../../../public/data/exploreSectionData";
-import { songUpgradeData } from "../../../../public/data/songUpgrdeData";
-import { weeklytopTrackData } from "../../../../public/data/weeklyTopTracksData";
 import SongUpgradeTableRow from "../albumb-allsong/SongUpgradeTableRow";
 import ExploreSectionTableRow from "../explore/ExploreSectionTableRow";
 import WeeklyTopTrack from "../explore/WeeklyTopTrack";
@@ -22,7 +30,7 @@ const ProfileSection = () => {
                 alt="img"
               />
               <div className="thingkin">
-                <i className="ti ti-camera upload-button d-block white fs-30"></i>
+                <IconCamera className="upload-button d-block white fs-30" />
                 <input
                   className="file-upload mt-10"
                   type="file"
@@ -40,7 +48,7 @@ const ProfileSection = () => {
                   alt="img"
                 />
                 <div className="boxes">
-                  <i className="ti ti-plus "></i>
+                  <IconPlus />
                   <input type="file" accept="image/*" />
                 </div>
               </div>
@@ -55,7 +63,7 @@ const ProfileSection = () => {
                   href="#0"
                   className="d-flex fs-14 fw-500 bodyfont base2 align-items-center gap-2"
                 >
-                  <i className="ti ti-edit"></i>
+                  <IconEdit />
                   Edit Profile
                 </Link>
               </div>
@@ -185,7 +193,6 @@ const ProfileSection = () => {
               id="pro1-tab-pane"
               role="tabpanel"
               aria-labelledby="pro1-tab"
-              tabindex="0"
             >
               <div className="row g-4">
                 <div className="col-lg-7">
@@ -246,14 +253,14 @@ const ProfileSection = () => {
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-gender-female fs-24 base"></i>
+                      <IconGenderFemale className="fs-24 base" />
                       Male
                     </Link>
                     <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-share-3 fs-24 base"></i>
+                      <IconShare3 className="fs-24 base" />
                       Social Links
                     </Link>
                   </div>
@@ -273,7 +280,6 @@ const ProfileSection = () => {
               id="pro2-tab-pane"
               role="tabpanel"
               aria-labelledby="pro2-tab"
-              tabindex="0"
             >
               <div className="row g-4">
                 <div className="col-lg-7">
@@ -338,14 +344,14 @@ const ProfileSection = () => {
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-gender-female fs-24 base"></i>
+                      <IconGenderFemale className="fs-24 base" />
                       Male
                     </Link>
                     <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-share-3 fs-24 base"></i>
+                      <IconShare3 className="fs-24 base" />
                       Social Links
                     </Link>
                   </div>
@@ -365,7 +371,6 @@ const ProfileSection = () => {
               id="pro3-tab-pane"
               role="tabpanel"
               aria-labelledby="pro3-tab"
-              tabindex="0"
             >
               <div className="row g-4">
                 <div className="col-lg-7">
@@ -430,14 +435,14 @@ const ProfileSection = () => {
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-gender-female fs-24 base"></i>
+                      <IconGenderFemale className="fs-24 base" />
                       Male
                     </Link>
                     <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-share-3 fs-24 base"></i>
+                      <IconShare3 className="fs-24 base" />
                       Social Links
                     </Link>
                   </div>
@@ -457,13 +462,12 @@ const ProfileSection = () => {
               id="pro4-tab-pane"
               role="tabpanel"
               aria-labelledby="pro4-tab"
-              tabindex="0"
             >
               <div className="row g-4">
                 <div className="col-lg-7">
                   <div className="no__tracksfound">
                     <Link href="#0" className="boxes text-center">
-                      <i className="ti ti-playlist-off"></i>
+                      <IconPlaylistOff />
                       <span className="fs-16 fw-500 white d-block">
                         No tracks found
                       </span>
@@ -510,14 +514,14 @@ const ProfileSection = () => {
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-gender-female fs-24 base"></i>
+                      <IconGenderFemale className="fs-24 base" />
                       Male
                     </Link>
                     <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-share-3 fs-24 base"></i>
+                      <IconShare3 className="fs-24 base" />
                       Social Links
                     </Link>
                   </div>
@@ -537,13 +541,12 @@ const ProfileSection = () => {
               id="pro5-tab-pane"
               role="tabpanel"
               aria-labelledby="pro5-tab"
-              tabindex="0"
             >
               <div className="row g-4">
                 <div className="col-lg-7">
                   <div className="no__tracksfound">
                     <Link href="#0" className="boxes text-center">
-                      <i className="ti ti-playlist-off"></i>
+                      <IconPlaylistOff />
                       <span className="fs-16 fw-500 white d-block">
                         No tracks found
                       </span>
@@ -590,14 +593,14 @@ const ProfileSection = () => {
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-gender-female fs-24 base"></i>
+                      <IconGenderFemale className="fs-24 base" />
                       Male
                     </Link>
                     <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-share-3 fs-24 base"></i>
+                      <IconShare3 className="fs-24 base" />
                       Social Links
                     </Link>
                   </div>
@@ -617,13 +620,12 @@ const ProfileSection = () => {
               id="pro6-tab-pane"
               role="tabpanel"
               aria-labelledby="pro6-tab"
-              tabindex="0"
             >
               <div className="row g-4">
                 <div className="col-lg-7">
                   <div className="no__tracksfound">
                     <Link href="#0" className="boxes text-center">
-                      <i className="ti ti-playlist-off"></i>
+                      <IconPlaylistOff />
                       <span className="fs-16 fw-500 white d-block">
                         No tracks found
                       </span>
@@ -670,14 +672,14 @@ const ProfileSection = () => {
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-gender-female fs-24 base"></i>
+                      <IconGenderFemale className="fs-24 base" />
                       Male
                     </Link>
                     <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-share-3 fs-24 base"></i>
+                      <IconShare3 className="fs-24 base" />
                       Social Links
                     </Link>
                   </div>
@@ -697,13 +699,12 @@ const ProfileSection = () => {
               id="pro7-tab-pane"
               role="tabpanel"
               aria-labelledby="pro7-tab"
-              tabindex="0"
             >
               <div className="row g-4">
                 <div className="col-lg-7">
                   <div className="no__tracksfound">
                     <Link href="#0" className="boxes text-center">
-                      <i className="ti ti-playlist-off"></i>
+                      <IconPlaylistOff />
                       <span className="fs-16 fw-500 white d-block">
                         No tracks found
                       </span>
@@ -750,14 +751,14 @@ const ProfileSection = () => {
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-gender-female fs-24 base"></i>
+                      <IconGenderFemale className="fs-24 base" />
                       Male
                     </Link>
                     <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-share-3 fs-24 base"></i>
+                      <IconShare3 className="fs-24 base" />
                       Social Links
                     </Link>
                   </div>
@@ -777,13 +778,12 @@ const ProfileSection = () => {
               id="pro8-tab-pane"
               role="tabpanel"
               aria-labelledby="pro8-tab"
-              tabindex="0"
             >
               <div className="row g-4">
                 <div className="col-lg-7">
                   <div className="no__tracksfound">
                     <Link href="#0" className="boxes text-center">
-                      <i className="ti ti-playlist-off"></i>
+                      <IconPlaylistOff />
                       <span className="fs-16 fw-500 white d-block">
                         No tracks found
                       </span>
@@ -830,14 +830,14 @@ const ProfileSection = () => {
                       href="#0"
                       className="d-flex mb-10 align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-gender-female fs-24 base"></i>
+                      <IconGenderFemale className="fs-24 base" />
                       Male
                     </Link>
                     <Link
                       href="#0"
                       className="d-flex align-items-center gap-3 fs-18 pra fw-500 bodyfont"
                     >
-                      <i className="ti ti-share-3 fs-24 base"></i>
+                      <IconShare3 className="fs-24 base" />
                       Social Links
                     </Link>
                   </div>

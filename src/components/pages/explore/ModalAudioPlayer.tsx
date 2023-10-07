@@ -1,5 +1,14 @@
 "use client";
 import useAudioPlayer from "@/hooks/useAudioPlayer";
+import {
+  IconMultiplier1x,
+  IconPlayerSkipBack,
+  IconPlayerSkipForward,
+  IconPlaylist,
+  IconRepeat,
+  IconSwitch,
+  IconX,
+} from "@tabler/icons-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -70,16 +79,15 @@ const ModalAudioPlayer = ({
       <div className="d-flex middle__audioboxes align-items-center">
         <div className="d-flex align-items-center switch">
           <Link href="#0" className="white">
-            <i className="ti ti-switch"></i>
+            <IconSwitch />
           </Link>
           <Link href="#0" className="white lefttrun">
-            <i className="ti ti-player-skip-back"></i>
+            <IconPlayerSkipBack />
           </Link>
         </div>
         <div className={`audioplayer ${playToggle && "audioplayer-playing"}`}>
           <audio
             preload="auto"
-            controls=""
             style={{ width: "0px", height: "0px", visibility: "hidden" }}
             onTimeUpdate={handleProgress}
             ref={audioRef}
@@ -133,25 +141,25 @@ const ModalAudioPlayer = ({
           </div>
         </div>
         <Link href="#0" className="white righttrun">
-          <i className="ti ti-player-skip-forward pra"></i>
+          <IconPlayerSkipForward className="pra" />
         </Link>
         <Link href="#0" className="white righttrun">
-          <i className="ti ti-repeat pra"></i>
+          <IconRepeat className="pra" />
         </Link>
       </div>
       <div className="d-flex small__center align-items-center">
         <Link href="#0" className="white">
-          <i className="ti ti-multiplier-1x pra circle__add"></i>
+          <IconMultiplier1x className="pra circle__add" />
         </Link>
         <Link href="#0" className="white">
-          <i className="ti ti-playlist fs-20 pra"></i>
+          <IconPlaylist className="fs-20 pra" />
         </Link>
         <button
           type="button"
           className="btn pra cross__btnsnone"
           data-bs-dismiss="modal"
         >
-          <i className="ti ti-x fs-24"></i>
+          <IconX className="fs-24" />
         </button>
       </div>
     </>

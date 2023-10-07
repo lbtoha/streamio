@@ -1,4 +1,4 @@
-import { moodsCardData } from "../../../../public/data/moodsCardData";
+import { moodsCardData } from "@/../public/data/moodsCardData";
 import MoodsCard from "../home/MoodsCard";
 
 const Trending = () => {

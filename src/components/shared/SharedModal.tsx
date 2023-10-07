@@ -1,15 +1,20 @@
+import {
+  IconBrandBehance,
+  IconBrandDiscord,
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandTwitch,
+  IconBrandWhatsapp,
+  IconBrandWikipedia,
+  IconBrandYoutube,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import AudioPlayer from "./AudioPlayer";
 
 const SharedModal = () => {
   return (
-    <div
-      className="modal fade"
-      id="exampleModal2"
-      tabindex="-1"
-      aria-hidden="true"
-    >
+    <div className="modal fade" id="exampleModal2" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered modal-lg">
         <div className="modal-content play__shapewrap">
           <h4 className="white text-center mb-40">Share this Song</h4>
@@ -54,7 +59,6 @@ const SharedModal = () => {
                 id="home-tab-pane"
                 role="tabpanel"
                 aria-labelledby="home-tab"
-                tabindex="0"
               >
                 <div className="d-flex mt-18 mb-20 align-items-center gap-3">
                   <Image
@@ -75,51 +79,49 @@ const SharedModal = () => {
                 <ul className="custom__social d-flex align-center gap-2">
                   <li>
                     <Link href="#0">
-                      <i className="ti ti-brand-facebook white"></i>
+                      <IconBrandFacebook className="white" />
                     </Link>
                   </li>
                   <li>
                     <Link href="#0">
-                      <i className="ti ti-brand-twitch"></i>
+                      <IconBrandTwitch className="white" />
                     </Link>
                   </li>
                   <li>
                     <Link href="#0">
-                      <i className="ti ti-brand-instagram"></i>
+                      <IconBrandInstagram className="white" />
                     </Link>
                   </li>
                   <li>
                     <Link href="#0">
-                      <i className="ti ti-brand-whatsapp"></i>
+                      <IconBrandWhatsapp className="white" />
                     </Link>
                   </li>
                   <li>
                     <Link href="#0">
-                      <i className="ti ti-brand-youtube"></i>
+                      <IconBrandYoutube className="white" />
                     </Link>
                   </li>
                   <li>
                     <Link href="#0">
-                      <i className="ti ti-brand-discord"></i>
+                      <IconBrandDiscord className="white" />
                     </Link>
                   </li>
                   <li>
                     <Link href="#0">
-                      <i className="ti ti-brand-wikipedia"></i>
+                      <IconBrandWikipedia className="white" />
                     </Link>
                   </li>
                   <li>
                     <Link href="#0">
-                      <i className="ti ti-brand-behance"></i>
+                      <IconBrandBehance className="white" />
                     </Link>
                   </li>
                 </ul>
                 <input
                   className="thmb_url"
                   type="text"
-                  value="https://demo.deepsoundscript.com/track/bqDlwx13lz881WM"
-                  onclick="select()"
-                  readonly=""
+                  defaultValue="https://demo.deepsoundscript.com/track/bqDlwx13lz881WM"
                 />
               </div>
               <div
@@ -127,7 +129,6 @@ const SharedModal = () => {
                 id="profile-tab-pane"
                 role="tabpanel"
                 aria-labelledby="profile-tab"
-                tabindex="0"
               >
                 <div className="d-flex online__embeded mt-18 align-items-center gap-3">
                   <div className="online__thumb">
@@ -162,15 +163,13 @@ const SharedModal = () => {
                   <input
                     className="thmb_url"
                     type="text"
-                    value="https://demo.deepsoundscript.com/track/bqDlwx13lz881WM"
-                    onclick="select()"
-                    readonly=""
+                    defaultValue="https://demo.deepsoundscript.com/track/bqDlwx13lz881WM"
                   />
                   <input
                     type="color"
                     className="colorplate"
                     name="head"
-                    value="#e66465"
+                    defaultValue="#e66465"
                   />
                 </div>
               </div>

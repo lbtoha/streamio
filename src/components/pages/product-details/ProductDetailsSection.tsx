@@ -1,4 +1,12 @@
 "use client";
+import {
+  IconChevronDown,
+  IconChevronUp,
+  IconHeart,
+  IconShoppingCartPlus,
+  IconStar,
+  IconStarFilled,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,6 +17,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const ProductDetailsSection = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [quantity, setQuantity] = useState(1);
+
+  const quantityIncrement = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setQuantity(quantity + 1);
+  };
+  const quantityDecrement = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setQuantity(quantity - 1);
+  };
 
   return (
     <section className="product__details custom__space pr-24 pl-24">
@@ -122,19 +140,19 @@ const ProductDetailsSection = () => {
               <h2 className="white mb-16">Guitar ZR-975</h2>
               <ul className="rated mb-20 d-flex align-items-center gap-1">
                 <li>
-                  <i className="ti ti-star base2"></i>
+                  <IconStar className="base2" />
                 </li>
                 <li>
-                  <i className="ti ti-star base2"></i>
+                  <IconStar className="base2" />
                 </li>
                 <li>
-                  <i className="ti ti-star-filled base2"></i>
+                  <IconStarFilled className="base2" />
                 </li>
                 <li>
-                  <i className="ti ti-star-filled base2"></i>
+                  <IconStarFilled className="base2" />
                 </li>
                 <li>
-                  <i className="ti ti-star-filled base2"></i>
+                  <IconStarFilled className="base2" />
                 </li>
                 <li className="fs-14 ms-2 pra fw-500 bodyfont">( 0 Reviews)</li>
               </ul>
@@ -161,24 +179,32 @@ const ProductDetailsSection = () => {
                       min="1"
                       max="10"
                       step="1"
-                      value="1"
+                      defaultValue={quantity}
                     />
                     <span className="d-grid updownicon align-items-center">
-                      <button className="qtyminus" aria-hidden="true">
-                        <i className="ti ti-chevron-up"></i>
+                      <button
+                        onClick={quantityIncrement}
+                        className="qtyminus"
+                        aria-hidden="true"
+                      >
+                        <IconChevronUp />
                       </button>
-                      <button className="qtyplus" aria-hidden="true">
-                        <i className="ti ti-chevron-down"></i>
+                      <button
+                        onClick={quantityDecrement}
+                        className="qtyplus"
+                        aria-hidden="true"
+                      >
+                        <IconChevronDown />
                       </button>
                     </span>
                   </p>
                 </form>
                 <Link href="#0" className="buybtn gap-3">
-                  <i className="ti ti-shopping-cart-plus"></i>
+                  <IconShoppingCartPlus />
                   Buy Now
                 </Link>
                 <Link href="#0" className="buybtn2">
-                  <i className="ti ti-heart fs-26"></i>
+                  <IconHeart className="fs-26" />
                 </Link>
               </div>
               <div className="por__categoris mt-30">
@@ -238,7 +264,6 @@ const ProductDetailsSection = () => {
                 id="home-tab-pane"
                 role="tabpanel"
                 aria-labelledby="home-tab"
-                tabindex="0"
               >
                 <div className="review__body">
                   <p className="fs-16 fw-400 bodyfont pra mt-18">
@@ -257,7 +282,6 @@ const ProductDetailsSection = () => {
                 id="profile-tab-pane"
                 role="tabpanel"
                 aria-labelledby="profile-tab"
-                tabindex="0"
               >
                 <div className="review__body">
                   <span className="fs-20 fw-500 d-block mb-20 bodyfont white">

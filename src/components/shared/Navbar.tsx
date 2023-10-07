@@ -1,22 +1,29 @@
 "use client";
+import { mainNavbarData, sideBarData } from "@/../public/data/navBarData";
+import { handleLinkClick } from "@/utils/handleLinkClick";
 import { navbarContext } from "@/utils/reactContext";
+import {
+  IconBell,
+  IconChecks,
+  IconChevronDown,
+  IconDots,
+  IconSearch,
+  IconShoppingCart,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
-import { mainNavbarData, sideBarData } from "../../../public/data/navBarData";
 import NavbarDropdown from "./NavbarDropdown";
 
 const Navbar = () => {
   const { isSidebarOpen } = useContext(navbarContext);
-  const [path, setPath] = useState("/");
   const [isSubDropDownOpen, setSubDropDownOpen] = useState(false);
 
   const pathName = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY);
       if (window.scrollY > 0) {
         document
           .querySelector(".header-wrapper")
@@ -46,7 +53,7 @@ const Navbar = () => {
               className={`sidebar-wrapper mainbg ${isSidebarOpen && "active"}`}
             >
               <div className="d-flex logo__wrap align-items-center justify-content-between">
-                <Link href="index" className="logo">
+                <Link href="/" className="logo">
                   <Image
                     width={180}
                     height={52}
@@ -73,10 +80,12 @@ const Navbar = () => {
                           menuItems={menuItems}
                         />
                       ) : (
-                        <li>
+                        <li key={id}>
                           <Link
                             href={path}
-                            className="d-flex hcolor align-items-center gap-2"
+                            className={`d-flex hcolor align-items-center gap-2 ${
+                              pathName === path ? "navbar-item-active" : ""
+                            }`}
                           >
                             {icon}
                             {menuTitle}
@@ -96,7 +105,7 @@ const Navbar = () => {
               {/*==============main menu===== */}
               <ul className="main-menuone">
                 <li className="small__logo">
-                  <Link href="index">
+                  <Link href="/">
                     <Image
                       width={68}
                       height={51}
@@ -108,7 +117,7 @@ const Navbar = () => {
                 <li className="search__show">
                   <form action="#0" className="d-flex align-items-center">
                     <button type="submit">
-                      <i className="ti ti-search"></i>
+                      <IconSearch />
                     </button>
                     <input
                       type="text"
@@ -119,16 +128,20 @@ const Navbar = () => {
                 {mainNavbarData.map(
                   ({ id, menuTitle, icon, path, menuItems }) => {
                     return menuItems ? (
-                      <li className="liclick xl__devicecustomize max-xl-none">
+                      <li
+                        key={id}
+                        className="liclick xl__devicecustomize max-xl-none"
+                      >
                         <span className="d-flex align-items-center">
                           <Link
-                            onClick={() =>
-                              setSubDropDownOpen(!isSubDropDownOpen)
-                            }
-                            href="javascript:void(0)"
+                            onClick={(e) => {
+                              setSubDropDownOpen(!isSubDropDownOpen);
+                              handleLinkClick(e);
+                            }}
+                            href="#"
                             className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
                           >
-                            <i className="ti ti-dots"></i>
+                            <IconDots />
                           </Link>
                         </span>
                         <div
@@ -148,7 +161,7 @@ const Navbar = () => {
                         </div>
                       </li>
                     ) : (
-                      <li>
+                      <li key={id}>
                         <Link
                           href={path}
                           className="d-flex hcolor align-items-center gap-2"
@@ -164,7 +177,7 @@ const Navbar = () => {
               <div className="menu__right__components d-flex align-items-center">
                 <div className="menu__components d-flex align-items-center">
                   <Link href="cart" className="shop__tolley">
-                    <i className="ti ti-shopping-cart pra fs-30"></i>
+                    <IconShoppingCart className="pra fs-30" />
                     <span className="shop__badge">3</span>
                   </Link>
                   <div className="dropdown profie__dropdown">
@@ -184,7 +197,7 @@ const Navbar = () => {
                       />
                       <span className="d-flex fs-14 fw-500 pra align-items-center gap-1">
                         David Malan
-                        <i className="ti ti-chevron-down"></i>
+                        <IconChevronDown />
                       </span>
                     </Link>
                     <div
@@ -201,7 +214,7 @@ const Navbar = () => {
                               alt="image"
                               className="img-fluid jenny rounded-circle object-fit-cover flex-shrink-0"
                             />
-                            <i className="ti ti-checks checks"></i>
+                            <IconChecks className="checks" />
                           </div>
                           <div className="flex-grow-1">
                             <h5 className="fs-20 fw-600 white  mb-0">
@@ -227,7 +240,7 @@ const Navbar = () => {
                           </li>
                           <li className="mb-16">
                             <Link
-                              href="javascript:void(0)"
+                              href="#"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
                               <i className="bi bi-bell fs-20"></i>
@@ -241,7 +254,7 @@ const Navbar = () => {
                         <ul className="list">
                           <li className="mb-16">
                             <Link
-                              href="javascript:void(0)"
+                              href="#"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
                               <i className="bi bi-credit-card-2-back fs-20"></i>
@@ -253,7 +266,7 @@ const Navbar = () => {
                           </li>
                           <li className="mb-16">
                             <Link
-                              href="javascript:void(0)"
+                              href="#"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
                               <i className="bi bi-credit-card-2-back fs-20"></i>
@@ -265,7 +278,7 @@ const Navbar = () => {
                           </li>
                           <li className="mb-16">
                             <Link
-                              href="javascript:void(0)"
+                              href="#"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
                               <i className="bi bi-gear fs-20"></i>
@@ -277,7 +290,7 @@ const Navbar = () => {
                           </li>
                           <li>
                             <Link
-                              href="javascript:void(0)"
+                              href="#"
                               className="link d-flex align-items-center gap-2 dropdown-item"
                             >
                               <i className="bi bi-file-earmark-plus fs-20"></i>
@@ -299,7 +312,7 @@ const Navbar = () => {
                       data-bs-offset="0,14"
                       aria-expanded="true"
                     >
-                      <i className="ti ti-bell"></i>
+                      <IconBell />
                     </Link>
                     <div
                       className="dropdown-menu dropdown-menu-end "

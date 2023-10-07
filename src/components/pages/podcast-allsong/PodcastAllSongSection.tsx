@@ -1,3 +1,4 @@
+import { IconPlayerPlay, IconShare } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -39,13 +40,13 @@ const PodcastAllSongSection = () => {
             <div className="d-flex mt-24 align-items-center gap-4">
               <Link href="signin" className="cmbtn d-flex gap-2">
                 <span>
-                  <i className="ti ti-player-play fs-24 base"></i>
+                  <IconPlayerPlay className="fs-24 base" />
                 </span>
                 <span>Play</span>
               </Link>
               <Link href="signin" className="cmbtn d-flex gap-2">
                 <span>
-                  <i className="ti ti-share fs-24 base"></i>
+                  <IconShare className="fs-24 base" />
                 </span>
                 <span>Share</span>
               </Link>

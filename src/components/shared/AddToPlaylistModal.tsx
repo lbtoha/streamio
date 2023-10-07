@@ -1,11 +1,6 @@
 const AddToPlaylistModal = () => {
   return (
-    <div
-      className="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-hidden="true"
-    >
+    <div className="modal fade" id="exampleModal" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content modal__playlist">
           <div className="d-flex align-items-center mb-30 justify-content-between">

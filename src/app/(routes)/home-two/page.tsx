@@ -1,3 +1,4 @@
+import { productData } from "@/../public/data/productDta";
 import Banner from "@/components/pages/home-two/Banner";
 import TrendingSlider from "@/components/pages/home-two/TrendingSlider";
 import Artists from "@/components/pages/home/Artists";
@@ -8,7 +9,6 @@ import Podcasts from "@/components/pages/home/Podcast";
 import Product from "@/components/pages/home/Product";
 import Workout from "@/components/pages/home/Workout";
 import MainBody from "@/components/shared/MainBody";
-import { productData } from "../../../../public/data/productDta";
 
 const homeTwo = () => {
   return (
@@ -17,7 +17,7 @@ const homeTwo = () => {
       <TrendingSlider />
       <Moods />
       <Artists />
-      <Workout />
+      <Workout end={6} />
       <FeaturedShows />
       <Podcasts />
       <Product sectionTitle="Product" componentData={productData} />

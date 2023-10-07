@@ -1,8 +1,9 @@
 "use client";
+import { genresAllSongsSliderData } from "@/../public/data/genresAllSongsSliderData";
+import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 //@ts-ignore
 import { Navigation, Scrollbar } from "swiper";
-import { genresAllSongsSliderData } from "../../../../public/data/genresAllSongsSliderData";
 import GenresSliderCard from "./GenresSliderCard";
 
 const GenresSlider = () => {
@@ -54,11 +55,11 @@ const GenresSlider = () => {
           <div className="d-flex gap-4 mt-40 align-items-center">
             <div className="gap-1 d-flex">
               <div className="cmn-button-prev2">
-                <i className="ti ti-chevron-left"></i>
+                <IconChevronLeft />
               </div>
               <div className="cmn-pagination"></div>
               <div className="cmn-button-next2">
-                <i className="ti ti-chevron-right"></i>
+                <IconChevronRight />
               </div>
             </div>
             <div className="swiper-scrollbar"></div>

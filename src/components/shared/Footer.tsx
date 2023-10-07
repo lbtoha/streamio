@@ -1,3 +1,10 @@
+import {
+  IconBrandDiscord,
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandTwitch,
+  IconBrandYoutube,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,10 +21,7 @@ const Footer = () => {
                 <div className="link__attach d-flex">
                   <ul className="link">
                     <li className="mb-16">
-                      <Link
-                        href="javascript:void(0)"
-                        className="fs-16 fw-400 bodyfont pra"
-                      >
+                      <Link href="#" className="fs-16 fw-400 bodyfont pra">
                         About
                       </Link>
                     </li>
@@ -102,36 +106,24 @@ const Footer = () => {
                 <div className="link__attach mb-60 d-flex">
                   <ul className="link">
                     <li className="mb-16">
-                      <Link
-                        href="javascript:void(0)"
-                        className="fs-16 fw-400 bodyfont pra"
-                      >
+                      <Link href="#" className="fs-16 fw-400 bodyfont pra">
                         UA: +3 567 897 483
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        href="javascript:void(0)"
-                        className="fs-16 fw-400 bodyfont pra"
-                      >
+                      <Link href="#" className="fs-16 fw-400 bodyfont pra">
                         ronyui3630.com
                       </Link>
                     </li>
                   </ul>
                   <ul className="link">
                     <li className="mb-16">
-                      <Link
-                        href="javascript:void(0)"
-                        className="fs-16 fw-400 bodyfont pra"
-                      >
+                      <Link href="#" className="fs-16 fw-400 bodyfont pra">
                         www.Pixelaxic.com
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        href="javascript:void(0)"
-                        className="fs-16 fw-400 bodyfont pra"
-                      >
+                      <Link href="#" className="fs-16 fw-400 bodyfont pra">
                         Ukraine, Odessa
                       </Link>
                     </li>
@@ -139,28 +131,28 @@ const Footer = () => {
                 </div>
                 <ul className="social d-flex align-items-center">
                   <li>
-                    <Link href="javascript:void(0)">
-                      <i className="ti ti-brand-facebook"></i>
+                    <Link href="#">
+                      <IconBrandFacebook />
                     </Link>
                   </li>
                   <li>
-                    <Link href="javascript:void(0)">
-                      <i className="ti ti-brand-twitch"></i>
+                    <Link href="#">
+                      <IconBrandTwitch />
                     </Link>
                   </li>
                   <li>
-                    <Link href="javascript:void(0)">
-                      <i className="ti ti-brand-instagram"></i>
+                    <Link href="#">
+                      <IconBrandInstagram />
                     </Link>
                   </li>
                   <li>
-                    <Link href="javascript:void(0)">
-                      <i className="ti ti-brand-discord"></i>
+                    <Link href="#">
+                      <IconBrandDiscord />
                     </Link>
                   </li>
                   <li>
-                    <Link href="javascript:void(0)">
-                      <i className="ti ti-brand-youtube"></i>
+                    <Link href="#">
+                      <IconBrandYoutube />
                     </Link>
                   </li>
                 </ul>

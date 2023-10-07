@@ -1,9 +1,10 @@
 "use client";
 //@ts-ignore
+import { workoutCardData } from "@/../public/data/workoutData";
+import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 //@ts-ignore
 import { Navigation, Scrollbar } from "swiper";
-import { workoutCardData } from "../../../../public/data/workoutData";
 import MoodsCard from "../home/MoodsCard";
 
 const WorkoutSlider = () => {
@@ -57,11 +58,11 @@ const WorkoutSlider = () => {
           <div className="d-flex gap-4 mt-40 align-items-center">
             <div className="gap-1 d-flex">
               <div className="cmn-button-prev2">
-                <i className="ti ti-chevron-left"></i>
+                <IconChevronLeft />
               </div>
               <div className="cmn-pagination"></div>
               <div className="cmn-button-next2">
-                <i className="ti ti-chevron-right"></i>
+                <IconChevronRight />
               </div>
             </div>
             <div className="swiper-scrollbar"></div>

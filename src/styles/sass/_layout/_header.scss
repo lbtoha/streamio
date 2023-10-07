@@ -10,7 +10,7 @@
     margin-left: 0px;
     .closebts__two {
       left: 0px;
-      i {
+      svg {
         font-size: 26px;
       }
     }
@@ -35,7 +35,7 @@
   &:hover {
     cursor: pointer;
   }
-  i {
+  svg {
     color: var(--white);
     font-size: 26px;
   }
@@ -96,7 +96,7 @@
   }
   .closebtn {
     margin-bottom: -12px;
-    i {
+    svg {
       font-size: 24px;
     }
     &:hover {
@@ -127,7 +127,7 @@
         color: var(--pra);
         transition: all 0.4s;
         @include bodyfont;
-        i {
+        svg {
           font-size: 22px;
         }
       }
@@ -242,7 +242,7 @@
       color: var(--white);
     }
     .click__title {
-      i {
+      svg {
         color: var(--white);
       }
       color: var(--white);
@@ -253,6 +253,11 @@
       background: var(--base);
     }
   }
+}
+
+.navbar-item-active {
+  background-color: var(--base);
+  color: var(--white) !important;
 }
 //menu clickable
 //--Header Here--//
@@ -335,7 +340,7 @@
           outline: none;
           font-size: 14px;
           color: var(--pra);
-          i {
+          svg {
             padding-top: 5px;
             font-size: 22px;
           }
@@ -371,7 +376,7 @@
         &:hover {
           color: var(--hover);
         }
-        i {
+        svg {
           margin-left: 2px;
           color: var(--base-color);
         }
@@ -425,7 +430,7 @@
             padding: 10px 24px 10px;
             border-radius: 16px;
             transition: all 0.4s;
-            i {
+            svg {
               font-size: 28px;
               color: var(--white) !important;
             }
@@ -434,7 +439,7 @@
             a {
               color: var(--subtitle) !important;
               background: var(--secondary-color-secondary-color, #fffb1f);
-              i {
+              svg {
                 color: var(--subtitle) !important;
               }
             }
@@ -530,14 +535,14 @@
           height: 8px;
         }
       }
-      i {
+      svg {
         font-size: 26px;
         color: var(--white);
       }
       @include breakpoint(max-xs) {
         width: 35px;
         height: 35px;
-        i {
+        svg {
           font-size: 18px;
           color: var(--white);
         }
@@ -547,18 +552,18 @@
       background: var(--cmnbg);
       padding: 11px 12px 12px;
       border-radius: 100px;
-      i {
+      svg {
         transition: all 0.4s;
         color: var(--white);
       }
       &:hover {
-        i {
+        svg {
           color: var(--white);
         }
       }
       @include breakpoint(max-xs) {
         padding: 8px 7px 9px;
-        i {
+        svg {
           font-size: 16px;
         }
       }
@@ -623,7 +628,7 @@
         gap: 12px;
         position: relative;
         span {
-          i {
+          svg {
             font-size: 20px;
           }
         }
@@ -725,7 +730,7 @@
       padding: 0;
       width: 160px;
       border: unset;
-      i {
+      svg {
         font-size: 36px;
         color: var(--white);
       }
@@ -746,7 +751,7 @@
   @include breakpoint(max-xs) {
     width: 30px;
     height: 30px;
-    i {
+    svg {
       font-size: 18px;
     }
   }

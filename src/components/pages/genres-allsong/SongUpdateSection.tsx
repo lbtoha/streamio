@@ -1,6 +1,7 @@
+import { songUpgradeData } from "@/../public/data/songUpgrdeData";
+import { IconClockHour3 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import { songUpgradeData } from "../../../../public/data/songUpgrdeData";
 import SongUpgradeTableRow from "../albumb-allsong/SongUpgradeTableRow";
 
 const SongUpdateSection = () => {
@@ -42,7 +43,7 @@ const SongUpdateSection = () => {
                     </th>
                     <th className="justify-content-end d__custom d-flex">
                       <span className="fs-16 white fw-500 bodyfont">
-                        <i className="ti ti-clock-hour-3"></i>
+                        <IconClockHour3 className="fs-22 pra" />
                       </span>
                     </th>
                     <th className="d-lg-none white">

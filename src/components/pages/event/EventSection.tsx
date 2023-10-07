@@ -1,8 +1,15 @@
 "use client";
+import {
+  IconCalendarDue,
+  IconCheck,
+  IconChevronLeft,
+  IconChevronRight,
+  IconPlus,
+} from "@tabler/icons-react";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-//@ts-ignore
 import Link from "next/link";
+//@ts-ignore
+import { Swiper, SwiperSlide } from "swiper/react";
 //@ts-ignore
 import { Navigation } from "swiper";
 
@@ -14,7 +21,7 @@ const EventSection = () => {
           <div className="event__boxes">
             <div className="d-flex mb-40 align-items-center justify-content-between flex-wrap gap-2">
               <div className="d-flex fs-24 fw-500 bodyfont white align-items-center gap-1">
-                <i className="ti ti-calendar-due fs-26"></i>
+                <IconCalendarDue className="fs-26" />
                 Event
               </div>
               <Link href="create-event" className="fs-18 fw-500 bodyfont white">
@@ -120,16 +127,16 @@ const EventSection = () => {
                 href="create-event"
                 className="d-flex create__btn fs-18 fw-400 bodyfont white align-items-center gap-2"
               >
-                <i className="ti ti-plus"></i>
+                <IconPlus />
                 Create
               </Link>
             </div>
             <div className="gap-1 event__sldebtn d-flex">
               <div className="cmn-button-prev2">
-                <i className="ti ti-chevron-left"></i>
+                <IconChevronLeft />
               </div>
               <div className="cmn-button-next2">
-                <i className="ti ti-chevron-right"></i>
+                <IconChevronRight />
               </div>
             </div>
           </div>
@@ -158,7 +165,7 @@ const EventSection = () => {
                       </div>
                     </div>
                     <Link href="#0" className="event__check">
-                      <i className="ti ti-check"></i>
+                      <IconCheck />
                     </Link>
                   </div>
                 </div>
@@ -176,7 +183,7 @@ const EventSection = () => {
                     href="create-event"
                     className="d-flex create__hand fs-18 fw-400 bodyfont whtie align-items-center gap-3"
                   >
-                    <i className="ti ti-plus fs-20"></i>
+                    <IconPlus className="fs-20" />
                     Create New Event
                   </Link>
                 </div>

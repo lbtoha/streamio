@@ -1,6 +1,7 @@
+import { featureShowData } from "@/../public/data/featureShowData";
+import { featureShowRightData } from "@/../public/data/featureShowRightData";
+import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Link from "next/link";
-import { featureShowData } from "../../../../public/data/featureShowData";
-import { featureShowRightData } from "../../../../public/data/featureShowRightData";
 import FeatureShowLeftCard from "./FeatureShowLeftCard";
 import FeatureShowRightCard from "./FeatureShowRightCard";
 
@@ -16,7 +17,7 @@ const FeaturedShows = () => {
             className="view__btn white d-flex align-items-center gap-2"
           >
             View All
-            <i className="ti ti-arrow-narrow-right"></i>
+            <IconArrowNarrowRight />
           </Link>
         </div>
         <div className="row g-4">

@@ -1,7 +1,21 @@
-import { trendingsliderData } from "../../../../public/data/trendingSliderData";
+import { trendingsliderData } from "@/../public/data/trendingSliderData";
+import SelectBox from "@/components/shared/SelectBox";
+import { IconSearch } from "@tabler/icons-react";
 import TrendingCard from "./TrendingCard";
 
 const TrendingSection = () => {
+  const artists = [
+    { label: "Tom Cook" },
+    { label: "Tanya Fox" },
+    { label: "Hellen Schmidt" },
+  ];
+
+  const genres = [
+    { label: "All Artists" },
+    { label: "New Artists" },
+    { label: "Expert Artists" },
+  ];
+
   return (
     <section className="trending__section pr-24 pl-24 pb-100">
       <div className="trending__selected mb-30 d-flex align-items-center justify-content-between">
@@ -12,19 +26,11 @@ const TrendingSection = () => {
           >
             <input type="text" placeholder="Search..." />
             <button type="submit">
-              <i className="ti ti-search"></i>
+              <IconSearch />
             </button>
           </form>
-          <select name="artists">
-            <option value="1">All Artists</option>
-            <option value="1">New Artists</option>
-            <option value="1">Expert Artists</option>
-          </select>
-          <select name="genres">
-            <option value="1">All Artists</option>
-            <option value="1">New Artists</option>
-            <option value="1">Expert Artists</option>
-          </select>
+          <SelectBox options={artists} />
+          <SelectBox options={genres} />
         </div>
         <ul className="nav nav-tabs" id="myTab" role="tablist">
           <li className="nav-item" role="presentation">

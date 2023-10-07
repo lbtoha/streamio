@@ -1,5 +1,6 @@
+import { latestPostData } from "@/../public/data/latestPostData";
+import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Link from "next/link";
-import { latestPostData } from "../../../../public/data/latestPostData";
 import LatestPostCard from "./LatestPostCard";
 
 const LatestPost = () => {
@@ -14,7 +15,7 @@ const LatestPost = () => {
             className="view__btn white d-flex align-items-center gap-2"
           >
             View All
-            <i className="ti ti-arrow-narrow-right"></i>
+            <IconArrowNarrowRight />
           </Link>
         </div>
         <div className="row g-4">

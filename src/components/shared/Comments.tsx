@@ -1,3 +1,4 @@
+import { IconShare3 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,10 +38,10 @@ const Comments = () => {
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
                         <Link
-                          href="javascript:void(0)"
+                          href="#"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
-                          <i className="ti ti-share-3 fs-24"></i>
+                          <IconShare3 className="fs-24" />
                           <span className="white fs-14">Reply</span>
                         </Link>
                       </div>
@@ -97,10 +98,10 @@ const Comments = () => {
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
                         <Link
-                          href="javascript:void(0)"
+                          href="#"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
-                          <i className="ti ti-share-3 fs-24"></i>
+                          <IconShare3 className="fs-24" />
                           <span className="white fs-14">Reply</span>
                         </Link>
                       </div>

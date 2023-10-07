@@ -1,3 +1,5 @@
+import { IconArrowNarrowRight } from "@tabler/icons-react";
+
 const FaqSection = () => {
   return (
     <section className="faq__section pr-24 pl-24 pb-80">
@@ -21,7 +23,7 @@ const FaqSection = () => {
                     <span className="white fs-18 fw-500 bodyfont">
                       Token Pre-Sale
                     </span>
-                    <i className="ti ti-arrow-narrow-right fs-24 white"></i>
+                    <IconArrowNarrowRight className="fs-24 white" />
                   </button>
                 </li>
                 <li className="nav-item" role="presentation">
@@ -38,7 +40,7 @@ const FaqSection = () => {
                     <span className="white fs-18 fw-500 bodyfont">
                       Staking & Farming
                     </span>
-                    <i className="ti ti-arrow-narrow-right fs-24 white"></i>
+                    <IconArrowNarrowRight className="fs-24 white" />
                   </button>
                 </li>
                 <li className="nav-item" role="presentation">
@@ -55,7 +57,7 @@ const FaqSection = () => {
                     <span className="white fs-18 fw-500 bodyfont">
                       Ecosystem
                     </span>
-                    <i className="ti ti-arrow-narrow-right fs-24 white"></i>
+                    <IconArrowNarrowRight className="fs-24 white" />
                   </button>
                 </li>
                 <li className="nav-item" role="presentation">
@@ -72,7 +74,7 @@ const FaqSection = () => {
                     <span className="white fs-18 fw-500 bodyfont">
                       Platform
                     </span>
-                    <i className="ti ti-arrow-narrow-right fs-24 white"></i>
+                    <IconArrowNarrowRight className="fs-24 white" />
                   </button>
                 </li>
                 <li className="nav-item" role="presentation">
@@ -89,7 +91,7 @@ const FaqSection = () => {
                     <span className="white fs-18 fw-500 bodyfont">
                       Roadmaps & Goals
                     </span>
-                    <i className="ti ti-arrow-narrow-right fs-24 white"></i>
+                    <IconArrowNarrowRight className="fs-24 white" />
                   </button>
                 </li>
               </ul>

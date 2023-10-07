@@ -1,3 +1,9 @@
+import {
+  IconDots,
+  IconPlaylistAdd,
+  IconShare,
+  IconUserPlus,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,7 +31,7 @@ const ConveterHead = ({
         <div className="d-flex conveter__follow align-items-center">
           <Link href="#0" className="cmbtn d-flex gap-2">
             <span>
-              <i className="ti ti-user-plus fs-24 base"></i>
+              <IconUserPlus className="fs-24 base" />
             </span>
             <span>Follow</span>
           </Link>
@@ -42,28 +48,28 @@ const ConveterHead = ({
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          <i className="ti ti-dots white"></i>
+          <IconDots className="white" />
         </button>
         <ul className="dropdown-menu" aria-labelledby="drops1">
           <li className="mb-2">
             <Link
               className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
-              href="javascript:void(0)"
+              href="#"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-              <i className="ti ti-playlist-add fs-30 base"></i>
+              <IconPlaylistAdd className="fs-30 base" />
               Add To Playlist
             </Link>
           </li>
           <li>
             <Link
               className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
-              href="javascript:void(0)"
+              href="#"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal2"
             >
-              <i className="ti ti-share fs-30 base"></i>
+              <IconShare className="fs-30 base" />
               Share
             </Link>
           </li>

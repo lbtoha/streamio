@@ -1,5 +1,5 @@
+import { latestPostData } from "@/../public/data/latestPostData";
 import Link from "next/link";
-import { latestPostData } from "../../../../public/data/latestPostData";
 import LatestPostCard from "../home/LatestPostCard";
 
 const LatestPost = () => {
@@ -73,7 +73,6 @@ const LatestPost = () => {
             id="home-tab-pane"
             role="tabpanel"
             aria-labelledby="home-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {latestPostData.map(({ id, ...props }) => (
@@ -91,7 +90,6 @@ const LatestPost = () => {
             id="profile-tab-pane"
             role="tabpanel"
             aria-labelledby="profile-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {latestPostData.slice(0, 3).map(({ id, ...props }) => (
@@ -109,7 +107,6 @@ const LatestPost = () => {
             id="contact-tab-pane"
             role="tabpanel"
             aria-labelledby="contact-tab"
-            tabindex="0"
           >
             <div className="row g-4">
               {latestPostData.map(({ id, ...props }) => (
@@ -127,7 +124,6 @@ const LatestPost = () => {
             id="contact-tab-panejozz"
             role="tabpanel"
             aria-labelledby="contact-tabjozz"
-            tabindex="0"
           >
             <div className="row g-4">
               {latestPostData.map(({ id, ...props }) => (

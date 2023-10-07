@@ -1,4 +1,12 @@
 import AudioPlayer from "@/components/shared/AudioPlayer";
+import {
+  IconBrandFacebook,
+  IconBrandInstagram,
+  IconBrandTwitch,
+  IconCheck,
+  IconMessageMinus,
+  IconShare3,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -29,7 +37,7 @@ const BlogDetailsLeft = () => {
                 href="#0"
                 className="d-flex white w-500 bodyfont align-items-center gap-3"
               >
-                <i className="ti ti-message-minus base fs-20"></i>
+                <IconMessageMinus className="base fs-20" />
                 15
               </Link>
             </div>
@@ -95,27 +103,27 @@ const BlogDetailsLeft = () => {
             </p>
             <ul className="emotion__list d-flex flex-wrap">
               <li className="d-flex align-items-center fs-16 fw-500 bodyfont white">
-                <i className="ti ti-check"></i>
+                <IconCheck />
                 Rediscovering Music&apos;s Purest Form
               </li>
               <li className="d-flex align-items-center fs-16 fw-500 bodyfont white">
-                <i className="ti ti-check"></i>
+                <IconCheck />
                 Symphonic Sojourn
               </li>
               <li className="d-flex align-items-center fs-16 fw-500 bodyfont white">
-                <i className="ti ti-check"></i>
+                <IconCheck />
                 The Universal Language of Music
               </li>
               <li className="d-flex align-items-center fs-16 fw-500 bodyfont white">
-                <i className="ti ti-check"></i>
+                <IconCheck />
                 How Music Shapes Our Perceptions
               </li>
               <li className="d-flex align-items-center fs-16 fw-500 bodyfont white">
-                <i className="ti ti-check"></i>
+                <IconCheck />
                 Rhythm and Melody: The Heartbeat of Music
               </li>
               <li className="d-flex align-items-center fs-16 fw-500 bodyfont white">
-                <i className="ti ti-check"></i>
+                <IconCheck />
                 Dancing to the Embracing the Joy of Music
               </li>
             </ul>
@@ -149,17 +157,17 @@ const BlogDetailsLeft = () => {
                 <li className="fs-24 me-1 fw-400 white headfont">Share:</li>
                 <li>
                   <Link href="#0" className="sicon white">
-                    <i className="ti pra fz-24 ti-brand-facebook"></i>
+                    <IconBrandFacebook className="pra fz-24" />
                   </Link>
                 </li>
                 <li>
                   <Link href="#0" className="sicon white">
-                    <i className="ti pra fz-24 ti-brand-twitch"></i>
+                    <IconBrandTwitch className="pra fz-24" />
                   </Link>
                 </li>
                 <li>
                   <Link href="#0" className="sicon white">
-                    <i className="ti pra fz-24 ti-brand-instagram"></i>
+                    <IconBrandInstagram className="pra fz-24" />
                   </Link>
                 </li>
               </ul>
@@ -194,10 +202,10 @@ const BlogDetailsLeft = () => {
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
                         <Link
-                          href="javascript:void(0)"
+                          href="#"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
-                          <i className="ti ti-share-3 fs-24"></i>
+                          <IconShare3 className="fs-24" />
                           <span className="white fs-14">Reply</span>
                         </Link>
                       </div>
@@ -254,10 +262,10 @@ const BlogDetailsLeft = () => {
                     <div className="comment__boxcontent mt-16">
                       <div className="feedback__content d-flex align-items-center justify-content-end">
                         <Link
-                          href="javascript:void(0)"
+                          href="#"
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
-                          <i className="ti ti-share-3 fs-24"></i>
+                          <IconShare3 className="fs-24" />
                           <span className="white fs-14">Reply</span>
                         </Link>
                       </div>
@@ -295,7 +303,7 @@ const BlogDetailsLeft = () => {
                 name="comment"
                 id="comment"
                 className="mb-30"
-                rows="5"
+                rows={5}
                 placeholder="Add Coment"
               ></textarea>
               <span className="w-100 d-flex align-items-center justify-content-end">

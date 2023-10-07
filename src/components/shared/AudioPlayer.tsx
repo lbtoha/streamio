@@ -1,5 +1,6 @@
 "use client";
 import useAudioPlayer from "@/hooks/useAudioPlayer";
+import { handleLinkClick } from "@/utils/handleLinkClick";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -43,7 +44,7 @@ const AudioPlayer = ({
   }, [duration, audio]);
 
   return (
-    <div className="pause__block pause__abs">
+    <div className="pause__block pause__abs pt-2 pb-1">
       <div className={`audioplayer ${playToggle && "audioplayer-playing"}`}>
         <audio
           preload="auto"
@@ -59,7 +60,7 @@ const AudioPlayer = ({
           className="audioplayer-playpause"
           title=""
         >
-          <Link href="javascript:;"></Link>
+          <Link href="#" onClick={handleLinkClick}></Link>
         </div>
         <div className="audioplayer-time audioplayer-time-current">
           {currentTime}
@@ -75,7 +76,7 @@ const AudioPlayer = ({
         >
           <div
             className="audioplayer-bar-loaded"
-            style={{ width: "100%" }}
+            style={{ width: "102%" }}
           ></div>
           <div
             className="audioplayer-bar-played"
@@ -87,7 +88,7 @@ const AudioPlayer = ({
         </div>
         <div className="audioplayer-volume">
           <div className="audioplayer-volume-button" title="">
-            <Link href="#"></Link>
+            <Link href="#" onClick={handleLinkClick}></Link>
           </div>
           <div className="audioplayer-volume-adjust">
             <div>

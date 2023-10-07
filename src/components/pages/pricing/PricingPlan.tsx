@@ -1,10 +1,13 @@
 "use client";
 
+import { IconCheck, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { useState } from "react";
+import ToggleButton from "./ToggleButton";
 
 const PricingPlan = () => {
   const [toggleSlide, setToggleSlide] = useState(true);
+  const [enabled, setEnabled] = useState(false);
 
   return (
     <section className="price__section pr-24 pl-24 pb-100">
@@ -15,14 +18,20 @@ const PricingPlan = () => {
             Choose a plan tailored to your needs
           </p>
           <div className="d-flex justify-content-center align-items-center">
-            <span className="switch-label js-switch-label-monthly">
+            <span
+              className={`switch-label js-switch-label-monthly ${
+                enabled ? "" : "active"
+              }`}
+            >
               Monthly
             </span>
-            <label className="switch">
-              <input type="checkbox" checked="checked" />
-              <span className="slider"></span>
-            </label>
-            <span className="switch-label js-switch-label-yearly active">
+
+            <ToggleButton enabled={enabled} setEnabled={setEnabled} />
+            <span
+              className={`switch-label js-switch-label-yearly  ${
+                enabled ? "active" : ""
+              }`}
+            >
               Yearly
             </span>
           </div>
@@ -51,27 +60,27 @@ const PricingPlan = () => {
               </div>
               <ul className="pricing__list mt-24 mb-40">
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg"></i>
+                  <IconCheck className="fs-16 basebg" />
                   Streamio Originals
                 </li>
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg"></i>
+                  <IconCheck className="fs-16 basebg" />
                   Switch plans or cancel anytime
                 </li>
                 <li className="d-flex gap-2 pra fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-x fs-16 praborder pra"></i>
+                  <IconX className="fs-16 praborder pra" />
                   Stream 65+ top Live
                 </li>
                 <li className="d-flex gap-2 pra fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-x fs-16 praborder pra"></i>
+                  <IconX className="fs-16 praborder pra" />
                   Music channels
                 </li>
                 <li className="d-flex gap-2 pra fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-x fs-16 praborder pra"></i>
+                  <IconX className="fs-16 praborder pra" />
                   Download Songs
                 </li>
                 <li className="d-flex gap-2 pra fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-x fs-16 praborder pra"></i>
+                  <IconX className="fs-16 praborder pra" />
                   Unlimited Max Upload
                 </li>
               </ul>
@@ -96,34 +105,34 @@ const PricingPlan = () => {
                     data-price-monthly="599"
                     data-price-yearly="109"
                   >
-                    499
+                    {enabled ? 109 : 499}
                   </span>
                 </div>
                 <span className="fs-16 month fw-500 bodyfont pra">/month</span>
               </div>
               <ul className="pricing__list mt-24 mb-40">
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg2"></i>
+                  <IconCheck className="fs-16 basebg2" />
                   Streamio Originals
                 </li>
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg2"></i>
+                  <IconCheck className="fs-16 basebg2" />
                   Switch plans or cancel anytime
                 </li>
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg2"></i>
+                  <IconCheck className="fs-16 basebg2" />
                   Stream 65+ top Live
                 </li>
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg2"></i>
+                  <IconCheck className="fs-16 basebg2" />
                   Music channels
                 </li>
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg2"></i>
+                  <IconCheck className="fs-16 basebg2" />
                   Download Songs
                 </li>
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg2"></i>
+                  <IconCheck className="fs-16 basebg2" />
                   Unlimited Max Upload
                 </li>
               </ul>
@@ -148,34 +157,34 @@ const PricingPlan = () => {
                     data-price-monthly="17"
                     data-price-yearly="109"
                   >
-                    17.75
+                    {enabled ? 205 : 599}
                   </span>
                 </div>
                 <span className="fs-16 month fw-500 bodyfont pra">/month</span>
               </div>
               <ul className="pricing__list mt-24 mb-40">
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg3"></i>
+                  <IconCheck className="fs-16 basebg3" />
                   Streamio Originals
                 </li>
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg3"></i>
+                  <IconCheck className="fs-16 basebg3" />
                   Switch plans or cancel anytime
                 </li>
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg3"></i>
+                  <IconCheck className="fs-16 basebg3" />
                   Stream 65+ top Live
                 </li>
                 <li className="d-flex gap-2 fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-check fs-16 basebg3"></i>
+                  <IconCheck className="fs-16 basebg3" />
                   Music channels
                 </li>
                 <li className="d-flex gap-2 pra fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-x fs-16 praborder pra"></i>
+                  <IconX className="fs-16 praborder pra" />
                   Download Songs
                 </li>
                 <li className="d-flex gap-2 pra fs-16 bodyfont fw-400 align-items-center">
-                  <i className="ti ti-x fs-16 praborder pra"></i>
+                  <IconX className="fs-16 praborder pra" />
                   Unlimited Max Upload
                 </li>
               </ul>
