@@ -15,7 +15,7 @@ const PodcastCard = ({ image, title, views, song, subTitle }: Props) => {
   return (
     <div className="trending__item round16 p-8">
       <div className="thumb ralt overhid transition">
-        <Image src={image} className="transition" alt="img" />
+        <Image src={image} className="transition h-auto" alt="img" />
         <div className="podcast__viwer d-flex align-items-center justify-content-between">
           <span className="live fs-16 bodyfont white">LIve</span>
           <span className="viewer fs-16 bodyfont white">{views}k Viewers</span>

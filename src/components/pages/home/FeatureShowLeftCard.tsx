@@ -24,7 +24,12 @@ const FeatureShowLeftCard = ({
     <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
       <div className="featured__show ralt">
         <div className="thumb overhid ralt">
-          <Image src={image} className="w-100 transition overhid" alt="img" />
+          <Image
+            src={image}
+            className="w-100 transition overhid"
+            alt="img"
+            layout="responsive"
+          />
         </div>
         <div className="f__showcontent">
           <div className="d-flex align-items-center mb-16 justify-content-between">

@@ -1822,6 +1822,9 @@
       &:hover {
         cursor: pointer;
       }
+      svg {
+        margin: 0 auto;
+      }
     }
   }
   .cover__form {
@@ -1881,6 +1884,10 @@
           &:hover {
             cursor: pointer;
           }
+        }
+
+        svg {
+          margin: 0 auto;
         }
       }
     }
@@ -2306,6 +2313,7 @@
     }
   }
 }
+
 .profile__tabsbar {
   background: var(--cmnbox);
   padding: 32px 24px;

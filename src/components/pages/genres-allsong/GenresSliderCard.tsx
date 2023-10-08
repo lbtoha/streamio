@@ -16,7 +16,7 @@ const GenresSliderCard = ({ image, title, subTitle, song, link }: Props) => {
       <div className="thumb ralt mb-16 transition overhid">
         <Image
           src={image}
-          className="w-100 round50 transition overhid"
+          className="w-100 round50 transition overhid h-auto flex-shrink-0"
           alt="img"
         />
         <AudioPlayer audio={song} />

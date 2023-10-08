@@ -14,7 +14,11 @@ const ProductCard = ({ image, productPrice, productTitle, name }: Props) => {
     <div className="col-lg-2 col-md-3 col-sm-4">
       <div className="product__item">
         <div className="thumb ralt mb-16 transition overhid">
-          <Image src={image} className="w-100 transition overhid" alt="img" />
+          <Image
+            src={image}
+            className="w-100 transition overhid h-auto "
+            alt="img"
+          />
           <Link
             href="cart"
             className="product__badge text-uppercase fw-500 d-flex align-items-center justify-content-center fs-16 bodyfont white"

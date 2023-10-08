@@ -17,7 +17,7 @@ const SongUpdateSection = () => {
                   width={390}
                   height={390}
                   src="/img/trending/latest-song.jpg"
-                  className="w-100"
+                  className="w-100 h-auto flex-shrink-0"
                   alt="img"
                 />
               </div>

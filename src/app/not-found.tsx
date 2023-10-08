@@ -17,6 +17,7 @@ const NotFound = () => {
                     height={315}
                     src="/img/error/error.png"
                     alt="img"
+                    layout="responsive"
                   />
                 </div>
                 <div className="content">

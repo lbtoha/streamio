@@ -15,7 +15,12 @@ const LatestPostCard = ({ image, date, comment, title, type }: Props) => {
     <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6">
       <div className="latest__item overhid ralt">
         <div className="thumb ralt mb-16 transition overhid">
-          <Image src={image} className="w-100 transition overhid" alt="img" />
+          <Image
+            src={image}
+            className="w-100 transition overhid"
+            alt="img"
+            layout="responsive"
+          />
           <AudioPlayer audio="" />
           <Link href="#" className="l__badge">
             {type}

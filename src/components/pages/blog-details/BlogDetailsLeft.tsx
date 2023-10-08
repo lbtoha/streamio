@@ -22,6 +22,7 @@ const BlogDetailsLeft = () => {
               src="/img/blog/blgo-big1.jpg"
               className="w-100 transition overhid"
               alt="img"
+              layout="responsive"
             />
             <AudioPlayer />
             <Link href="#0" className="l__badge">

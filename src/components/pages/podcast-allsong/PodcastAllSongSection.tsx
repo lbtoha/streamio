@@ -12,6 +12,7 @@ const PodcastAllSongSection = () => {
             height={390}
             src="/img/pocast/podcasting.jpg"
             alt="img"
+            className="h-auto flex-shrink-0"
           />
           <div className="artist__allcontent">
             <h3 className="white mb-10">Chester Bennington</h3>

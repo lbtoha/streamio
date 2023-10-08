@@ -15,7 +15,7 @@ const TrendingCard = ({ image, title, location, listeners }: Props) => {
     <div className="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6">
       <div className="trending__item text-center round16">
         <div className="thumb ralt overhid transition">
-          <Image src={image} className="transition" alt="img" />
+          <Image src={image} className="transition h-auto" alt="img" />
           <div className="trending__bbar d-flex align-items-center justify-content-around">
             <Link
               href="#"

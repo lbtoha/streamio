@@ -11,6 +11,8 @@ const Artist = () => {
             height={390}
             src="/img/details/artist-man.jpg"
             alt="img"
+            className="flex-shrink-0"
+            style={{ height: "auto" }}
           />
           <div className="artist__allcontent">
             <h3 className="white mb-10">Chester Bennington</h3>

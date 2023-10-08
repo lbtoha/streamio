@@ -25,7 +25,7 @@ const ProfileSection = () => {
               <Image
                 width={1356}
                 height={517}
-                className="profile-pic arrow"
+                className="profile-pic arrow "
                 src="/img/profile/profile-cover.jpg"
                 alt="img"
               />

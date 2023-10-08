@@ -7,6 +7,7 @@ import { poppins } from "@/utils/fonts";
 import "material-symbols";
 import { Metadata } from "next";
 import { Suspense } from "react";
+import { Toaster } from "react-hot-toast";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
@@ -36,6 +37,7 @@ export default function RootLayout({
         <SharedModal />
         <DeletePostModal />
         <ReportModal />
+        <Toaster />
         <AudioPlayerModal />
       </body>
     </html>

@@ -29,7 +29,7 @@ export const moodsCardData = [
   {
     id: uuidv4(),
     image: image3,
-    title: "Hot Hits Maghred Now",
+    title: "Hot Hits Maghred",
     subTitle: "Arijite Singh",
     song: "http://physical-authority.surge.sh/music/2.mp3",
   },
@@ -92,7 +92,7 @@ export const moodsCardData = [
   {
     id: uuidv4(),
     image: image12,
-    title: "Hot Hits Maghred Now",
+    title: "Hot Hits Maghred",
     subTitle: "Arijite Singh",
     song: "http://physical-authority.surge.sh/music/2.mp3",
   },

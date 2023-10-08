@@ -14,7 +14,12 @@ const TrendingSliderCard = ({ image, title, location, listeners }: Props) => {
   return (
     <div className="swiper-slide trending__item text-center round16 p-8">
       <div className="thumb ralt overhid transition">
-        <Image src={image} className="transition" alt="img" />
+        <Image
+          src={image}
+          layout="responsive"
+          className="transition"
+          alt="img"
+        />
         <div className="trending__bbar d-flex align-items-center justify-content-around">
           <Link
             href="#"

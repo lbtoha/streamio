@@ -12,7 +12,14 @@ const ArtistsSliderCard = ({ image, title, location }: Props) => {
   return (
     <div className="swiper-slide trending__item round16 p-8">
       <div className="thumb ralt overhid transition">
-        <Image src={image} className="transition" alt="img" />
+        <Image
+          src={image}
+          width={390}
+          height={390}
+          className="transition"
+          alt="img"
+          layout="responsive"
+        />
         <div className="artist__popup d-flex align-items-center justify-content-between">
           <div className="content">
             <h5 className="mb-1">

@@ -19,7 +19,12 @@ const ProductSliderCard = ({
     <div className="swiper-slide round16 p-8">
       <div className="product__item">
         <div className="thumb ralt mb-16 transition overhid">
-          <Image src={image} className="w-100 transition overhid" alt="img" />
+          <Image
+            src={image}
+            className="w-100 transition overhid"
+            alt="img"
+            layout="responsive"
+          />
           <Link
             href="cart"
             className="product__badge text-uppercase fw-500 d-flex align-items-center justify-content-center fs-16 bodyfont white"

@@ -1,4 +1,35 @@
+"use client";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+import toast from "react-hot-toast";
 const ContactSection = () => {
+  const form = useRef<HTMLFormElement | null>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs
+      // create a account in https://www.emailjs.com/
+      // follow there documentation get "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID",  "YOUR_PUBLIC_KEY"
+      // in "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID",  "YOUR_PUBLIC_KEY"  replace it with actual contents
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        // @ts-ignore
+        form.current,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Message Send Successfully!");
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error("Message Not Send!");
+        }
+      );
+  };
   return (
     <section className="contact__section 0 pr-24 pl-24 pb-80">
       <div className="container">
@@ -6,7 +37,7 @@ const ContactSection = () => {
           <div className="col-lg-10">
             <div className="event__createcover checkout__wrapper">
               <h3 className="white white text-center mb-30">Contact Us</h3>
-              <form action="#shanta" className="cover__form">
+              <form ref={form} onSubmit={sendEmail} className="cover__form">
                 <div className="row g-4">
                   <div className="col-lg-12">
                     <div className="cover__grp">

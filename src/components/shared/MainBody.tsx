@@ -1,4 +1,5 @@
 "use client";
+import { IconListTree } from "@tabler/icons-react";
 import React, { useState } from "react";
 import { navbarContext } from "../../utils/reactContext";
 import Footer from "./Footer";
@@ -17,7 +18,7 @@ const MainBody = ({ children }: { children: React.ReactNode }) => {
       <div className={`main__body ${isSidebarOpen && "body-collapse"}`}>
         {/* <!--close menu-->    */}
         <div onClick={toggleSidebar} className="closebts__two">
-          <i className={`ti ti-list-tree`}></i>
+          <IconListTree />
         </div>
         {/* <!--close menu end-->    */}
         {children}

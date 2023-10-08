@@ -19,6 +19,7 @@ const MoodsCard = ({ image, title, subTitle, song, link }: Props) => {
           src={image}
           className="w-100 round50 transition overhid"
           alt="img"
+          layout="responsive"
         />
         <AudioPlayer audio={song} />
       </div>
