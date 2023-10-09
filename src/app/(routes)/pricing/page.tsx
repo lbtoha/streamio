@@ -1,14 +1,20 @@
 import PricingPlan from "@/components/pages/pricing/PricingPlan";
 import BreadCrumSingle from "@/components/shared/BreadCrumSingle";
-import MainBody from "@/components/shared/MainBody";
+import { Metadata } from "next";
 
-const podcast = () => {
+export const metadata: Metadata = {
+  title:
+    "Pricing | Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+  description: "Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+};
+
+const pricing = () => {
   return (
-    <MainBody>
+    <>
       <BreadCrumSingle page="Pricing Plan" />
       <PricingPlan />
-    </MainBody>
+    </>
   );
 };
 
-export default podcast;
+export default pricing;

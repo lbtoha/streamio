@@ -186,6 +186,7 @@ const ProductDetailsSection = () => {
                         onClick={quantityIncrement}
                         className="qtyminus"
                         aria-hidden="true"
+                        aria-label="button"
                       >
                         <IconChevronUp />
                       </button>
@@ -193,6 +194,7 @@ const ProductDetailsSection = () => {
                         onClick={quantityDecrement}
                         className="qtyplus"
                         aria-hidden="true"
+                        aria-label="button"
                       >
                         <IconChevronDown />
                       </button>
@@ -239,6 +241,7 @@ const ProductDetailsSection = () => {
                   role="tab"
                   aria-controls="home-tab-pane"
                   aria-selected="true"
+                  aria-label="home-tab"
                 >
                   Description
                 </button>
@@ -253,6 +256,7 @@ const ProductDetailsSection = () => {
                   role="tab"
                   aria-controls="profile-tab-pane"
                   aria-selected="false"
+                  aria-label="profile-tab"
                 >
                   Reviews (01)
                 </button>

@@ -13,7 +13,7 @@ type Props = {
 const PodcastSliderCard = ({ image, views, title, subTitle, song }: Props) => {
   return (
     <div className="thumb ralt overhid transition">
-      <Image src={image} className="transition" alt="img" layout="responsive" />
+      <Image src={image} className="transition h-auto" alt="img" />
       <div className="podcast__viwer d-flex align-items-center justify-content-between">
         <span className="live fs-16 bodyfont white">LIve</span>
         <span className="viewer fs-16 bodyfont white">{views}k Viewers</span>

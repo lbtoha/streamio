@@ -17,6 +17,7 @@ const Trending = () => {
               role="tab"
               aria-controls="home-tab-pane"
               aria-selected="true"
+              aria-label="home-tab"
             >
               Mix
             </button>
@@ -31,6 +32,7 @@ const Trending = () => {
               role="tab"
               aria-controls="profile-tab-pane"
               aria-selected="false"
+              aria-label="profile-tab"
             >
               Classic
             </button>
@@ -39,6 +41,7 @@ const Trending = () => {
             <button
               className="nav-link"
               id="contact-tab"
+              aria-label="contact-tab"
               data-bs-toggle="tab"
               data-bs-target="#contact-tab-pane"
               type="button"
@@ -53,6 +56,7 @@ const Trending = () => {
             <button
               className="nav-link"
               id="contact-tabjozz"
+              aria-label="contact-tabjozz"
               data-bs-toggle="tab"
               data-bs-target="#contact-tab-panejozz"
               type="button"
@@ -73,6 +77,7 @@ const Trending = () => {
               role="tab"
               aria-controls="contact-tab-paneother"
               aria-selected="false"
+              aria-label="contact-tabother"
             >
               Other
             </button>

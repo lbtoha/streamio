@@ -109,7 +109,11 @@ const ContactSection = () => {
                   </div>
                   <div className="col-lg-12">
                     <div className="cover__grp d-flex justify-content-end">
-                      <button type="submit" className="cmn--btn">
+                      <button
+                        type="submit"
+                        aria-label="submit button"
+                        className="cmn--btn"
+                      >
                         <span>Send</span>
                       </button>
                     </div>

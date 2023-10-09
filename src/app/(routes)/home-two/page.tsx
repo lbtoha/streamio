@@ -8,11 +8,17 @@ import Moods from "@/components/pages/home/Moods";
 import Podcasts from "@/components/pages/home/Podcast";
 import Product from "@/components/pages/home/Product";
 import Workout from "@/components/pages/home/Workout";
-import MainBody from "@/components/shared/MainBody";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Home Two | Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+  description: "Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+};
 
 const homeTwo = () => {
   return (
-    <MainBody>
+    <>
       <Banner />
       <TrendingSlider />
       <Moods />
@@ -22,7 +28,7 @@ const homeTwo = () => {
       <Podcasts />
       <Product sectionTitle="Product" componentData={productData} />
       <LatestPost />
-    </MainBody>
+    </>
   );
 };
 

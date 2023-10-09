@@ -1,6 +1,6 @@
 const AddToPlaylistModal = () => {
   return (
-    <div className="modal fade" id="exampleModal" aria-hidden="true">
+    <div className="modal fade" id="exampleModalAddPlayList" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content modal__playlist">
           <div className="d-flex align-items-center mb-30 justify-content-between">
@@ -11,10 +11,15 @@ const AddToPlaylistModal = () => {
             No playlists found
           </div>
           <div className="modal-footer mt-40 d-flex gap-2 align-items-center justify-content-center">
-            <button type="button" className="btn white" data-bs-dismiss="modal">
+            <button
+              type="button"
+              aria-label="button button"
+              className="btn white"
+              data-bs-dismiss="modal"
+            >
               Cancel
             </button>
-            <button type="button" className="btn base2">
+            <button type="button" aria-label="button" className="btn base2">
               Add
             </button>
           </div>

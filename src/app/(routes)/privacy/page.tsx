@@ -1,14 +1,20 @@
 import PrivacyPolicy from "@/components/pages/privacy/PrivacyPolicy";
 import BreadCrumSingle from "@/components/shared/BreadCrumSingle";
-import MainBody from "@/components/shared/MainBody";
+import { Metadata } from "next";
 
-const podcast = () => {
+export const metadata: Metadata = {
+  title:
+    "Privacy | Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+  description: "Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+};
+
+const privacy = () => {
   return (
-    <MainBody>
+    <>
       <BreadCrumSingle page="Privacy Policy" />
       <PrivacyPolicy />
-    </MainBody>
+    </>
   );
 };
 
-export default podcast;
+export default privacy;

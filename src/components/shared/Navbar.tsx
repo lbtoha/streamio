@@ -43,6 +43,7 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [isSidebarOpen]);
+
   return (
     // <!-- Header Here -->
     <>
@@ -116,7 +117,7 @@ const Navbar = () => {
                 </li>
                 <li className="search__show">
                   <form action="#0" className="d-flex align-items-center">
-                    <button type="submit">
+                    <button aria-label="submit button">
                       <IconSearch />
                     </button>
                     <input
@@ -134,12 +135,12 @@ const Navbar = () => {
                       >
                         <span className="d-flex align-items-center">
                           <Link
-                            onClick={(e) => {
+                            onMouseEnter={(e) => {
                               setSubDropDownOpen(!isSubDropDownOpen);
                               handleLinkClick(e);
                             }}
                             href="#"
-                            className="mclick d-flex hcolor align-items-center w-100 justify-content-between"
+                            className={`mclick d-flex hcolor align-items-center w-100 justify-content-between`}
                           >
                             <IconDots />
                           </Link>
@@ -149,11 +150,20 @@ const Navbar = () => {
                             isSubDropDownOpen ? "active" : ""
                           }`}
                         >
-                          <ul>
-                            {menuItems.map(({ id, title, path }) => {
+                          <ul onMouseLeave={() => setSubDropDownOpen(false)}>
+                            {menuItems.map(({ id, title, childrenPath }) => {
                               return (
                                 <li key={id}>
-                                  <Link href={path}>{title}</Link>
+                                  <Link
+                                    href={childrenPath}
+                                    className={`${
+                                      pathName == childrenPath
+                                        ? "main-menu-active"
+                                        : ""
+                                    }`}
+                                  >
+                                    {title}
+                                  </Link>
                                 </li>
                               );
                             })}
@@ -164,7 +174,9 @@ const Navbar = () => {
                       <li key={id}>
                         <Link
                           href={path}
-                          className="d-flex hcolor align-items-center gap-2"
+                          className={`d-flex hcolor align-items-center gap-2 ${
+                            pathName === path ? "main-menu-active" : ""
+                          }`}
                         >
                           {icon}
                           {menuTitle}

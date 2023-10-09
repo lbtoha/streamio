@@ -128,7 +128,11 @@ const ProfileEditForm = () => {
                       >
                         Cancel
                       </Link>
-                      <button type="submit" className="cmn--btn">
+                      <button
+                        type="submit"
+                        aria-label="submit button"
+                        className="cmn--btn"
+                      >
                         <span>Save profile</span>
                       </button>
                     </div>

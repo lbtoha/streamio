@@ -8,11 +8,10 @@ import Podcasts from "@/components/pages/home/Podcast";
 import Product from "@/components/pages/home/Product";
 import TrendingSlider from "@/components/pages/home/TrendingSlider";
 import Workout from "@/components/pages/home/Workout";
-import MainBody from "@/components/shared/MainBody";
 
 const page = () => {
   return (
-    <MainBody>
+    <>
       <Banner />
       <TrendingSlider />
       <Moods />
@@ -22,7 +21,7 @@ const page = () => {
       <Podcasts />
       <Product sectionTitle="Product" componentData={productData} />
       <LatestPost />
-    </MainBody>
+    </>
   );
 };
 

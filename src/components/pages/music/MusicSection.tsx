@@ -26,7 +26,7 @@ const MusicSection = () => {
             className="d-flex align-items-center justify-content-between"
           >
             <input type="text" placeholder="Search..." />
-            <button type="submit">
+            <button type="submit" aria-label="submit button">
               <IconSearch />
             </button>
           </form>
@@ -44,6 +44,7 @@ const MusicSection = () => {
               role="tab"
               aria-controls="home-tab-pane"
               aria-selected="true"
+              aria-label="home-tab"
             >
               Featured
             </button>
@@ -58,6 +59,7 @@ const MusicSection = () => {
               role="tab"
               aria-controls="profile-tab-pane"
               aria-selected="false"
+              aria-label="profile-tab"
             >
               Popular
             </button>
@@ -66,6 +68,7 @@ const MusicSection = () => {
             <button
               className="nav-link"
               id="contact-tab"
+              aria-label="contact-tab"
               data-bs-toggle="tab"
               data-bs-target="#contact-tab-pane"
               type="button"

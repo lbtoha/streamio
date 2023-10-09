@@ -13,7 +13,7 @@ const BlogDetailsRight = () => {
             className="search__form d-flex align-items-center justify-content-between"
           >
             <input type="text" placeholder="Search" />
-            <button type="submit">
+            <button type="submit" aria-label="submit button">
               <IconSearch />
             </button>
           </form>

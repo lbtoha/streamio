@@ -20,9 +20,8 @@ const BlogDetailsLeft = () => {
               width={942}
               height={509}
               src="/img/blog/blgo-big1.jpg"
-              className="w-100 transition overhid"
+              className="w-100 transition overhid h-auto"
               alt="img"
-              layout="responsive"
             />
             <AudioPlayer />
             <Link href="#0" className="l__badge">
@@ -308,7 +307,11 @@ const BlogDetailsLeft = () => {
                 placeholder="Add Coment"
               ></textarea>
               <span className="w-100 d-flex align-items-center justify-content-end">
-                <button type="submit" className="cmn__simple">
+                <button
+                  type="submit"
+                  aria-label="submit"
+                  className="cmn__simple"
+                >
                   <span>Send</span>
                 </button>
               </span>

@@ -12,11 +12,7 @@ import {
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-const ModalAudioPlayer = ({
-  audio = "http://physical-authority.surge.sh/music/2.mp3",
-}: {
-  audio?: string;
-}) => {
+const ModalAudioPlayer = ({ audio }: { audio?: string }) => {
   const {
     playToggle,
     audioRef,
@@ -158,6 +154,7 @@ const ModalAudioPlayer = ({
           type="button"
           className="btn pra cross__btnsnone"
           data-bs-dismiss="modal"
+          aria-label="button"
         >
           <IconX className="fs-24" />
         </button>

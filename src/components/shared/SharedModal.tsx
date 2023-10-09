@@ -14,7 +14,7 @@ import AudioPlayer from "./AudioPlayer";
 
 const SharedModal = () => {
   return (
-    <div className="modal fade" id="exampleModal2" aria-hidden="true">
+    <div className="modal fade" id="exampleModalShare" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered modal-lg">
         <div className="modal-content play__shapewrap">
           <h4 className="white text-center mb-40">Share this Song</h4>
@@ -34,6 +34,7 @@ const SharedModal = () => {
                   role="tab"
                   aria-controls="home-tab-pane"
                   aria-selected="true"
+                  aria-label="home-tab"
                 >
                   Share
                 </button>
@@ -48,6 +49,7 @@ const SharedModal = () => {
                   role="tab"
                   aria-controls="profile-tab-pane"
                   aria-selected="false"
+                  aria-label="profile-tab"
                 >
                   Embed
                 </button>
@@ -176,7 +178,12 @@ const SharedModal = () => {
             </div>
           </div>
           <div className="modal-footer d-flex justify-content-center">
-            <button type="button" className="btn" data-bs-dismiss="modal">
+            <button
+              type="button"
+              aria-label="button"
+              className="btn"
+              data-bs-dismiss="modal"
+            >
               Close
             </button>
           </div>

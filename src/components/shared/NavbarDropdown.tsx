@@ -1,6 +1,7 @@
 "use client";
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 type Props = {
@@ -8,7 +9,12 @@ type Props = {
   icon: any;
   menuTitle: string;
   path: string;
-  menuItems: { id: string; title: string; path: string; parentPath: string }[];
+  menuItems: {
+    id: string;
+    title: string;
+    childrenPath: string;
+    parentPath: string;
+  }[];
 };
 
 const NavbarDropdown = ({
@@ -19,6 +25,8 @@ const NavbarDropdown = ({
   path,
 }: Props) => {
   const [isSubMenuOpen, setSubMenuOpen] = useState(false);
+  const [parentPath, setParentPath] = useState("");
+  const pathName = usePathname();
 
   return (
     <li
@@ -28,7 +36,9 @@ const NavbarDropdown = ({
       <span className="d-flex align-items-center">
         <Link
           href="#"
-          className={`mclick d-flex hcolor align-items-center w-100 justify-content-between `}
+          className={`mclick d-flex hcolor align-items-center w-100 justify-content-between ${
+            parentPath === path ? "navbar-item-active" : ""
+          }`}
         >
           <span className="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
             {icon}
@@ -45,10 +55,17 @@ const NavbarDropdown = ({
         }`}
       >
         <ul>
-          {menuItems.map(({ id, title, path, parentPath }) => {
+          {menuItems.map(({ id, title, childrenPath, parentPath }) => {
             return (
-              <li key={id}>
-                <Link href={path}>{title}</Link>
+              <li key={id} onClick={() => setParentPath(parentPath)}>
+                <Link
+                  className={`${
+                    pathName === childrenPath ? "navbar-item-active" : ""
+                  }`}
+                  href={childrenPath}
+                >
+                  {title}
+                </Link>
               </li>
             );
           })}

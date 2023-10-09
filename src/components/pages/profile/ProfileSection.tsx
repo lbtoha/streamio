@@ -81,6 +81,7 @@ const ProfileSection = () => {
                   role="tab"
                   aria-controls="pro1-tab-pane"
                   aria-selected="true"
+                  aria-label="button"
                 >
                   Activites
                 </button>
@@ -95,6 +96,7 @@ const ProfileSection = () => {
                   role="tab"
                   aria-controls="pro2-tab-pane"
                   aria-selected="false"
+                  aria-label="button"
                 >
                   Songs
                 </button>
@@ -109,6 +111,7 @@ const ProfileSection = () => {
                   role="tab"
                   aria-controls="pro3-tab-pane"
                   aria-selected="false"
+                  aria-label="button"
                 >
                   Albums
                 </button>
@@ -123,6 +126,7 @@ const ProfileSection = () => {
                   role="tab"
                   aria-controls="pro4-tab-pane"
                   aria-selected="false"
+                  aria-label="button"
                 >
                   Playlist
                 </button>
@@ -137,6 +141,7 @@ const ProfileSection = () => {
                   role="tab"
                   aria-controls="pro5-tab-pane"
                   aria-selected="false"
+                  aria-label="tab button"
                 >
                   Liked
                 </button>
@@ -151,6 +156,7 @@ const ProfileSection = () => {
                   role="tab"
                   aria-controls="pro6-tab-pane"
                   aria-selected="false"
+                  aria-label="tab button"
                 >
                   Events
                 </button>
@@ -165,6 +171,7 @@ const ProfileSection = () => {
                   role="tab"
                   aria-controls="pro7-tab-pane"
                   aria-selected="false"
+                  aria-label="tab button"
                 >
                   Stations
                 </button>
@@ -179,6 +186,7 @@ const ProfileSection = () => {
                   role="tab"
                   aria-controls="pro8-tab-pane"
                   aria-selected="false"
+                  aria-label="tab button"
                 >
                   Latest Songs
                 </button>

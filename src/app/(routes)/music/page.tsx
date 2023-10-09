@@ -1,13 +1,18 @@
 import MusicSection from "@/components/pages/music/MusicSection";
 import BreadCrumb from "@/components/shared/BreadCrum";
-import MainBody from "@/components/shared/MainBody";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Music | Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+  description: "Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+};
 
 const music = () => {
   return (
-    <MainBody>
+    <>
       <BreadCrumb page="Top Songs" />
       <MusicSection />
-    </MainBody>
+    </>
   );
 };
 

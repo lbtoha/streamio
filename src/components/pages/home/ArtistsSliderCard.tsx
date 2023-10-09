@@ -16,9 +16,8 @@ const ArtistsSliderCard = ({ image, title, location }: Props) => {
           src={image}
           width={390}
           height={390}
-          className="transition"
+          className="transition h-auto"
           alt="img"
-          layout="responsive"
         />
         <div className="artist__popup d-flex align-items-center justify-content-between">
           <div className="content">

@@ -84,6 +84,7 @@ const CommonDetails = ({
                   role="tab"
                   aria-controls="home-tab-pane"
                   aria-selected="true"
+                  aria-label="home-tab"
                 >
                   Description
                 </button>
@@ -98,6 +99,7 @@ const CommonDetails = ({
                   role="tab"
                   aria-controls="profile-tab-pane"
                   aria-selected="false"
+                  aria-label="profile-tab"
                 >
                   Lyrics
                 </button>
@@ -384,7 +386,11 @@ const CommonDetails = ({
                 placeholder="Add Coment"
               ></textarea>
               <span className="w-100 d-flex align-items-center justify-content-end">
-                <button type="submit" className="cmn__simple">
+                <button
+                  type="submit"
+                  className="cmn__simple"
+                  aria-label="submit"
+                >
                   <span>Send</span>
                 </button>
               </span>

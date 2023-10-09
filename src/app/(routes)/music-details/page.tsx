@@ -1,17 +1,23 @@
 import CommonDetails from "@/components/pages/albumb-details/CommonDetails";
 import ConveterHead from "@/components/pages/albumb-details/ConveterHead";
-import MainBody from "@/components/shared/MainBody";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Music Details | Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+  description: "Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+};
 
 const musicDetails = () => {
   return (
-    <MainBody>
+    <>
       <CommonDetails image="/img/trending/audio-topsong.jpg">
         <ConveterHead
           name="Chester Bennington"
           songTitle="I Love My Country [Online-audio-converter.com]"
         />
       </CommonDetails>
-    </MainBody>
+    </>
   );
 };
 

@@ -2,7 +2,7 @@ const DeletePostModal = () => {
   return (
     <div
       className="modal overlayadd fade"
-      id="exampleModal2"
+      id="exampleModalDelete"
       aria-hidden="true"
     >
       <div className="modal-dialog modal-dialog-centered modal-md">
@@ -14,10 +14,15 @@ const DeletePostModal = () => {
             Are your sure you wnat to delete this post?
           </div>
           <div className="modal-footer mt-40 d-flex gap-2 align-items-center justify-content-center">
-            <button type="button" className="btn white" data-bs-dismiss="modal">
+            <button
+              type="button"
+              aria-label="button"
+              className="btn white"
+              data-bs-dismiss="modal"
+            >
               Cancel
             </button>
-            <button type="button" className="btn base2">
+            <button type="button" aria-label="button" className="btn base2">
               Delete
             </button>
           </div>

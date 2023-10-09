@@ -4,17 +4,23 @@ import PodcastAllSongSection from "@/components/pages/podcast-allsong/PodcastAll
 import Trending from "@/components/pages/podcast-allsong/TrendingSlider";
 import TableRow from "@/components/pages/podcast-details/TableRow";
 import Comments from "@/components/shared/Comments";
-import MainBody from "@/components/shared/MainBody";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Podcast Details | Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+  description: "Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+};
 
 const podcastAllSong = () => {
   return (
-    <MainBody>
+    <>
       <PodcastAllSongSection />
       <TableRow />
       <Trending />
       <SongUpgrade sectionTitle="Audio Podcasts" artistSong={songUpgradeData} />
       <Comments />
-    </MainBody>
+    </>
   );
 };
 

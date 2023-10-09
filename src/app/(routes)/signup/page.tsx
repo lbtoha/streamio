@@ -1,13 +1,19 @@
 import SignUpForm from "@/components/pages/signup/SignUpForm";
 import BreadCrumSingle from "@/components/shared/BreadCrumSingle";
-import MainBody from "@/components/shared/MainBody";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Sign up | Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+  description: "Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+};
 
 const signUp = () => {
   return (
-    <MainBody>
+    <>
       <BreadCrumSingle page="Sign up" />
       <SignUpForm />
-    </MainBody>
+    </>
   );
 };
 

@@ -47,6 +47,7 @@ const ConveterHead = ({
           id="drops1"
           data-bs-toggle="dropdown"
           aria-expanded="false"
+          aria-label="dropdown"
         >
           <IconDots className="white" />
         </button>
@@ -56,7 +57,7 @@ const ConveterHead = ({
               className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
               href="#"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
+              data-bs-target="#exampleModalAddPlayList"
             >
               <IconPlaylistAdd className="fs-30 base" />
               Add To Playlist
@@ -67,7 +68,7 @@ const ConveterHead = ({
               className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
               href="#"
               data-bs-toggle="modal"
-              data-bs-target="#exampleModal2"
+              data-bs-target="#exampleModalShare"
             >
               <IconShare className="fs-30 base" />
               Share

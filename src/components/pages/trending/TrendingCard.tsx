@@ -32,7 +32,7 @@ const TrendingCard = ({ image, title, location, listeners }: Props) => {
               {listeners}
             </Link>
           </div>
-          <AudioPlayer audio="http://physical-authority.surge.sh/music/2.mp3" />
+          <AudioPlayer audio="../audio/audio.mp3" />
         </div>
         <div className="content mt-16">
           <h5>

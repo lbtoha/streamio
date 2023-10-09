@@ -59,6 +59,7 @@ const ExploreSectionTableRow = ({
                 id="drops1"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                aria-label="dropdown button"
               >
                 <IconDots className="white " />
               </button>
@@ -68,10 +69,10 @@ const ExploreSectionTableRow = ({
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
                     href="#"
                     data-bs-toggle="modal"
-                    data-bs-target="#exampleModal2"
+                    data-bs-target="#exampleModalDelete"
                   >
                     <IconTrash className="base2 fs-24" />
-                    Delet Post
+                    Delete Post
                   </Link>
                 </li>
                 <li className="mb-2">
@@ -79,7 +80,7 @@ const ExploreSectionTableRow = ({
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
                     href="#"
                     data-bs-toggle="modal"
-                    data-bs-target="#exampleModal3"
+                    data-bs-target="#exampleModalReport"
                   >
                     <IconMessageReport className="fs-24" />
                     Report
@@ -90,7 +91,7 @@ const ExploreSectionTableRow = ({
                     className="dropdown-item d-flex align-items-center gap-2 fs-14 fw-400 bodyfont pra"
                     href="#"
                     data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
+                    data-bs-target="#exampleModalAddPlayList"
                   >
                     <IconPlaylistAdd className="fs-24 base" />
                     Add To Playlist

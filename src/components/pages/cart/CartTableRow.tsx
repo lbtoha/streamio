@@ -17,7 +17,7 @@ const CartTableRow = () => {
       <td className="quantity__td">
         <form action="#0">
           <p className="qty align-items-center">
-            <button className="qtyplus" aria-hidden="true">
+            <button className="qtyplus" aria-label="button" aria-hidden="true">
               <IconPlus />
             </button>
             <input
@@ -29,7 +29,7 @@ const CartTableRow = () => {
               step="1"
               defaultValue="01"
             />
-            <button className="qtyminus" aria-hidden="true">
+            <button className="qtyminus" aria-label="button" aria-hidden="true">
               <IconMinus />
             </button>
           </p>

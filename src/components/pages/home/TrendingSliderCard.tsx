@@ -13,13 +13,8 @@ type Props = {
 const TrendingSliderCard = ({ image, title, location, listeners }: Props) => {
   return (
     <div className="swiper-slide trending__item text-center round16 p-8">
-      <div className="thumb ralt overhid transition">
-        <Image
-          src={image}
-          layout="responsive"
-          className="transition"
-          alt="img"
-        />
+      <div className="thumb ralt overhid transition ">
+        <Image src={image} className="transition h-auto" alt="img" />
         <div className="trending__bbar d-flex align-items-center justify-content-around">
           <Link
             href="#"
@@ -36,7 +31,7 @@ const TrendingSliderCard = ({ image, title, location, listeners }: Props) => {
             {listeners}
           </Link>
         </div>
-        <AudioPlayer audio="http://physical-authority.surge.sh/music/2.mp3" />
+        <AudioPlayer audio="../audio/audio.mp3" />
       </div>
       <div className="content mt-16">
         <h5>

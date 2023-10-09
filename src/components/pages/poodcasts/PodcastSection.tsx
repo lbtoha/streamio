@@ -28,7 +28,7 @@ const PodcastSection = () => {
             className="d-flex align-items-center justify-content-between"
           >
             <input type="text" placeholder="Search..." />
-            <button type="submit">
+            <button type="submit" aria-label="submit button">
               <IconSearch />
             </button>
           </form>
@@ -45,6 +45,7 @@ const PodcastSection = () => {
               role="tab"
               aria-controls="home-tab-pane"
               aria-selected="true"
+              aria-label="home-tab"
             >
               Live
             </button>
@@ -59,6 +60,7 @@ const PodcastSection = () => {
               role="tab"
               aria-controls="profile-tab-pane"
               aria-selected="false"
+              aria-label="profile-tab"
             >
               Popular
             </button>
@@ -67,6 +69,7 @@ const PodcastSection = () => {
             <button
               className="nav-link"
               id="contact-tab"
+              aria-label="contact-tab"
               data-bs-toggle="tab"
               data-bs-target="#contact-tab-pane"
               type="button"

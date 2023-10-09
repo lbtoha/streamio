@@ -17,9 +17,8 @@ const LatestPostCard = ({ image, date, comment, title, type }: Props) => {
         <div className="thumb ralt mb-16 transition overhid">
           <Image
             src={image}
-            className="w-100 transition overhid"
+            className="w-100 transition overhid h-auto"
             alt="img"
-            layout="responsive"
           />
           <AudioPlayer audio="" />
           <Link href="#" className="l__badge">

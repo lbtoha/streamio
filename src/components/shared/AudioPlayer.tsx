@@ -4,11 +4,7 @@ import { handleLinkClick } from "@/utils/handleLinkClick";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const AudioPlayer = ({
-  audio = "http://physical-authority.surge.sh/music/2.mp3",
-}: {
-  audio?: string;
-}) => {
+const AudioPlayer = ({ audio = "../audio/audio.mp3" }: { audio?: string }) => {
   const {
     playToggle,
     audioRef,

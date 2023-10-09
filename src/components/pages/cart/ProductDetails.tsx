@@ -32,7 +32,9 @@ const ProductDetails = () => {
                     className="d-flex align-items-center justify-content-between"
                   >
                     <input type="text" placeholder="Enter Coupon Code" />
-                    <button type="submit">Apply Coupon</button>
+                    <button type="submit" aria-label="submit button">
+                      Apply Coupon
+                    </button>
                   </form>
                   <Link href="#0" className="updatcart">
                     Update Cart

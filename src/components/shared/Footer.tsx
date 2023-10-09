@@ -73,7 +73,7 @@ const Footer = () => {
                     className="d-flex align-items-center justify-content-between gap-1"
                   >
                     <input type="email" placeholder="Email address" />
-                    <button type="submit">
+                    <button type="submit" aria-label="submit button">
                       <span>Go</span>
                     </button>
                   </form>

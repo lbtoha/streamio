@@ -41,7 +41,11 @@ const CartRow = ({ image, name, quantity, price, subTotal }: Props) => {
       <td className="quantity__td">
         <form action="#0">
           <p className="qty align-items-center">
-            <button onClick={cartItemsIncrement} className="qtyplus">
+            <button
+              onClick={cartItemsIncrement}
+              aria-label="cart item increment button"
+              className="qtyplus"
+            >
               <IconPlus />
             </button>
             <input
@@ -56,6 +60,7 @@ const CartRow = ({ image, name, quantity, price, subTotal }: Props) => {
             />
             <button
               onClick={cartItemsDecrement}
+              aria-label="cart item decrement button"
               className="qtyminus"
               aria-hidden="true"
             >

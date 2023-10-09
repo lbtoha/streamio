@@ -7,61 +7,61 @@ export const moreEpisodesData = [
   {
     id: uuidv4(),
     image: image1,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
   {
     id: uuidv4(),
     image: image2,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
   {
     id: uuidv4(),
     image: image3,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
   {
     id: uuidv4(),
     image: image4,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
   {
     id: uuidv4(),
     image: image1,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
   {
     id: uuidv4(),
     image: image2,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
   {
     id: uuidv4(),
     image: image3,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
   {
     id: uuidv4(),
     image: image4,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
   {
     id: uuidv4(),
     image: image1,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
   {
     id: uuidv4(),
     image: image2,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
   {
     id: uuidv4(),
     image: image3,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
   {
     id: uuidv4(),
     image: image4,
-    song: "http://physical-authority.surge.sh/music/2.mp3",
+    song: "../audio/audio.mp3",
   },
 ];

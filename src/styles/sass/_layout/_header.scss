@@ -199,6 +199,10 @@
         font-size: 14px !important;
         display: block;
       }
+
+      .main-menu-active {
+        color: var(--base) !important;
+      }
       &::after {
         display: none;
       }
@@ -256,8 +260,12 @@
 }
 
 .navbar-item-active {
-  background-color: var(--base);
+  background-color: var(--base) !important;
   color: var(--white) !important;
+}
+
+.main-menu-active {
+  color: var(--base) !important;
 }
 //menu clickable
 //--Header Here--//
@@ -341,8 +349,8 @@
           font-size: 14px;
           color: var(--pra);
           svg {
-            padding-top: 5px;
-            font-size: 22px;
+            // padding-top: 5px;
+            // font-size: 22px;
           }
         }
         ::placeholder {
@@ -667,6 +675,12 @@
         .dropdown-item {
           padding: 0;
           gap: 10px;
+
+          &:hover {
+            background: #272726 !important;
+            padding: 8px;
+            border-radius: 10px;
+          }
           .notification__thumb {
             width: 50px;
             height: 50px;

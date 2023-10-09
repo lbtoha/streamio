@@ -70,7 +70,11 @@ const SignUpForm = () => {
                   </div>
                   <div className="col-lg-12">
                     <div className="cover__grp mb-30 sign__inbtn">
-                      <button type="submit" className="cmn--btn d-block w-100">
+                      <button
+                        type="submit"
+                        aria-label="submit button"
+                        className="cmn--btn d-block w-100"
+                      >
                         <span>Sign Up Now</span>
                       </button>
                     </div>

@@ -19,6 +19,7 @@ const FaqSection = () => {
                     role="tab"
                     aria-controls="home"
                     aria-selected="true"
+                    aria-label="home-tab"
                   >
                     <span className="white fs-18 fw-500 bodyfont">
                       Token Pre-Sale
@@ -36,6 +37,7 @@ const FaqSection = () => {
                     role="tab"
                     aria-controls="profile"
                     aria-selected="false"
+                    aria-label="profile-tab"
                   >
                     <span className="white fs-18 fw-500 bodyfont">
                       Staking & Farming
@@ -47,6 +49,7 @@ const FaqSection = () => {
                   <button
                     className="nav-link d-flex align-items-center gap-3"
                     id="contact-tab"
+                    aria-label="contact-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#contact"
                     type="button"
@@ -70,6 +73,7 @@ const FaqSection = () => {
                     role="tab"
                     aria-controls="contactnew"
                     aria-selected="false"
+                    aria-label="contact-tab"
                   >
                     <span className="white fs-18 fw-500 bodyfont">
                       Platform
@@ -87,6 +91,7 @@ const FaqSection = () => {
                     role="tab"
                     aria-controls="contactmap"
                     aria-selected="false"
+                    aria-label="contact tab button"
                   >
                     <span className="white fs-18 fw-500 bodyfont">
                       Roadmaps & Goals
@@ -118,6 +123,7 @@ const FaqSection = () => {
                               data-bs-target="#collapsecmn4"
                               aria-expanded="true"
                               aria-controls="collapsecmn4"
+                              aria-label="button"
                             >
                               What is Swapify ?
                             </button>
@@ -150,6 +156,7 @@ const FaqSection = () => {
                               data-bs-target="#collapsecmn5"
                               aria-expanded="false"
                               aria-controls="collapsecmn5"
+                              aria-label="button"
                             >
                               How we can buy and invest token ?
                             </button>
@@ -182,6 +189,7 @@ const FaqSection = () => {
                               data-bs-target="#collapsecmn6"
                               aria-expanded="false"
                               aria-controls="collapsecmn6"
+                              aria-label="button"
                             >
                               How secure is this token ?
                             </button>
@@ -214,6 +222,7 @@ const FaqSection = () => {
                               data-bs-target="#collapsecmn1"
                               aria-expanded="false"
                               aria-controls="collapsecmn1"
+                              aria-label="button"
                             >
                               What are long-tail and short-tail assets ?
                             </button>
@@ -246,6 +255,7 @@ const FaqSection = () => {
                               data-bs-target="#collapsecmn2"
                               aria-expanded="false"
                               aria-controls="collapsecmn2"
+                              aria-label="button"
                             >
                               What is your contract address ?
                             </button>
@@ -293,6 +303,7 @@ const FaqSection = () => {
                               data-bs-target="#collapsehighid4"
                               aria-expanded="true"
                               aria-controls="collapsehighid4"
+                              aria-label="button"
                             >
                               What is Swapify ?
                             </button>
@@ -325,6 +336,7 @@ const FaqSection = () => {
                               data-bs-target="#collapsecmn12"
                               aria-expanded="false"
                               aria-controls="collapsecmn12"
+                              aria-label="button"
                             >
                               What are long-tail and short-tail assets ?
                             </button>
@@ -357,6 +369,7 @@ const FaqSection = () => {
                               data-bs-target="#collapsecmn13"
                               aria-expanded="false"
                               aria-controls="collapsecmn13"
+                              aria-label="button"
                             >
                               How secure is this token ?
                             </button>
@@ -389,6 +402,7 @@ const FaqSection = () => {
                               data-bs-target="#collapsecmn3"
                               aria-expanded="false"
                               aria-controls="collapsecmn3"
+                              aria-label="button"
                             >
                               What is Swapify ?
                             </button>
@@ -421,6 +435,7 @@ const FaqSection = () => {
                               data-bs-target="#collapsecmn14"
                               aria-expanded="false"
                               aria-controls="collapsecmn14"
+                              aria-label="button"
                             >
                               How we can buy and invest token ?
                             </button>
@@ -468,6 +483,7 @@ const FaqSection = () => {
                               data-bs-target="#collapsesport4"
                               aria-expanded="true"
                               aria-controls="collapsesport4"
+                              aria-label="button"
                             >
                               What is your contract address ?
                             </button>
@@ -495,6 +511,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="sportid5">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapsesport5"
@@ -527,6 +544,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="sportid6">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapsesport6"
@@ -559,6 +577,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="sportid1">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapsesport1"
@@ -591,6 +610,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="sportid2">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapsesport2"
@@ -638,6 +658,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="worldleid4">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseleague4"
@@ -670,6 +691,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="worldleid5">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseleague5"
@@ -702,6 +724,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="worldleid6">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseleague6"
@@ -734,6 +757,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="worldleid1">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseleague1"
@@ -766,6 +790,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="worldleid2">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseleague2"
@@ -813,6 +838,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="cmnid7">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapsecmn7"
@@ -845,6 +871,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="cmnid8">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapsecmn8"
@@ -877,6 +904,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="cmnid9">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapsecmn9"
@@ -909,6 +937,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="cmnid10">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapsecmn10"
@@ -941,6 +970,7 @@ const FaqSection = () => {
                           <h2 className="accordion-header" id="cmnid11">
                             <button
                               className="accordion-button collapsed"
+                              aria-label="button"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapsecmn11"

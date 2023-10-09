@@ -26,9 +26,8 @@ const FeatureShowLeftCard = ({
         <div className="thumb overhid ralt">
           <Image
             src={image}
-            className="w-100 transition overhid"
+            className="w-100 transition overhid h-auto"
             alt="img"
-            layout="responsive"
           />
         </div>
         <div className="f__showcontent">
