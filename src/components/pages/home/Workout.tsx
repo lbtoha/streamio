@@ -24,7 +24,7 @@ const Workout = ({ start, end }: { start?: number; end?: number }) => {
               key={id}
               className="col-xxl-2 col-xl-2 col-lg-3 col-md-3 col-md-4 col-sm-4"
             >
-              <MoodsCard key={id} {...props} link="albumb-allsong" />
+              <MoodsCard key={id} {...props} link="album-allsong" />
             </div>
           ))}
         </div>

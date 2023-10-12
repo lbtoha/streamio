@@ -41,11 +41,14 @@ const Product = ({ sectionTitle, componentData }: Props) => {
           modules={[Navigation, Scrollbar]}
           speed={200}
           spaceBetween={12}
-          loop={false}
+          loop={true}
           // smartspeed={ 1000}
           breakpoints={{
             320: {
               slidesPerView: 1,
+              scrollbar: {
+                dragSize: 40,
+              },
             },
             575: {
               slidesPerView: 3,
@@ -58,6 +61,9 @@ const Product = ({ sectionTitle, componentData }: Props) => {
             },
             1600: {
               slidesPerView: 6,
+              scrollbar: {
+                dragSize: 240,
+              },
             },
           }}
           scrollbar={{

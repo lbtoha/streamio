@@ -16,7 +16,7 @@ const CreateEventSection = () => {
     { label: "(GHT-01:00) Midway Island" },
   ];
 
-  const ticketsSelection = [{ label: "Yes" }, { label: "NO" }];
+  const ticketsSelection = [{ label: "Yes" }, { label: "No" }];
 
   return (
     <section className="event__section custom__space pr-24 pl-24 pb-80">

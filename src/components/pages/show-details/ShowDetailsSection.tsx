@@ -1,4 +1,6 @@
+"use client";
 import AudioPlayer from "@/components/shared/AudioPlayer";
+import { handleLinkClick } from "@/utils/handleLinkClick";
 import {
   IconBrandFacebook,
   IconBrandInstagram,
@@ -103,13 +105,21 @@ const ShowDetailsSection = () => {
               </div>
               <div className="d-flex mt-80 like__dislike justify-content-between w-100 align-items-center">
                 <div className="d-flex align-items-center gap-4">
-                  <Link href="#0" className="cmbtn d-flex gap-2">
+                  <Link
+                    href="#0"
+                    onClick={handleLinkClick}
+                    className="cmbtn d-flex gap-2"
+                  >
                     <span>
                       <IconThumbUp className="fs-24 base" />
                     </span>
                     <span>Like</span>
                   </Link>
-                  <Link href="#0" className="cmbtn d-flex gap-2">
+                  <Link
+                    href="#0"
+                    onClick={handleLinkClick}
+                    className="cmbtn d-flex gap-2"
+                  >
                     <span>
                       <IconThumbDown className="fs-24 base" />
                     </span>
@@ -219,7 +229,7 @@ const ShowDetailsSection = () => {
               change, making it a potent tool for social and cultural movements.
             </p>
           </div>
-          <div className="tag__boxes tag__shareshow mt-30 mb-60 d-flex align-items-center">
+          <div className="tag__boxes tag__shareshow mt-30 d-flex align-items-center">
             <ul className="tag d-flex align-items-center">
               <li className="fs-24 me-1 fw-400 white headfont">Tag:</li>
               <li>

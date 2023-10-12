@@ -119,7 +119,7 @@
 .swiper-scrollbar-drag {
   background: var(--base);
   height: 5px;
-  width: 177px !important;
+  // width: 177px !important;
   border-radius: 0;
   top: -1px;
   @include breakpoint(max-xs) {
@@ -374,8 +374,10 @@
     background: var(--base);
     padding: 16px 10px;
     svg {
+      flex-shrink: 0;
       border-right: 1px solid var(--white);
       padding-right: 12px;
+      width: 60px;
       margin-right: 12px;
     }
     transition: all 0.4s;
@@ -449,8 +451,9 @@
     visibility: hidden;
     opacity: 0;
   }
-  &:hover {
-    .content {
+
+  .content {
+    &:hover {
       h4 {
         a {
           color: var(--base);
@@ -458,6 +461,8 @@
         }
       }
     }
+  }
+  &:hover {
     .thumb {
       .pause__abs {
         visibility: visible;
@@ -1800,7 +1805,17 @@
   }
 }
 //browse event Section
+.inputPassword {
+  position: relative;
+}
 
+.toggle-icon {
+  position: absolute;
+  z-index: 20;
+  top: 59px;
+  right: 20px;
+  cursor: pointer;
+}
 //Event create Section
 .event__createcover {
   .event__coverhead {
@@ -1827,9 +1842,11 @@
       }
     }
   }
+
   .cover__form {
     background: var(--cmnbox);
     padding: 40px 40px;
+
     .cover__grp {
       textarea,
       .nice-select,
@@ -1862,6 +1879,7 @@
       ::placeholder {
         color: #bab9bb;
       }
+
       label {
         color: #fefefe !important;
         @include breakpoint(max-xxl) {

@@ -51,10 +51,12 @@ const Trending = ({ classList, sectionTitle, sliderData, children }: Props) => {
           speed={200}
           spaceBetween={12}
           loop={true}
-          // smartspeed={ 1000}
           breakpoints={{
             320: {
               slidesPerView: 1,
+              scrollbar: {
+                dragSize: 40,
+              },
             },
             575: {
               slidesPerView: 2,
@@ -67,10 +69,14 @@ const Trending = ({ classList, sectionTitle, sliderData, children }: Props) => {
             },
             1600: {
               slidesPerView: 4,
+              scrollbar: {
+                dragSize: 240,
+              },
             },
           }}
           scrollbar={{
             el: ".swiper-scrollbar",
+            draggable: true,
           }}
           navigation={{
             nextEl: ".cmn-button-next2",

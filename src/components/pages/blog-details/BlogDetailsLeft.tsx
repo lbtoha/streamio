@@ -1,4 +1,6 @@
+"use client";
 import AudioPlayer from "@/components/shared/AudioPlayer";
+import { handleLinkClick } from "@/utils/handleLinkClick";
 import {
   IconBrandFacebook,
   IconBrandInstagram,
@@ -203,6 +205,7 @@ const BlogDetailsLeft = () => {
                       <div className="feedback__content d-flex align-items-center justify-content-end">
                         <Link
                           href="#"
+                          onClick={handleLinkClick}
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
                           <IconShare3 className="fs-24" />
@@ -263,6 +266,7 @@ const BlogDetailsLeft = () => {
                       <div className="feedback__content d-flex align-items-center justify-content-end">
                         <Link
                           href="#"
+                          onClick={handleLinkClick}
                           className="reply cmbtn base fs-16 bodyfont d-flex align-items-center gap-2"
                         >
                           <IconShare3 className="fs-24" />

@@ -182,6 +182,12 @@
   max-height: 0;
   overflow: hidden;
   transition: opacity 0.3s ease, max-height 0.3s ease;
+
+  .menucontent-ul {
+    a:hover {
+      color: var(--base) !important;
+    }
+  }
   ul {
     background: var(--cmnbg);
     z-index: 4;
@@ -515,8 +521,8 @@
         display: flex;
         font-size: 10px;
         position: absolute;
-        top: 0;
-        right: -5px;
+        top: -7px;
+        right: -9px;
       }
     }
     .glose__icon {
@@ -624,6 +630,11 @@
                 color: var(--base);
                 background: transparent;
               }
+
+              .pra {
+                color: var(--base) !important;
+                transition: all 0.2s ease-in-out;
+              }
             }
           }
         }
@@ -675,10 +686,10 @@
         .dropdown-item {
           padding: 0;
           gap: 10px;
+          padding: 8px;
 
           &:hover {
             background: #272726 !important;
-            padding: 8px;
             border-radius: 10px;
           }
           .notification__thumb {

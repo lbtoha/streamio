@@ -21,7 +21,6 @@ const CartTableRow = () => {
               <IconPlus />
             </button>
             <input
-              type="number"
               name="qty"
               id="qty"
               min="1"

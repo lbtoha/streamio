@@ -1,6 +1,10 @@
+"use client";
+import PasswordField from "@/components/shared/PasswordField";
 import Link from "next/link";
+import { useState } from "react";
 
 const SignInForm = () => {
+  const [passwordField, setPasswordField] = useState(true);
   return (
     <section className="signin__section pr-24 pl-24 pb-80">
       <div className="container">
@@ -22,19 +26,7 @@ const SignInForm = () => {
                     </div>
                   </div>
                   <div className="col-lg-12">
-                    <div className="cover__grp">
-                      <label
-                        htmlFor="phones"
-                        className="mb-16 fs-18 d-block fw-500 white bodyfont"
-                      >
-                        Password <span className="base2">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        id="phones"
-                        placeholder="Type Your Password"
-                      />
-                    </div>
+                    <PasswordField />
                   </div>
                   <div className="col-lg-12">
                     <div className="d-flex flex-wrap align-items-center justify-content-between">

@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Privacy | Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+    "Privacy - Streamio Multipurpose Audio Podcast & Music Nextjs Template",
   description: "Streamio Multipurpose Audio Podcast & Music Nextjs Template",
 };
 

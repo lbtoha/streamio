@@ -21,7 +21,7 @@ const SongUpgradeTableRow = ({
     <tr>
       <td>
         <Link
-          href="albumb-details"
+          href="album-details"
           className="upgrade__left d-flex align-items-center gap-3"
         >
           <span className="fs-16 fw-500 d-block bodyfont white">
@@ -37,12 +37,12 @@ const SongUpgradeTableRow = ({
         </Link>
       </td>
       <td className="d__custom">
-        <Link href="albumb-details" className="d-block white fs-14 bodyfont">
+        <Link href="album-details" className="d-block white fs-14 bodyfont">
           The Best of Sade
         </Link>
       </td>
       <td className="d__custom">
-        <Link href="albumb-details" className="d-block white fs-14 bodyfont">
+        <Link href="album-details" className="d-block white fs-14 bodyfont">
           April 07, 2023
         </Link>
       </td>

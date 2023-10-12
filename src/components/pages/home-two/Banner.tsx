@@ -39,7 +39,7 @@ const Banner = () => {
                       <span>Buy Now</span>
                     </Link>
                     <Link href="trending" className="cmn--btn cmn--btntwo">
-                      <span>Learn More</span>
+                      <span>Explore</span>
                     </Link>
                   </div>
                 </div>
@@ -57,7 +57,7 @@ const Banner = () => {
                       <span>Buy Now</span>
                     </Link>
                     <Link href="trending" className="cmn--btn cmn--btntwo">
-                      <span>Learn More</span>
+                      <span>Explore</span>
                     </Link>
                   </div>
                 </div>
@@ -75,7 +75,7 @@ const Banner = () => {
                       <span>Buy Now</span>
                     </Link>
                     <Link href="trending" className="cmn--btn cmn--btntwo">
-                      <span>Learn More</span>
+                      <span>Explore</span>
                     </Link>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ const Banner = () => {
                       <span>Buy Now</span>
                     </Link>
                     <Link href="trending" className="cmn--btn cmn--btntwo">
-                      <span>Learn More</span>
+                      <span>Explore</span>
                     </Link>
                   </div>
                 </div>

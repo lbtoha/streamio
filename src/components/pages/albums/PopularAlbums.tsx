@@ -34,6 +34,9 @@ const PopularAlbums = ({ sectionTitle, sliderData }: Props) => {
           breakpoints={{
             320: {
               slidesPerView: 1,
+              scrollbar: {
+                dragSize: 40,
+              },
             },
             575: {
               slidesPerView: 3,
@@ -46,6 +49,9 @@ const PopularAlbums = ({ sectionTitle, sliderData }: Props) => {
             },
             1600: {
               slidesPerView: 6,
+              scrollbar: {
+                dragSize: 240,
+              },
             },
           }}
           scrollbar={{

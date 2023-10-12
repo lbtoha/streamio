@@ -3,7 +3,7 @@ import BreadCrumb from "@/components/shared/BreadCrum";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+  title: "Blog - Streamio Multipurpose Audio Podcast & Music Nextjs Template",
   description: "Streamio Multipurpose Audio Podcast & Music Nextjs Template",
 };
 const blog = () => {

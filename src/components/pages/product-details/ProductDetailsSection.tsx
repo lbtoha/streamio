@@ -25,7 +25,9 @@ const ProductDetailsSection = () => {
   };
   const quantityDecrement = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setQuantity(quantity - 1);
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
   };
 
   return (
@@ -173,13 +175,14 @@ const ProductDetailsSection = () => {
                 <form action="#0">
                   <p className="qty d-flex align-items-center">
                     <input
-                      type="number"
+                      // type="number"
                       name="qty"
                       id="qty"
                       min="1"
                       max="10"
                       step="1"
                       defaultValue={quantity}
+                      value={quantity}
                     />
                     <span className="d-grid updownicon align-items-center">
                       <button

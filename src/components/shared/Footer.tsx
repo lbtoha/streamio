@@ -53,7 +53,7 @@ const Footer = () => {
                     </li>
                     <li className="mb-16">
                       <Link
-                        href="poodcasts"
+                        href="podcasts"
                         className="fs-16 fw-400 bodyfont pra"
                       >
                         Podcasts
@@ -72,7 +72,9 @@ const Footer = () => {
                     action="#0"
                     className="d-flex align-items-center justify-content-between gap-1"
                   >
-                    <input type="email" placeholder="Email address" />
+                    <div className="input-item">
+                      <input type="email" placeholder="Email address" />
+                    </div>
                     <button type="submit" aria-label="submit button">
                       <span>Go</span>
                     </button>
@@ -106,7 +108,10 @@ const Footer = () => {
                 <div className="link__attach mb-60 d-flex">
                   <ul className="link">
                     <li className="mb-16">
-                      <Link href="#" className="fs-16 fw-400 bodyfont pra">
+                      <Link
+                        href="tel:+3567897483"
+                        className="fs-16 fw-400 bodyfont pra"
+                      >
                         UA: +3 567 897 483
                       </Link>
                     </li>
@@ -162,7 +167,7 @@ const Footer = () => {
         </div>
         <div className="footer__bottom d-flex align-items-center">
           <p className="pra fs-14 fw-400 bodyfont">
-            Copyright &copy;Streamio{" "}
+            Copyright {new Date().getFullYear()} &copy;Streamio{" "}
             <span className="white design__side">
               {" "}
               Designed By{" "}

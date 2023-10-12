@@ -20,7 +20,7 @@ const AudioPlayerModal = () => {
               />
               <span className="fs-16 fw-500 bodyfont">Rocky Pub</span>
             </div>
-            <ModalAudioPlayer />
+            <ModalAudioPlayer audio="../audio/audio.mp3" />
           </div>
         </div>
       </div>

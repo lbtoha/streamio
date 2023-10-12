@@ -23,6 +23,9 @@ const WorkoutSlider = () => {
           breakpoints={{
             320: {
               slidesPerView: 1,
+              scrollbar: {
+                dragSize: 40,
+              },
             },
             575: {
               slidesPerView: 3,
@@ -35,6 +38,9 @@ const WorkoutSlider = () => {
             },
             1600: {
               slidesPerView: 6,
+              scrollbar: {
+                dragSize: 240,
+              },
             },
           }}
           scrollbar={{

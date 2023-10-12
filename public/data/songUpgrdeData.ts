@@ -17,7 +17,7 @@ export const songUpgradeData = [
     image: image1,
     singer: "Laufey",
     songDuration: "3:30",
-    link: "albumb-details",
+    link: "album-details",
   },
   {
     id: uuidv4(),
@@ -25,7 +25,7 @@ export const songUpgradeData = [
     image: image2,
     singer: "Laufey",
     songDuration: "3:30",
-    link: "albumb-details",
+    link: "album-details",
   },
   {
     id: uuidv4(),
@@ -33,7 +33,7 @@ export const songUpgradeData = [
     image: image3,
     singer: "Laufey",
     songDuration: "3:30",
-    link: "albumb-details",
+    link: "album-details",
   },
   {
     id: uuidv4(),
@@ -41,7 +41,7 @@ export const songUpgradeData = [
     image: image4,
     singer: "Laufey",
     songDuration: "3:30",
-    link: "albumb-details",
+    link: "album-details",
   },
   {
     id: uuidv4(),
@@ -49,7 +49,7 @@ export const songUpgradeData = [
     image: image5,
     singer: "Laufey",
     songDuration: "3:30",
-    link: "albumb-details",
+    link: "album-details",
   },
   {
     id: uuidv4(),
@@ -57,7 +57,7 @@ export const songUpgradeData = [
     image: image6,
     singer: "Laufey",
     songDuration: "3:30",
-    link: "albumb-details",
+    link: "album-details",
   },
   {
     id: uuidv4(),
@@ -65,7 +65,7 @@ export const songUpgradeData = [
     image: image7,
     singer: "Laufey",
     songDuration: "3:30",
-    link: "albumb-details",
+    link: "album-details",
   },
   {
     id: uuidv4(),
@@ -73,7 +73,7 @@ export const songUpgradeData = [
     image: image8,
     singer: "Laufey",
     songDuration: "3:30",
-    link: "albumb-details",
+    link: "album-details",
   },
   {
     id: uuidv4(),
@@ -81,7 +81,7 @@ export const songUpgradeData = [
     image: image9,
     singer: "Laufey",
     songDuration: "3:30",
-    link: "albumb-details",
+    link: "album-details",
   },
   {
     id: uuidv4(),
@@ -89,6 +89,6 @@ export const songUpgradeData = [
     image: image10,
     singer: "Laufey",
     songDuration: "3:30",
-    link: "albumb-details",
+    link: "album-details",
   },
 ];

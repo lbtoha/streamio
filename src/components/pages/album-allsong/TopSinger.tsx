@@ -13,7 +13,7 @@ const TopSinger = () => {
               key={id}
               className="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-4"
             >
-              <MoodsCard {...props} link="albumb-details" />
+              <MoodsCard {...props} link="album-details" />
             </div>
           ))}
         </div>

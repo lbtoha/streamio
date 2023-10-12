@@ -1,3 +1,4 @@
+import PasswordField from "@/components/shared/PasswordField";
 import Link from "next/link";
 
 const SignUpForm = () => {
@@ -33,19 +34,7 @@ const SignUpForm = () => {
                     </div>
                   </div>
                   <div className="col-lg-12">
-                    <div className="cover__grp">
-                      <label
-                        htmlFor="phones"
-                        className="mb-16 fs-18 d-block fw-500 white bodyfont"
-                      >
-                        Password <span className="base2">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        id="phones"
-                        placeholder="Type Your Password"
-                      />
-                    </div>
+                    <PasswordField />
                   </div>
                   <div className="col-lg-12">
                     <div className="d-flex flex-wrap align-items-center justify-content-between">

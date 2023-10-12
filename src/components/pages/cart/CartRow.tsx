@@ -20,9 +20,12 @@ const CartRow = ({ image, name, quantity, price, subTotal }: Props) => {
     e.preventDefault();
     setCartItem(cartItem + 1);
   };
+
   const cartItemsDecrement = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    setCartItem(cartItem - 1);
+    if (cartItem > 1) {
+      setCartItem(cartItem - 1);
+    }
   };
 
   useEffect(() => {
@@ -49,14 +52,10 @@ const CartRow = ({ image, name, quantity, price, subTotal }: Props) => {
               <IconPlus />
             </button>
             <input
-              type="number"
               name="qty"
               id="qty"
-              min="1"
-              max="10"
-              step="1"
+              onChange={() => setCartItem}
               value={cartItem}
-              defaultValue={cartItem}
             />
             <button
               onClick={cartItemsDecrement}
@@ -71,8 +70,8 @@ const CartRow = ({ image, name, quantity, price, subTotal }: Props) => {
       </td>
       <td>${price}</td>
       <td>
-        <span className="d-flex align-items-center gap-3">
-          ${itemSubtotal}
+        <span className="d-flex align-items-center gap-3 ">
+          <span className="total-amount">${itemSubtotal}</span>
           <Link href="#0" className="iconx">
             <IconX />
           </Link>

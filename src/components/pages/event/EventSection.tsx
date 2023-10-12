@@ -35,7 +35,7 @@ const EventSection = () => {
               modules={[Navigation]}
               speed={200}
               spaceBetween={12}
-              loop={false}
+              loop={true}
               breakpoints={{
                 320: {
                   slidesPerView: 4,

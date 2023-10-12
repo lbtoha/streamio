@@ -11,7 +11,7 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import SongUpgradeTableRow from "../albumb-allsong/SongUpgradeTableRow";
+import SongUpgradeTableRow from "../album-allsong/SongUpgradeTableRow";
 import ExploreSectionTableRow from "../explore/ExploreSectionTableRow";
 import WeeklyTopTrack from "../explore/WeeklyTopTrack";
 

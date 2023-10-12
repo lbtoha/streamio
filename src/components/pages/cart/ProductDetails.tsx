@@ -41,12 +41,18 @@ const ProductDetails = () => {
                   </Link>
                 </div>
                 <div className="coupon__price text-center">
-                  <Link href="#0" className="carttoal">
+                  {/* <Link href="#0" className="carttoal">
                     Cart Total
-                  </Link>
-                  <span className="fs-24 d-block mt-60 mb-60 fw-600 bodyfont white">
-                    $75..00
-                  </span>
+                  </Link> */}
+                  <span className="cart-total-title">Cart Totals</span>
+
+                  <div className="mt-40 mb-3  bodyfont white cart-subtotal">
+                    <span>Subtotal</span> <span>$290.00</span>
+                  </div>
+                  <div className="mb-40  bodyfont white cart-subtotal">
+                    <span>Total</span> <span>$290.00</span>
+                  </div>
+                  <div className="cart-total"></div>
                   <Link href="checkout" className="cehckout">
                     Checkout
                   </Link>

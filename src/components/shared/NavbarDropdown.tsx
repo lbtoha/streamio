@@ -2,42 +2,48 @@
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { SetStateAction } from "react";
 
 type Props = {
+  id: string;
   className?: string;
   icon: any;
   menuTitle: string;
-  path: string;
+  isActive: boolean | undefined;
+  isSubMenuOpen: string;
+  setSubMenuOpen: React.Dispatch<SetStateAction<string>>;
   menuItems: {
     id: string;
     title: string;
-    childrenPath: string;
-    parentPath: string;
+    dropDownPath: string;
   }[];
 };
 
 const NavbarDropdown = ({
+  id,
   className,
   menuTitle,
   menuItems,
   icon,
-  path,
+  isActive,
+  isSubMenuOpen,
+  setSubMenuOpen,
 }: Props) => {
-  const [isSubMenuOpen, setSubMenuOpen] = useState(false);
-  const [parentPath, setParentPath] = useState("");
+  // const [isSubMenuOpen, setSubMenuOpen] = useState("");
   const pathName = usePathname();
 
+  const handleSubMenuOpen = (id: string) => {
+    setSubMenuOpen(id);
+  };
+
   return (
-    <li
-      onClick={() => setSubMenuOpen(!isSubMenuOpen)}
-      className={`liclick ${className}`}
-    >
+    <li className={`liclick ${className}`}>
       <span className="d-flex align-items-center">
         <Link
+          onClick={() => handleSubMenuOpen(id)}
           href="#"
           className={`mclick d-flex hcolor align-items-center w-100 justify-content-between ${
-            parentPath === path ? "navbar-item-active" : ""
+            isActive ? "navbar-item-active" : ""
           }`}
         >
           <span className="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
@@ -55,14 +61,14 @@ const NavbarDropdown = ({
         }`}
       >
         <ul>
-          {menuItems.map(({ id, title, childrenPath, parentPath }) => {
+          {menuItems.map(({ id, title, dropDownPath }) => {
             return (
-              <li key={id} onClick={() => setParentPath(parentPath)}>
+              <li key={id}>
                 <Link
                   className={`${
-                    pathName === childrenPath ? "navbar-item-active" : ""
+                    pathName === dropDownPath ? "navbar-item-active" : ""
                   }`}
-                  href={childrenPath}
+                  href={dropDownPath}
                 >
                   {title}
                 </Link>

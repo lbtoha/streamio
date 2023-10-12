@@ -1,12 +1,12 @@
 import { songUpgradeData } from "@/../public/data/songUpgrdeData";
-import SongUpgrade from "@/components/pages/albumb-allsong/SongUpgrade";
+import SongUpgrade from "@/components/pages/album-allsong/SongUpgrade";
 import MoodsSlider from "@/components/pages/moods/MoodsSlider";
 import BreadCrumSingle from "@/components/shared/BreadCrumSingle";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Mood All Song | Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+    "Mood All Song - Streamio Multipurpose Audio Podcast & Music Nextjs Template",
   description: "Streamio Multipurpose Audio Podcast & Music Nextjs Template",
 };
 

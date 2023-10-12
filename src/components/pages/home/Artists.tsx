@@ -34,6 +34,9 @@ const Artists = () => {
           breakpoints={{
             320: {
               slidesPerView: 1,
+              scrollbar: {
+                dragSize: 40,
+              },
             },
             575: {
               slidesPerView: 2,
@@ -46,6 +49,9 @@ const Artists = () => {
             },
             1600: {
               slidesPerView: 4,
+              scrollbar: {
+                dragSize: 240,
+              },
             },
           }}
           scrollbar={{

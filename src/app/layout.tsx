@@ -5,7 +5,6 @@ import MainBody from "@/components/shared/MainBody";
 import ReportModal from "@/components/shared/ReportModal";
 import SharedModal from "@/components/shared/SharedModal";
 import { poppins } from "@/utils/fonts";
-import "material-symbols";
 import { Metadata } from "next";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
@@ -19,7 +18,7 @@ import Loader from "./Loader";
 
 export const metadata: Metadata = {
   title:
-    "Streamio | Streamio Multipurpose Audio Podcast & Music Nextjs Template",
+    "Streamio - Streamio Multipurpose Audio Podcast & Music Nextjs Template",
   description: "Streamio Multipurpose Audio Podcast & Music Nextjs Template",
 };
 
@@ -30,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={poppins.variable}>
         <MainBody>
           <main>
             <Suspense fallback={<Loader />}>{children}</Suspense>

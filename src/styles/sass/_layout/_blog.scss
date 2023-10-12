@@ -205,6 +205,7 @@
       padding: 0;
     }
     input {
+      appearance: none;
       background: transparent;
       border: unset;
       width: 30px;
@@ -224,7 +225,7 @@
   }
 }
 .buybtn2 {
-  padding: 12px 16px 6px;
+  padding: 12px 12px;
   background: var(--base);
   color: var(--white);
 }
@@ -340,6 +341,11 @@
         border: unset;
         background: var(--cmnbox);
         color: var(--white);
+
+        .total-amount {
+          width: 50px;
+          text-align: center;
+        }
         a,
         button {
           color: var(--white);
@@ -544,6 +550,22 @@
     color: var(--white);
     background: var(--base);
     display: inline-block;
+  }
+
+  .cart-total-title {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 20px;
+    display: block;
+  }
+
+  .cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 1px solid rgba(16, 101, 78, 0.2);
+    padding: 16px 40px;
+    align-items: center;
   }
   .cehckout {
     padding: 16px 21px;

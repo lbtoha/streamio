@@ -778,26 +778,23 @@ p {
 
 .toggle-button-area {
   position: relative;
-  display: inline-block;
   width: 42px;
   height: 20px;
   border-radius: 30px;
   background-color: var(--base);
-  display: inline-flex;
-  flex-shrink: 0;
+  display: flex;
+  align-items: center;
 
   transition: all;
-  transition-duration: 200;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   .button {
     pointer-events: none;
-    display: inline-block;
     background: var(--white);
     height: 16px;
     width: 16px;
-    margin-top: 1px;
     border-radius: 100%;
-    transition: all ease-in-out 200;
+    transition: all 0.3s ease-in-out;
   }
 
   .button.toggle {

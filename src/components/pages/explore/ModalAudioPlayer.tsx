@@ -36,6 +36,17 @@ const ModalAudioPlayer = ({ audio }: { audio?: string }) => {
 
   // formate the duration in second
   const [durationInMin, setDurationInMin] = useState("");
+  const [currentInMin, setCurrentInMin] = useState("");
+
+  useEffect(() => {
+    const minutes: number = Math.floor(currentTime / 60);
+    const remainingSeconds: number = Math.floor(currentTime % 60);
+    const newCurrent = `${minutes}:${remainingSeconds} `.replace(
+      /:0(\d) min$/,
+      ":$1 min"
+    );
+    setCurrentInMin(newCurrent);
+  }, [currentTime, audio]);
 
   useEffect(() => {
     const minutes: number = Math.floor(duration / 60);
@@ -55,6 +66,7 @@ const ModalAudioPlayer = ({ audio }: { audio?: string }) => {
 
   const handleVolumeChange = (event: React.MouseEvent<HTMLDivElement>) => {
     const progressBarv = vref.current;
+
     if (progressBarv) {
       const rect = progressBarv.getBoundingClientRect();
       const clickPosition = event.clientX - rect.left;
@@ -63,7 +75,7 @@ const ModalAudioPlayer = ({ audio }: { audio?: string }) => {
       const newVolume = clickPosition / rect.width;
 
       // Set the new volume in state
-
+      setVolume(newVolume);
       if (audioRef.current) {
         audioRef.current.volume = newVolume;
       }
@@ -98,7 +110,7 @@ const ModalAudioPlayer = ({ audio }: { audio?: string }) => {
             <Link href="#"></Link>
           </div>
           <div className="audioplayer-time audioplayer-time-current">
-            {currentTime}
+            {currentInMin}
           </div>
           <div
             ref={progressBarRef}

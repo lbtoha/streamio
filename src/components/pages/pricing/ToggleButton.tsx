@@ -8,20 +8,15 @@ type Props = {
 };
 export default function ToggleButton({ enabled, setEnabled }: Props) {
   return (
-    <div className="">
-      <Switch
-        checked={enabled}
-        onChange={setEnabled}
-        className={`toggle-button-area ${
-          enabled ? "bg-teal-900" : "bg-teal-700"
-        }`}
-      >
-        <span className="sr-only">Use setting</span>
-        <span
-          aria-hidden="true"
-          className={`button ${enabled ? "toggle" : "translate-x-0"}`}
-        />
-      </Switch>
-    </div>
+    <Switch
+      checked={enabled}
+      onChange={setEnabled}
+      className={`toggle-button-area `}
+    >
+      <span
+        aria-hidden="true"
+        className={`button ${enabled ? "toggle" : ""}`}
+      />
+    </Switch>
   );
 }

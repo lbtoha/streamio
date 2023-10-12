@@ -7,54 +7,40 @@ import {
   IconChecks,
   IconChevronDown,
   IconDots,
+  IconMinus,
+  IconPlus,
   IconSearch,
   IconShoppingCart,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useContext, useEffect, useState } from "react";
-import NavbarDropdown from "./NavbarDropdown";
+import { useContext, useState } from "react";
 
 const Navbar = () => {
-  const { isSidebarOpen } = useContext(navbarContext);
+  const { isSidebarOpen, setIsSidebarOpen } = useContext(navbarContext);
   const [isSubDropDownOpen, setSubDropDownOpen] = useState(false);
+  const [isSubMenuOpen, setSubMenuOpen] = useState<string | null>(
+    sideBarData[0].id
+  );
 
   const pathName = usePathname();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        document
-          .querySelector(".header-wrapper")
-          ?.classList.remove("slideInUp");
-        document.body.classList.add("body-padding");
-      } else {
-        document.querySelector(".header-wrapper")?.classList.add("slideInUp");
-        document.body.classList.remove("body-padding");
-      }
-    };
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isSidebarOpen]);
 
   return (
     // <!-- Header Here -->
     <>
       <div className="header__section__attachment">
         <div className="container-fluid p-0-fluid p-0">
-          <div className=" d-flex">
+          <div className="d-flex">
             <div
               className={`sidebar-wrapper mainbg ${isSidebarOpen && "active"}`}
             >
               <div className="d-flex logo__wrap align-items-center justify-content-between">
-                <Link href="/" className="logo">
+                <Link
+                  href="/"
+                  className="logo"
+                  onClick={() => setIsSidebarOpen(false)}
+                >
                   <Image
                     width={180}
                     height={52}
@@ -62,27 +48,74 @@ const Navbar = () => {
                     alt="img"
                   />
                 </Link>
-                <div className="closebtn d-none">
-                  <i className="material-symbols-outlined">close</i>
-                </div>
               </div>
               <div className="sidebar__wrapbox">
                 <ul className="sidebar__menu">
                   {/*==============side menu===== */}
                   {sideBarData.map(
                     ({ id, menuTitle, icon, className, path, menuItems }) => {
+                      let isActive = menuItems?.some(
+                        (path) => pathName == path.dropDownPath
+                      );
                       return menuItems ? (
-                        <NavbarDropdown
-                          className={className}
-                          key={id}
-                          icon={icon}
-                          path={path}
-                          menuTitle={menuTitle}
-                          menuItems={menuItems}
-                        />
+                        <li key={id} className={`liclick ${className}`}>
+                          <span className="d-flex align-items-center">
+                            <Link
+                              onClick={() =>
+                                setSubMenuOpen((prev) =>
+                                  prev == id ? null : id
+                                )
+                              }
+                              href="#"
+                              className={`mclick d-flex hcolor align-items-center w-100 justify-content-between ${
+                                isActive ? "navbar-item-active" : ""
+                              }`}
+                            >
+                              <span className="d-flex click__title fs-16 bodyfont d-flex align-items-center gap-2">
+                                {icon}
+                                {menuTitle}
+                              </span>
+                              <span className="d-flex click__title align-items-center">
+                                {isSubMenuOpen == id ? (
+                                  <IconMinus />
+                                ) : (
+                                  <IconPlus />
+                                )}
+                              </span>
+                            </Link>
+                          </span>
+                          <div
+                            className={` menucontent menucontent-show ${
+                              isSubMenuOpen == id ? "active" : ""
+                            }`}
+                          >
+                            <ul>
+                              {menuItems.map(({ id, title, dropDownPath }) => {
+                                return (
+                                  <li
+                                    key={id}
+                                    onClick={() => setIsSidebarOpen(false)}
+                                  >
+                                    <Link
+                                      className={`${
+                                        pathName === dropDownPath
+                                          ? "navbar-item-active"
+                                          : ""
+                                      }`}
+                                      href={dropDownPath}
+                                    >
+                                      {title}
+                                    </Link>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </div>
+                        </li>
                       ) : (
-                        <li key={id}>
+                        <li key={id} onClick={() => setIsSidebarOpen(false)}>
                           <Link
+                            onClick={() => setSubMenuOpen(null)}
                             href={path}
                             className={`d-flex hcolor align-items-center gap-2 ${
                               pathName === path ? "navbar-item-active" : ""
@@ -139,6 +172,7 @@ const Navbar = () => {
                               setSubDropDownOpen(!isSubDropDownOpen);
                               handleLinkClick(e);
                             }}
+                            onMouseLeave={() => setSubDropDownOpen(false)}
                             href="#"
                             className={`mclick d-flex hcolor align-items-center w-100 justify-content-between`}
                           >
@@ -150,14 +184,21 @@ const Navbar = () => {
                             isSubDropDownOpen ? "active" : ""
                           }`}
                         >
-                          <ul onMouseLeave={() => setSubDropDownOpen(false)}>
-                            {menuItems.map(({ id, title, childrenPath }) => {
+                          <ul
+                            onMouseLeave={() => setSubDropDownOpen(false)}
+                            onMouseEnter={() =>
+                              setSubDropDownOpen(!isSidebarOpen && true)
+                            }
+                            className="menucontent-ul"
+                          >
+                            {menuItems.map(({ id, title, dropDownPath }) => {
                               return (
                                 <li key={id}>
                                   <Link
-                                    href={childrenPath}
+                                    onClick={() => setSubMenuOpen(null)}
+                                    href={dropDownPath}
                                     className={`${
-                                      pathName == childrenPath
+                                      pathName == dropDownPath
                                         ? "main-menu-active"
                                         : ""
                                     }`}
