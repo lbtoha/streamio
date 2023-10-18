@@ -88,7 +88,7 @@ const Footer = () => {
                   Databest - powerful Podcasts expert on processing marketing
                   data
                 </p>
-                <Link href="index" className="d-block mb-60">
+                <Link href="/" className="d-block mb-60">
                   <Image
                     width={68}
                     height={51}

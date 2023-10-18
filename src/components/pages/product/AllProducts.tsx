@@ -2,6 +2,7 @@ import { productData } from "@/../public/data/productDta";
 import SelectBox from "@/components/shared/SelectBox";
 import { IconSearch } from "@tabler/icons-react";
 import Link from "next/link";
+import { v4 as uuidv4 } from "uuid";
 import ProductCard from "./ProductCard";
 
 const AllProducts = () => {
@@ -93,8 +94,8 @@ const AllProducts = () => {
             aria-labelledby="home-tab"
           >
             <div className="row g-4">
-              {productData.map(({ id, ...props }) => (
-                <ProductCard key={id} {...props} />
+              {productData.map(({ ...props }) => (
+                <ProductCard key={uuidv4()} {...props} />
               ))}
             </div>
             <div className="text-center mt-60">

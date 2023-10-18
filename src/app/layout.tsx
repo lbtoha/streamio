@@ -8,6 +8,7 @@ import { poppins } from "@/utils/fonts";
 import { Metadata } from "next";
 import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
+import "react-toastify/dist/ReactToastify.css";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";

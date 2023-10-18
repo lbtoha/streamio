@@ -1,15 +1,32 @@
+"use client";
+import { addToCart } from "@/redux/features/cart-slich";
+import { handleLinkClick } from "@/utils/handleLinkClick";
 import { IconShoppingCartPlus } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-
+import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 type Props = {
+  id: number;
   image: StaticImageData;
   productTitle: string;
   productPrice: number;
   name: string;
 };
 
-const ProductCard = ({ image, productPrice, productTitle, name }: Props) => {
+const ProductCard = ({
+  id,
+  image,
+  productPrice,
+  productTitle,
+  name,
+}: Props) => {
+  const notify = (productTitle: string) =>
+    toast(`${productTitle} is added to the cart!`, {
+      autoClose: 3000,
+      theme: "dark",
+    });
+  const dispatch = useDispatch();
   return (
     <div className="col-lg-2 col-md-3 col-sm-4">
       <div className="product__item">
@@ -21,6 +38,20 @@ const ProductCard = ({ image, productPrice, productTitle, name }: Props) => {
           />
           <Link
             href="cart"
+            onClick={(e) => {
+              notify(productTitle);
+              handleLinkClick(e);
+              dispatch(
+                addToCart({
+                  id,
+                  image,
+                  productTitle,
+                  productPrice,
+                  quantity: 1,
+                  subTotal: productPrice,
+                })
+              );
+            }}
             className="product__badge text-uppercase fw-500 d-flex align-items-center justify-content-center fs-16 bodyfont white"
           >
             <IconShoppingCartPlus />

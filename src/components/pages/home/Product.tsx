@@ -10,12 +10,13 @@ import { StaticImageData } from "next/image";
 import Link from "next/link";
 //@ts-ignore
 import { Navigation, Scrollbar } from "swiper";
+import { v4 as uuidv4 } from "uuid";
 import ProductSliderCard from "./ProductSliderCard";
 
 type Props = {
   sectionTitle: string;
   componentData: {
-    id: string;
+    id: number;
     image: StaticImageData;
     productTitle: string;
     productPrice: number;
@@ -76,8 +77,8 @@ const Product = ({ sectionTitle, componentData }: Props) => {
           className="swiper products__slider"
         >
           <div className="swiper-wrapper">
-            {componentData.map(({ id, ...props }) => (
-              <SwiperSlide key={id}>
+            {componentData.map(({ ...props }) => (
+              <SwiperSlide key={uuidv4()}>
                 <ProductSliderCard {...props} />
               </SwiperSlide>
             ))}

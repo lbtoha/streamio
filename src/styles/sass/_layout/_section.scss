@@ -177,6 +177,11 @@
   @include breakpoint(max-sm) {
     max-width: 300px;
     margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .thumb {
       width: 100px;
       .video__style {
@@ -1815,6 +1820,12 @@
   top: 59px;
   right: 20px;
   cursor: pointer;
+  @include breakpoint(max-xxl) {
+    top: 53px;
+  }
+  @include breakpoint(max-lg) {
+    top: 46px;
+  }
 }
 //Event create Section
 .event__createcover {

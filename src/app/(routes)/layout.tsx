@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
 
 export default function HomeLayout({
   children,
@@ -10,5 +11,11 @@ export default function HomeLayout({
     // @ts-ignore
     import("bootstrap/dist/js/bootstrap");
   }, []);
-  return <React.Fragment>{children}</React.Fragment>;
+  return (
+    <React.Fragment>
+      {" "}
+      {children}
+      <ToastContainer />
+    </React.Fragment>
+  );
 }

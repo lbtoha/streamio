@@ -1,5 +1,6 @@
 "use client";
 import { mainNavbarData, sideBarData } from "@/../public/data/navBarData";
+import { RootState } from "@/redux/store";
 import { handleLinkClick } from "@/utils/handleLinkClick";
 import { navbarContext } from "@/utils/reactContext";
 import {
@@ -16,6 +17,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useContext, useState } from "react";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const { isSidebarOpen, setIsSidebarOpen } = useContext(navbarContext);
@@ -25,7 +27,7 @@ const Navbar = () => {
   );
 
   const pathName = usePathname();
-
+  const { quantity } = useSelector((state: RootState) => state.cart.value);
   return (
     // <!-- Header Here -->
     <>
@@ -231,7 +233,7 @@ const Navbar = () => {
                 <div className="menu__components d-flex align-items-center">
                   <Link href="cart" className="shop__tolley">
                     <IconShoppingCart className="pra fs-30" />
-                    <span className="shop__badge">3</span>
+                    <span className="shop__badge">{quantity}</span>
                   </Link>
                   <div className="dropdown profie__dropdown">
                     <Link
@@ -248,7 +250,7 @@ const Navbar = () => {
                         alt="image"
                         className="img-fluid profile__img rounded-circle objec-fit-cover"
                       />
-                      <span className="d-flex fs-14 fw-500 pra align-items-center gap-1">
+                      <span className="d-flex fs-14 fw-500 pra align-items-center gap-1 d-none d-sm-block">
                         David Malan
                         <IconChevronDown />
                       </span>

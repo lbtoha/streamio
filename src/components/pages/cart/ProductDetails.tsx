@@ -1,8 +1,16 @@
-import { cartItems } from "@/../public/data/cartItems";
+"use client";
+import { RootState } from "@/redux/store";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+import { v4 as uuidv4 } from "uuid";
 import CartRow from "./CartRow";
 
 const ProductDetails = () => {
+  const { cartItems } = useSelector((state: RootState) => state.cart.value);
+  const totalPrice = cartItems.reduce(
+    (acc, item) => acc + item.productPrice * item.quantity!,
+    0
+  );
   return (
     // <!--product Details-->
     <section className="cart__section pb-80 pr-24 pl-24">
@@ -20,8 +28,8 @@ const ProductDetails = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {cartItems.map(({ id, ...props }) => (
-                    <CartRow key={id} {...props} />
+                  {cartItems.map(({ ...props }) => (
+                    <CartRow key={uuidv4()} {...props} />
                   ))}
                 </tbody>
               </table>
@@ -41,16 +49,12 @@ const ProductDetails = () => {
                   </Link>
                 </div>
                 <div className="coupon__price text-center">
-                  {/* <Link href="#0" className="carttoal">
-                    Cart Total
-                  </Link> */}
                   <span className="cart-total-title">Cart Totals</span>
-
                   <div className="mt-40 mb-3  bodyfont white cart-subtotal">
-                    <span>Subtotal</span> <span>$290.00</span>
+                    <span>Subtotal</span> <span>${totalPrice}</span>
                   </div>
                   <div className="mb-40  bodyfont white cart-subtotal">
-                    <span>Total</span> <span>$290.00</span>
+                    <span>Total</span> <span>${totalPrice}</span>
                   </div>
                   <div className="cart-total"></div>
                   <Link href="checkout" className="cehckout">

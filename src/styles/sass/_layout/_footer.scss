@@ -4,6 +4,10 @@
 }
 .footer__top {
   padding: 80px 0 40px;
+
+  @include breakpoint(max-sm) {
+    padding: 40px 0 40px;
+  }
 }
 .footer__widget {
   .link__attach {

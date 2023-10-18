@@ -8,7 +8,7 @@ const BreadCrumb = ({ page }: { page: string }) => {
       <div className="container-flud p-0">
         <ul className="breadcrund__content mb-40 d-flex gap-1 flex-wrap align-items-center">
           <li className="fs-16 bodyfont fw-500">
-            <Link href="index" className="pra">
+            <Link href="/" className="pra">
               Home
             </Link>
           </li>

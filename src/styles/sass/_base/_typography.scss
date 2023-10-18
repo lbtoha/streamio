@@ -375,6 +375,9 @@ p {
   @include breakpoint(max-md) {
     padding-bottom: 70px;
   }
+  @include breakpoint(max-sm) {
+    padding-bottom: 50px;
+  }
 }
 .pt-80 {
   padding-top: 80px;

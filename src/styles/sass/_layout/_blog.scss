@@ -382,7 +382,7 @@
               font-weight: 500;
               @include bodyfont;
               @include breakpoint(x4l) {
-                margin-left: 7px;
+                // margin-left: 7px;
               }
             }
             ::placeholder {
