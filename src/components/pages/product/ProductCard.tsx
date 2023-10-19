@@ -28,7 +28,7 @@ const ProductCard = ({
     });
   const dispatch = useDispatch();
   return (
-    <div className="col-lg-2 col-md-3 col-sm-4">
+    <div className="col-lg-2 col-md-3 col-sm-4 mb-24 mt-24">
       <div className="product__item">
         <div className="thumb ralt mb-16 transition overhid">
           <Image

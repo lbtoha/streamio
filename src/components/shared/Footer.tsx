@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6 col-sm-6 quick__space">
               <div className="footer__widget">
                 <h4 className="white mb-30">Quick Link</h4>
-                <div className="link__attach d-flex">
+                <div className="link__attach d-flex justify-content-between justify-content-lg-start">
                   <ul className="link">
                     <li className="mb-16">
                       <Link href="#" className="fs-16 fw-400 bodyfont pra">
@@ -179,7 +179,7 @@ const Footer = () => {
               </Link>
             </span>
           </p>
-          <ul className="privacy d-flex align-items-center gap-4">
+          <ul className="privacy d-flex align-items-center gap-2">
             <li>
               <Link href="privacy" className="fs-14 fw-400 bodyfont white">
                 Privacy

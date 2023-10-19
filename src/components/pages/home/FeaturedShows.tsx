@@ -24,8 +24,8 @@ const FeaturedShows = () => {
           {featureShowData.slice(0, 2).map(({ id, ...props }) => (
             <FeatureShowLeftCard key={id} {...props} />
           ))}
-          <div className="col-xxl-4 col-xl-4 col-lg-4">
-            <div className="show__rightbox">
+          <div className="col-xxl-4 col-12">
+            <div className="show__rightbox featured__show-right">
               {featureShowRightData.map(({ id, ...props }) => (
                 <FeatureShowRightCard key={id} {...props} />
               ))}

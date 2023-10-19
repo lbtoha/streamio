@@ -1,13 +1,10 @@
+"use client";
 import AudioPlayer from "@/components/shared/AudioPlayer";
-import {
-  IconShare,
-  IconShare3,
-  IconThumbDown,
-  IconThumbUp,
-} from "@tabler/icons-react";
+import LikeAndDisLikeBtn from "@/components/shared/LikeAndDisLikeBtn";
+import { IconShare, IconShare3 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const CommonDetails = ({
   image = "/img/trending/audio-albumb.jpg",
@@ -16,6 +13,8 @@ const CommonDetails = ({
   image?: string;
   children: React.ReactNode;
 }) => {
+  const [like, setLike] = useState(true);
+  const [disLike, setDisLike] = useState(false);
   return (
     // <!--common details-->
     <section className="genres__details custom__space pb-100 mr-24 ml-24">
@@ -34,36 +33,25 @@ const CommonDetails = ({
                 />
               </div>
               <div className="d-flex mt-80 like__dislike justify-content-between w-100 align-items-center">
-                <div className="d-flex align-items-center gap-4">
-                  <Link href="#0" className="cmbtn d-flex gap-2">
-                    <span>
-                      <IconThumbUp className="fs-24 base" />
-                    </span>
-                    <span>Like</span>
-                  </Link>
-                  <Link href="#0" className="cmbtn d-flex gap-2">
-                    <span>
-                      <IconThumbDown className="fs-24 base" />
-                    </span>
-                    <span>Dislike</span>
-                  </Link>
+                <div className="d-flex align-items-center gap-md-4 gap-2 order-1 order-sm-0">
+                  <LikeAndDisLikeBtn />
                 </div>
                 <div className="pause__block">
                   <AudioPlayer />
                 </div>
-                <div className="d-flex align-items-center gap-4">
-                  <Link href="#0" className="cmbtn d-flex gap-2">
+                <div className="d-flex align-items-center gap-md-4 gap-2 order-2 order-sm-1 pt-2 pt-sm-0">
+                  <button className="cmbtn d-flex gap-2">
                     <span>
                       <IconShare className="fs-24 base" />
                     </span>
                     <span>Share</span>
-                  </Link>
-                  <Link href="#0" className="cmbtn d-flex gap-2">
+                  </button>
+                  <button className="cmbtn d-flex gap-2">
                     <span>
                       <IconShare3 className="fs-24 base" />
                     </span>
                     <span>Re Post</span>
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>

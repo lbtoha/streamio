@@ -18,7 +18,7 @@ const ProductDetails = () => {
         <div className="row justify-content-center">
           <div className="col-lg-12">
             <div className="cart__wrapper">
-              <table className="table align-middle w-100">
+              <table className="table align-middle w-100 ">
                 <thead>
                   <tr>
                     <th>Product</th>
@@ -27,7 +27,7 @@ const ProductDetails = () => {
                     <th>Subtotal</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="">
                   {cartItems.map(({ ...props }) => (
                     <CartRow key={uuidv4()} {...props} />
                   ))}

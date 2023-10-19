@@ -103,7 +103,7 @@
     gap: 10px;
     .tag {
       flex-wrap: wrap;
-      justify-content: center;
+      // justify-content: center;
     }
   }
 }
@@ -232,6 +232,23 @@
 .product__detailsthumb {
   display: flex;
   gap: 24px;
+  .slide__small {
+    order: 2;
+
+    @include breakpoint(xxxl) {
+      order: 0;
+    }
+    .swiper-wrapper {
+      flex-wrap: nowrap !important;
+      gap: 0px !important;
+    }
+    img {
+      @include breakpoint(max-xs) {
+        width: 80% !important;
+        height: auto;
+      }
+    }
+  }
   .mySwiper2 {
     .swiper-slide {
       width: 100%;
@@ -242,7 +259,7 @@
   }
   .mySwiper {
     .swiper-wrapper {
-      gap: 24px;
+      gap: 24px !important;
       display: grid;
     }
   }
@@ -252,7 +269,7 @@
   @include breakpoint(max-xxxl) {
     flex-wrap: wrap;
     .slide__small {
-      width: unset;
+      width: 100%;
       margin: 0 auto;
     }
     .mySwiper {
@@ -273,11 +290,48 @@
       }
     }
   }
+
+  @include breakpoint(max-xs) {
+    .slide__small {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .mySwiper {
+      .swiper-wrapper {
+        gap: 0px !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .swiper-slide {
+          width: 60px !important;
+          img {
+            width: 100%;
+          }
+        }
+        @include breakpoint(max-xl) {
+          gap: 10px;
+        }
+      }
+    }
+  }
+
   @include breakpoint(max-lg) {
     margin-bottom: 30px;
   }
   @include breakpoint(max-sm) {
     margin-bottom: 5px;
+  }
+  @include breakpoint(max-sm) {
+    margin-bottom: 5px;
+  }
+
+  .slider-image {
+    @include breakpoint(max-lg) {
+      height: auto;
+    }
+    @include breakpoint(max-xs) {
+      height: auto;
+    }
   }
 }
 .reviews {
@@ -404,9 +458,10 @@
     }
   }
   @include breakpoint(max-md) {
-    overflow-x: scroll;
     table {
       width: 900px;
+      display: block;
+      overflow-x: scroll;
       thead {
         tr {
           th {

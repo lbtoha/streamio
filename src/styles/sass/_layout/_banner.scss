@@ -227,7 +227,12 @@
   }
   @include breakpoint(max-md) {
     margin-top: -0px;
-    padding-top: 80px;
+    padding-top: 80px !important;
+  }
+
+  @include breakpoint(max-sm) {
+    margin-top: -0px;
+    padding-top: 50px !important;
   }
 }
 //trending abs

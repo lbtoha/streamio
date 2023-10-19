@@ -111,8 +111,8 @@ const AllProducts = () => {
             aria-labelledby="profile-tab"
           >
             <div className="row g-4">
-              {productData.map(({ id, ...props }) => (
-                <ProductCard key={id} {...props} />
+              {productData.map(({ ...props }) => (
+                <ProductCard key={uuidv4()} {...props} />
               ))}
             </div>
             <div className="text-center mt-60">
@@ -128,8 +128,8 @@ const AllProducts = () => {
             aria-labelledby="contact-tab"
           >
             <div className="row g-4">
-              {productData.map(({ id, ...props }) => (
-                <ProductCard key={id} {...props} />
+              {productData.map(({ ...props }) => (
+                <ProductCard key={uuidv4()} {...props} />
               ))}
             </div>
             <div className="text-center mt-60">

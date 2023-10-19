@@ -308,7 +308,7 @@ const BlogDetailsLeft = () => {
                 id="comment"
                 className="mb-30"
                 rows={5}
-                placeholder="Add Coment"
+                placeholder="Add Comment"
               ></textarea>
               <span className="w-100 d-flex align-items-center justify-content-end">
                 <button

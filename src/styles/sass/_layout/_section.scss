@@ -308,6 +308,31 @@
     }
   }
 }
+
+.featured__show-right {
+  @include breakpoint(max-xl) {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  @include breakpoint(max-lg) {
+    grid-template-columns: 1fr;
+    gap: 0px;
+  }
+  .showbox {
+    width: 100% !important;
+
+    @include breakpoint(max-xs) {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      img {
+      }
+    }
+  }
+}
+
 .show__rightbox {
   @include breakpoint(max-lg) {
     display: flex;
@@ -368,7 +393,7 @@
     }
   }
   @include breakpoint(max-xxl) {
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
   }
 }
 //feature show Section
@@ -1234,7 +1259,7 @@
       @include breakpoint(max-sm) {
         flex-wrap: wrap;
         display: grid !important;
-        justify-content: center !important;
+        justify-content: space-around !important;
       }
     }
   }
@@ -1474,14 +1499,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
+      // width: 100%;
     }
-    @include breakpoint(max-xxs) {
+    @include breakpoint(max-sm) {
       padding: 14px 5px;
+      margin: 0 auto;
+      width: fit-content;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
+      flex-direction: column;
       border-radius: 5px;
     }
   }
@@ -1780,6 +1805,9 @@
 .browse__box {
   border: 1px solid var(--headborder);
   padding: 12px 12px;
+  @include breakpoint(max-xs) {
+    padding: 10px 10px;
+  }
   .event__check {
     min-width: 32px;
     min-height: 32px;
@@ -2062,6 +2090,7 @@
         @include bodyfont;
         @include breakpoint(max-sm) {
           font-size: 14px;
+          padding-left: 14px;
         }
         &::after {
           background: none;
@@ -2073,7 +2102,7 @@
           border-radius: 50%;
           font-family: "Font Awesome 5 Free";
           font-weight: 900;
-          content: "\f107";
+          content: "^";
           color: var(--pra);
           font-size: 14px;
         }
@@ -2087,7 +2116,7 @@
         border-radius: 50%;
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
-        content: "\f106";
+        content: "^";
         font-size: 16px;
         display: flex;
         align-items: center;

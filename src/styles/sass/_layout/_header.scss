@@ -79,6 +79,14 @@
   .logo__wrap {
     position: relative;
     padding: 18px 30px 21px;
+
+    .menu-close-button {
+      right: 0;
+      top: 5px;
+      padding: 5px;
+      background-color: #272726;
+      border-radius: 100%;
+    }
     &::before {
       position: absolute;
       bottom: 0;
@@ -589,8 +597,9 @@
       gap: 14px;
     }
     @include breakpoint(max-lg) {
-      gap: 10px;
+      gap: 20px;
     }
+
     .profie__dropdown {
       .dropdown-menu {
         width: 306px;

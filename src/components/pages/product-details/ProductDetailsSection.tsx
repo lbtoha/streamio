@@ -43,6 +43,14 @@ const ProductDetailsSection = () => {
                   loop={true}
                   spaceBetween={10}
                   watchSlidesProgress={true}
+                  breakpoints={{
+                    320: {
+                      slidesPerView: 2,
+                    },
+                    420: {
+                      slidesPerView: 2,
+                    },
+                  }}
                   className="swiper mySwiper"
                 >
                   <div className="swiper-wrapper">
@@ -106,6 +114,7 @@ const ProductDetailsSection = () => {
                         height={528}
                         src="/img/blog/pro-guitar.jpg"
                         alt="img"
+                        className="slider-image"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
@@ -114,6 +123,7 @@ const ProductDetailsSection = () => {
                         height={528}
                         src="/img/blog/pro-guitar.jpg"
                         alt="img"
+                        className="slider-image"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
@@ -122,6 +132,7 @@ const ProductDetailsSection = () => {
                         height={528}
                         src="/img/blog/pro-guitar.jpg"
                         alt="img"
+                        className="slider-image"
                       />
                     </SwiperSlide>
                     <SwiperSlide className="swiper-slide">
@@ -130,6 +141,7 @@ const ProductDetailsSection = () => {
                         height={528}
                         src="/img/blog/pro-guitar.jpg"
                         alt="img"
+                        className="slider-image"
                       />
                     </SwiperSlide>
                   </div>
@@ -142,21 +154,23 @@ const ProductDetailsSection = () => {
               <h2 className="white mb-16">Guitar ZR-975</h2>
               <ul className="rated mb-20 d-flex align-items-center gap-1">
                 <li>
+                  <IconStarFilled className="base2" />
+                </li>
+                <li>
+                  <IconStarFilled className="base2" />
+                </li>
+                <li>
+                  <IconStarFilled className="base2" />
+                </li>
+
+                <li>
                   <IconStar className="base2" />
                 </li>
                 <li>
                   <IconStar className="base2" />
                 </li>
-                <li>
-                  <IconStarFilled className="base2" />
-                </li>
-                <li>
-                  <IconStarFilled className="base2" />
-                </li>
-                <li>
-                  <IconStarFilled className="base2" />
-                </li>
-                <li className="fs-14 ms-2 pra fw-500 bodyfont">( 0 Reviews)</li>
+
+                <li className="fs-14 ms-2 pra fw-500 bodyfont">( 3 Reviews)</li>
               </ul>
               <span className="fs-24 d-flex align-items-center gap-1 fw-500 bodyfont white">
                 <span className="pra fs-20 fw-400">$60.00</span>$45.00
@@ -179,9 +193,7 @@ const ProductDetailsSection = () => {
                       name="qty"
                       id="qty"
                       min="1"
-                      max="10"
-                      step="1"
-                      defaultValue={quantity}
+                      onChange={() => setQuantity}
                       value={quantity}
                     />
                     <span className="d-grid updownicon align-items-center">

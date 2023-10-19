@@ -12,6 +12,7 @@ import {
   IconPlus,
   IconSearch,
   IconShoppingCart,
+  IconX,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,7 +38,7 @@ const Navbar = () => {
             <div
               className={`sidebar-wrapper mainbg ${isSidebarOpen && "active"}`}
             >
-              <div className="d-flex logo__wrap align-items-center justify-content-between">
+              <div className="d-flex logo__wrap align-items-center justify-content-between position-relative">
                 <Link
                   href="/"
                   className="logo"
@@ -50,6 +51,12 @@ const Navbar = () => {
                     alt="img"
                   />
                 </Link>
+                <div
+                  className="position-absolute  menu-close-button d-xl-none"
+                  onClick={() => setIsSidebarOpen(false)}
+                >
+                  <IconX />
+                </div>
               </div>
               <div className="sidebar__wrapbox">
                 <ul className="sidebar__menu">

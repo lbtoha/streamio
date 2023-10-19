@@ -21,7 +21,7 @@ const FeatureShowLeftCard = ({
   description,
 }: Props) => {
   return (
-    <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+    <div className="col-xxl-4 col-md-6 ">
       <div className="featured__show ralt">
         <div className="thumb overhid ralt">
           <Image

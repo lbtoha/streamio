@@ -1,6 +1,6 @@
 "use client";
 import AudioPlayer from "@/components/shared/AudioPlayer";
-import { handleLinkClick } from "@/utils/handleLinkClick";
+import LikeAndDisLikeBtn from "@/components/shared/LikeAndDisLikeBtn";
 import {
   IconBrandFacebook,
   IconBrandInstagram,
@@ -9,8 +9,6 @@ import {
   IconPlaylistAdd,
   IconShare,
   IconShare3,
-  IconThumbDown,
-  IconThumbUp,
   IconUserPlus,
 } from "@tabler/icons-react";
 import Image from "next/image";
@@ -104,30 +102,11 @@ const ShowDetailsSection = () => {
                 />
               </div>
               <div className="d-flex mt-80 like__dislike justify-content-between w-100 align-items-center">
-                <div className="d-flex align-items-center gap-4">
-                  <Link
-                    href="#0"
-                    onClick={handleLinkClick}
-                    className="cmbtn d-flex gap-2"
-                  >
-                    <span>
-                      <IconThumbUp className="fs-24 base" />
-                    </span>
-                    <span>Like</span>
-                  </Link>
-                  <Link
-                    href="#0"
-                    onClick={handleLinkClick}
-                    className="cmbtn d-flex gap-2"
-                  >
-                    <span>
-                      <IconThumbDown className="fs-24 base" />
-                    </span>
-                    <span>Dislike</span>
-                  </Link>
+                <div className="d-flex align-items-center gap-md-4 gap-2 order-1 order-sm-0">
+                  <LikeAndDisLikeBtn />
                 </div>
                 <AudioPlayer />
-                <div className="d-flex align-items-center gap-4">
+                <div className="d-flex align-items-center gap-md-4 gap-2 order-2 order-sm-1 pt-2 pt-sm-0">
                   <Link href="#0" className="cmbtn d-flex gap-2">
                     <span>
                       <IconShare className="fs-24 base" />

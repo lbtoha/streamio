@@ -29,12 +29,12 @@ const ConveterHead = ({
         </div>
         <h2 className="white mb-16">{songTitle}</h2>
         <div className="d-flex conveter__follow align-items-center">
-          <Link href="#0" className="cmbtn d-flex gap-2">
+          <button className="cmbtn d-flex gap-2">
             <span>
               <IconUserPlus className="fs-24 base" />
             </span>
             <span>Follow</span>
-          </Link>
+          </button>
           <span className="fs-16 fw-500 bodyfont white">
             03 days ago in Tomb
           </span>
