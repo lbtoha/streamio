@@ -390,6 +390,10 @@ p {
   @include breakpoint(max-lg) {
     padding-bottom: 60px;
   }
+
+  @include breakpoint(max-xxsmall) {
+    padding-bottom: 30px;
+  }
 }
 .pt-60 {
   padding-top: 60px;
@@ -540,6 +544,9 @@ p {
   @include breakpoint(max-lg) {
     margin-bottom: 80px;
   }
+  @include breakpoint(max-sm) {
+    margin-bottom: 30px;
+  }
 }
 .mt-80 {
   margin-top: 80px;
@@ -578,6 +585,9 @@ p {
   margin-bottom: 40px;
   @include breakpoint(max-lg) {
     margin-bottom: 30px;
+  }
+  @include breakpoint(max-sm) {
+    margin-bottom: 20px;
   }
 }
 .mb-30 {

@@ -1,4 +1,5 @@
 import { trendingsliderData } from "@/../public/data/trendingSliderData";
+import LoadMore from "@/components/shared/LoadMore";
 import SelectBox from "@/components/shared/SelectBox";
 import { IconSearch } from "@tabler/icons-react";
 import TrendingCard from "./TrendingCard";
@@ -18,7 +19,7 @@ const TrendingSection = () => {
 
   return (
     <section className="trending__section pr-24 pl-24 pb-100">
-      <div className="trending__selected mb-30 d-flex align-items-center justify-content-between">
+      <div className="trending__selected mb-30 d-flex align-items-center justify-content-lg-between justify-content-center">
         <div className="select__lefts d-flex align-items-center">
           <form
             action="#0"
@@ -92,6 +93,7 @@ const TrendingSection = () => {
               {trendingsliderData.slice(0, 8).map(({ id, ...props }) => (
                 <TrendingCard key={id} {...props} />
               ))}
+              <LoadMore />
             </div>
           </div>
           <div
@@ -104,6 +106,7 @@ const TrendingSection = () => {
               {trendingsliderData.slice(3).map(({ id, ...props }) => (
                 <TrendingCard key={id} {...props} />
               ))}
+              <LoadMore />
             </div>
           </div>
           <div
@@ -116,6 +119,7 @@ const TrendingSection = () => {
               {trendingsliderData.slice(4, 8).map(({ id, ...props }) => (
                 <TrendingCard key={id} {...props} />
               ))}
+              <LoadMore />
             </div>
           </div>
         </div>

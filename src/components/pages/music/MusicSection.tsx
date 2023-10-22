@@ -19,7 +19,7 @@ const MusicSection = () => {
 
   return (
     <section className="trending__section hotsong__section pr-24 pl-24 pb-100">
-      <div className="trending__selected mb-30 d-flex align-items-center justify-content-between">
+      <div className="trending__selected mb-30 d-flex align-items-center justify-content-lg-between justify-content-center">
         <div className="select__lefts d-flex align-items-center">
           <form
             action="#0"

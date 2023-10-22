@@ -609,8 +609,12 @@
 
   .cart-total-title {
     font-size: 20px;
+
     font-weight: 600;
-    padding-top: 20px;
+    padding-top: 10px;
+    @include breakpoint(sm) {
+      padding-top: 20px;
+    }
     display: block;
   }
 
@@ -619,7 +623,10 @@
     justify-content: space-between;
     border-radius: 10px;
     border: 1px solid rgba(16, 101, 78, 0.2);
-    padding: 16px 40px;
+    @include breakpoint(sm) {
+      padding: 16px 40px;
+    }
+    padding: 10px 40px;
     align-items: center;
   }
   .cehckout {

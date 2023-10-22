@@ -101,6 +101,9 @@ const Trending = () => {
                   <MoodsCard {...props} link="album-allsong" />
                 </div>
               ))}
+              <div className="text-center mt-40">
+                <button className="cmn__simple2">Load More</button>
+              </div>
             </div>
           </div>
           <div
@@ -118,6 +121,9 @@ const Trending = () => {
                   <MoodsCard key={id} {...props} link="album-allsong" />
                 </div>
               ))}
+              <div className="text-center mt-40">
+                <button className="cmn__simple2">Load More</button>
+              </div>
             </div>
           </div>
           <div
@@ -135,6 +141,9 @@ const Trending = () => {
                   <MoodsCard key={id} {...props} link="album-allsong" />
                 </div>
               ))}
+              <div className="text-center mt-40">
+                <button className="cmn__simple2">Load More</button>
+              </div>
             </div>
           </div>
           <div
@@ -152,6 +161,9 @@ const Trending = () => {
                   <MoodsCard key={id} {...props} link="album-allsong" />
                 </div>
               ))}
+              <div className="text-center mt-40">
+                <button className="cmn__simple2">Load More</button>
+              </div>
             </div>
           </div>
           <div
@@ -169,6 +181,9 @@ const Trending = () => {
                   <MoodsCard key={id} {...props} link="album-allsong" />
                 </div>
               ))}
+              <div className="text-center mt-40">
+                <button className="cmn__simple2">Load More</button>
+              </div>
             </div>
           </div>
         </div>

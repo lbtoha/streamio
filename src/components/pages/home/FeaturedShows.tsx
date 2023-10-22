@@ -8,7 +8,7 @@ import FeatureShowRightCard from "./FeatureShowRightCard";
 const FeaturedShows = () => {
   return (
     // <!--show feature section-->
-    <section className="featuredshow__section pr-24 pl-24 pb-100">
+    <section className="featuredshow__section pr-24 pl-24 mb-100 overflow-hidden">
       <div className="container-fluid p-0">
         <div className="header__text mb-24 d-flex align-items-center justify-content-between flex-wrap gap-2">
           <h2>Featured Shows</h2>

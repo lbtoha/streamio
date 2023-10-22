@@ -118,7 +118,7 @@ export const sideBarData = [
       },
       {
         id: uuidv4(),
-        title: "Show Details",
+        title: "Product Details",
         dropDownPath: "/product-details",
       },
       {
@@ -170,7 +170,7 @@ export const sideBarData = [
       },
       {
         id: uuidv4(),
-        title: "Show Details",
+        title: "Product Details",
         dropDownPath: "/product-details",
       },
       {
@@ -246,7 +246,7 @@ export const mainNavbarData = [
       },
       {
         id: uuidv4(),
-        title: "Show Details",
+        title: "Product Details",
         dropDownPath: "/product-details",
       },
       {

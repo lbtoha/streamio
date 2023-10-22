@@ -1,6 +1,8 @@
 "use client";
 
 import { moodsCardData } from "@/../public/data/moodsCardData";
+import LoadMore from "@/components/shared/LoadMore";
+import ViewAll from "@/components/shared/ViewAll";
 import MoodsCard from "../home/MoodsCard";
 
 //@ts-ignore
@@ -9,8 +11,8 @@ const MoodsSection = () => {
   return (
     <section className="genres__section pr-24 pl-24 pb-60">
       <div className="container-fluid">
-        <div className="header__text mb-30">
-          <h2>Moods</h2>
+        <div className="header__text mb-30 d-flex justify-content-between">
+          <h2>Moods</h2> <ViewAll />
         </div>
         <div className="row g-4">
           {moodsCardData.map(({ id, ...props }) => (
@@ -21,6 +23,7 @@ const MoodsSection = () => {
               <MoodsCard key={id} {...props} link="mood-details" />
             </div>
           ))}
+          <LoadMore />
         </div>
       </div>
     </section>

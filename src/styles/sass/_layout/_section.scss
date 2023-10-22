@@ -1212,6 +1212,13 @@
       width: 100%;
     }
   }
+
+  img {
+    @include breakpoint(max-lg) {
+      display: block !important;
+      margin: 0 auto !important;
+    }
+  }
   .audioplayer-playpause {
     @include breakpoint(max-sm) {
       margin: 5px auto;

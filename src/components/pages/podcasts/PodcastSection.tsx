@@ -21,7 +21,7 @@ const PodcastSection = () => {
       <div className="container-flud p-0">
         <h3 className="white mb-30">Podcasts</h3>
       </div>
-      <div className="trending__selected mb-30 d-flex align-items-center justify-content-between">
+      <div className="trending__selected mb-30 d-flex align-items-center justify-content-lg-between justify-content-center">
         <div className="select__lefts d-flex align-items-center">
           <form
             action="#0"
