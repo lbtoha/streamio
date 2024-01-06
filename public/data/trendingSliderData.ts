@@ -17,6 +17,8 @@ export const trendingsliderData = [
     title: "Space Melody",
     location: "NLE Chappa",
     listeners: 17503,
+    audioLink:
+      "https://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
   },
   {
     id: uuidv4(),
@@ -24,6 +26,8 @@ export const trendingsliderData = [
     title: "Girls In The Hood",
     location: "Florida Georgia",
     listeners: 17503,
+    audioLink:
+      "https://codeskulptor-demos.commondatastorage.googleapis.com/pang/paza-moduless.mp3",
   },
   {
     id: uuidv4(),
@@ -31,6 +35,8 @@ export const trendingsliderData = [
     title: "Like That",
     location: "Locash",
     listeners: 17503,
+    audioLink:
+      "https://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/soundtrack.ogg",
   },
   {
     id: uuidv4(),
@@ -38,6 +44,8 @@ export const trendingsliderData = [
     title: "Space Melody",
     location: "NLE Chappa",
     listeners: 17503,
+    audioLink:
+      "https://codeskulptor-demos.commondatastorage.googleapis.com/descent/background%20music.mp3",
   },
   {
     id: uuidv4(),
@@ -45,6 +53,8 @@ export const trendingsliderData = [
     title: "One Big Country",
     location: "Summer Walker",
     listeners: 17503,
+    audioLink:
+      "https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg",
   },
   {
     id: uuidv4(),
@@ -52,6 +62,8 @@ export const trendingsliderData = [
     title: "Girls In The Hood",
     location: "Florida Georgia",
     listeners: 17503,
+    audioLink:
+      "https://commondatastorage.googleapis.com/codeskulptor-demos/pyman_assets/ateapill.ogg",
   },
   {
     id: uuidv4(),
@@ -59,6 +71,8 @@ export const trendingsliderData = [
     title: "Like That",
     location: "Locash",
     listeners: 17503,
+    audioLink:
+      "https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/race1.ogg",
   },
   {
     id: uuidv4(),
@@ -66,6 +80,8 @@ export const trendingsliderData = [
     title: "",
     location: "",
     listeners: 17503,
+    audioLink:
+      "https://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/thrust.ogg",
   },
   {
     id: uuidv4(),
@@ -73,5 +89,7 @@ export const trendingsliderData = [
     title: "One Big Country",
     location: "Summer Walker",
     listeners: 17503,
+    audioLink:
+      "https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-5.ogg",
   },
 ];

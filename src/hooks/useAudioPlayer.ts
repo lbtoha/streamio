@@ -20,6 +20,20 @@ const useAudioPlayer = () => {
     }
   };
 
+  const handlePlay = () => {
+    setPlayToggle(true);
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
+
+  const handlePause = () => {
+    setPlayToggle(false);
+    if (audioRef.current) {
+      audioRef.current.pause();
+    }
+  };
+
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
@@ -114,6 +128,7 @@ const useAudioPlayer = () => {
 
   return {
     playToggle,
+    handlePause,
     audioRef,
     progressBarRef,
     progress,
@@ -121,6 +136,7 @@ const useAudioPlayer = () => {
     currentTime,
     isSeeking,
     handlePlayToggle,
+    handlePlay,
     handleProgress,
     setPlayToggle,
     seekToTime,

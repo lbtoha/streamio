@@ -1,43 +1,28 @@
 "use client";
 import useAudioPlayer from "@/hooks/useAudioPlayer";
-import { setCustomModal } from "@/redux/features/modalSlice";
-import { setTrack } from "@/redux/features/trackSlice";
-import { RootState } from "@/redux/store";
-import { handleLinkClick } from "@/utils/handleLinkClick";
 import {
   IconMultiplier1x,
-  IconPlayerPauseFilled,
-  IconPlayerPlayFilled,
-  IconPlayerSkipBack,
   IconPlayerSkipForward,
   IconPlaylist,
   IconRepeat,
-  IconSwitch,
   IconX,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useRef, useState } from "react";
 
-const ModalAudioPlayer = () => {
-  const dispatch = useDispatch();
-  const audioTrack = useSelector((state: RootState) => state.track);
-  const audio = audioTrack.url;
-  const isPlaying = audioTrack.isPlaying;
-
+const ModalAudioPlayerAll = ({ audio }: { audio?: string }) => {
   const {
     playToggle,
-    handlePause,
-    handlePlay,
     audioRef,
     progressBarRef,
     progress,
     duration,
     currentTime,
     isSeeking,
-    setPlayToggle,
     handlePlayToggle,
     handleProgress,
+    setPlayToggle,
+    seekToTime,
     handleFastReverse,
     handleFastForward,
     handleProgressBarMouseDown,
@@ -47,41 +32,11 @@ const ModalAudioPlayer = () => {
     handleProgressBarMouseLeave,
   } = useAudioPlayer();
 
-  const handleModalClose = () => {
-    dispatch(setCustomModal(false));
-    handlePause();
-    dispatch(setTrack({ url: audio, isPlaying: false }));
-  };
-
-  useEffect(() => {
-    if (audio && isPlaying) {
-      handlePlay();
-    }
-  }, [audio]);
-
-  useEffect(() => {
-    if (!isPlaying) {
-      handlePause();
-    } else {
-      handlePlay();
-    }
-  }, [isPlaying]);
-
-  const handleAudioPlay = () => {
-    if (!isPlaying) {
-      dispatch(setTrack({ url: audio, isPlaying: true }));
-      handlePlayToggle();
-    } else {
-      handlePause();
-      dispatch(setTrack({ url: audio, isPlaying: false }));
-    }
-  };
-
   // formate the duration in second
   const [durationInMin, setDurationInMin] = useState("");
   const [currentInMin, setCurrentInMin] = useState("");
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const minutes: number = Math.floor(currentTime / 60);
     const remainingSeconds: number = Math.floor(currentTime % 60);
     const newCurrent = `${minutes}:${remainingSeconds} `.replace(
@@ -94,15 +49,11 @@ const ModalAudioPlayer = () => {
   useEffect(() => {
     const minutes: number = Math.floor(duration / 60);
     const remainingSeconds: number = Math.floor(duration % 60);
-    if (Number.isNaN(minutes)) {
-      setCurrentInMin("0:00");
-    } else {
-      const newDuration = `${minutes}:${remainingSeconds} `.replace(
-        /:0(\d) min$/,
-        ":$1 min"
-      );
-      setDurationInMin(newDuration);
-    }
+    const newDuration = `${minutes}:${remainingSeconds} `.replace(
+      /:0(\d) min$/,
+      ":$1 min"
+    );
+    setDurationInMin(newDuration);
   }, [duration, audio]);
 
   //   =========================
@@ -128,23 +79,17 @@ const ModalAudioPlayer = () => {
       }
     }
   };
-  console.log({ isPlaying });
+
   return (
     <>
-      <div className="d-flex middle__audioboxes align-items-center ">
+      <div className="d-flex middle__audioboxes align-items-center">
         <div className="d-flex align-items-center switch">
-          <Link href="#0" className="white" onClick={handleLinkClick}>
+          {/* <Link href="#0" className="white">
             <IconSwitch />
           </Link>
-          <Link
-            href="#0"
-            className="white lefttrun"
-            onClick={(e) => {
-              handleLinkClick(e), handleFastReverse();
-            }}
-          >
+          <Link href="#0" className="white lefttrun">
             <IconPlayerSkipBack />
-          </Link>
+          </Link> */}
         </div>
         <div className={`audioplayer ${playToggle && "audioplayer-playing"}`}>
           <audio
@@ -152,13 +97,16 @@ const ModalAudioPlayer = () => {
             style={{ width: "0px", height: "0px", visibility: "hidden" }}
             onTimeUpdate={handleProgress}
             ref={audioRef}
-            src={`${audio}`}
-          ></audio>
-
-          <button onClick={handleAudioPlay} className="audioplayer-playpause">
-            {isPlaying ? <IconPlayerPauseFilled /> : <IconPlayerPlayFilled />}
-          </button>
-
+          >
+            <source src={audio} />
+          </audio>
+          <div
+            onClick={handlePlayToggle}
+            className="audioplayer-playpause"
+            title=""
+          >
+            <Link href="#"></Link>
+          </div>
           <div className="audioplayer-time audioplayer-time-current">
             {currentInMin}
           </div>
@@ -198,13 +146,7 @@ const ModalAudioPlayer = () => {
             </div>
           </div>
         </div>
-        <Link
-          href="#0"
-          className="white righttrun"
-          onClick={(e) => {
-            handleLinkClick(e), handleFastForward();
-          }}
-        >
+        <Link href="#0" className="white righttrun">
           <IconPlayerSkipForward className="pra" />
         </Link>
         <Link href="#0" className="white righttrun">
@@ -218,7 +160,12 @@ const ModalAudioPlayer = () => {
         <Link href="#0" className="white">
           <IconPlaylist className="fs-20 pra" />
         </Link>
-        <button className="btn pra cross__btnsnone" onClick={handleModalClose}>
+        <button
+          type="button"
+          className="btn pra cross__btnsnone"
+          data-bs-dismiss="modal"
+          aria-label="button"
+        >
           <IconX className="fs-24" />
         </button>
       </div>
@@ -226,4 +173,4 @@ const ModalAudioPlayer = () => {
   );
 };
 
-export default ModalAudioPlayer;
+export default ModalAudioPlayerAll;

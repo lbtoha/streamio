@@ -1,17 +1,20 @@
+"use client";
+import { RootState } from "@/redux/store";
 import Image from "next/image";
-import ModalAudioPlayer from "./ModalAudioPlayer";
+import { useSelector } from "react-redux";
+import ModalAudioPlayer from "../pages/explore/ModalAudioPlayer";
 
-const AudioPlayerModalNew = ({
-  id,
-  audioLink,
-}: {
-  id: string;
-  audioLink: string;
-}) => {
+const AudioPlayerModalLayout = () => {
+  const audioLink = useSelector((state: RootState) => state.track);
+
   return (
     <div
       className="modal backdrop profile-completeness-modal fade"
-      id={`exampleModalaudio${id}`}
+      // data-bs-backdrop="static"
+      data-bs-backdrop="false"
+      // data-bs-keyboard="false"
+      aria-labelledby="offcanvasScrollingLabel"
+      id={`exampleModalaudio`}
       aria-hidden={true}
     >
       <div className="modal-dialog width__maintain modal-dialog-centered modal-bottom">
@@ -34,4 +37,4 @@ const AudioPlayerModalNew = ({
   );
 };
 
-export default AudioPlayerModalNew;
+export default AudioPlayerModalLayout;

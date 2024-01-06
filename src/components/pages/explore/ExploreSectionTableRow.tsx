@@ -16,6 +16,7 @@ type Props = {
   songThumbnail: StaticImageData;
   songSubtitle: string;
   songDuration: string;
+  index: number;
 };
 const ExploreSectionTableRow = ({
   singerImage,
@@ -25,6 +26,7 @@ const ExploreSectionTableRow = ({
   songThumbnail,
   songSubtitle,
   songDuration,
+  index,
 }: Props) => {
   return (
     <>
@@ -103,7 +105,7 @@ const ExploreSectionTableRow = ({
         </td>
       </tr>
       <tr className="citem__border">
-        <td data-bs-toggle="modal" data-bs-target="#exampleModalaudio">
+        <td data-bs-toggle="modal" data-bs-target={`#exampleModalaudio`}>
           <Link href="#0" className="upgrade__left d-flex align-items-center">
             <Image src={songThumbnail} alt="img" />
             <span className="fs-16 fw-500 bodyfont white d-block">
@@ -135,6 +137,10 @@ const ExploreSectionTableRow = ({
           </div>
         </td>
       </tr>
+      {/* <AudioPlayerModal
+        id={`${index}`}
+        audioLink="https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3"
+      /> */}
     </>
   );
 };

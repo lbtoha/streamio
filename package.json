@@ -33,6 +33,7 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@types/react-howler": "^5.2.3",
     "sass": "^1.68.0"
   }
 }

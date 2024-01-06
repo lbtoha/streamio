@@ -64,6 +64,22 @@
     opacity: 0;
     transition: all 0.4s;
   }
+
+  .button-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    color: var(--white);
+    background: var(--base);
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease-in-out;
+  }
+
   &:hover {
     .thumb {
       img {
@@ -99,6 +115,10 @@
           color: var(--base);
         }
       }
+    }
+
+    .button-play {
+      opacity: 1;
     }
   }
   @include breakpoint(max-xxl) {
@@ -658,6 +678,7 @@
 }
 .modal {
   .modal-bottom {
+    background: transparent;
     .modal-content {
       position: absolute;
       bottom: 0;
@@ -668,6 +689,7 @@
 
 .modal-backdrop.show {
   opacity: 0;
+  position: relative;
 }
 
 //big play bar

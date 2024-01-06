@@ -1,5 +1,5 @@
-import AudioPlayerModal from "@/components/pages/explore/AudioPlayerModal";
 import AddToPlaylistModal from "@/components/shared/AddToPlaylistModal";
+import AudioPlayerModalLayoutTwo from "@/components/shared/AudioPlayerModalLayoutTwo";
 import DeletePostModal from "@/components/shared/DeletePostModal";
 import MainBody from "@/components/shared/MainBody";
 import ReportModal from "@/components/shared/ReportModal";
@@ -32,16 +32,16 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.variable}>
         <MainBody>
-          <main>
+          <main className="z-1">
             <Suspense fallback={<Loader />}>{children}</Suspense>
           </main>
+          <AudioPlayerModalLayoutTwo />
         </MainBody>
         <AddToPlaylistModal />
         <SharedModal />
         <DeletePostModal />
         <ReportModal />
         <Toaster />
-        <AudioPlayerModal />
       </body>
     </html>
   );
