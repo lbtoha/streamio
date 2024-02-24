@@ -22,6 +22,7 @@ export const exploreSectionData = [
     songThumbnail: songImage1,
     songSubtitle: "Laufey",
     songDuration: "3:59",
+    song: "https://codeskulptor-demos.commondatastorage.googleapis.com/descent/background%20music.mp3",
   },
   {
     id: uuidv4(),
@@ -32,6 +33,7 @@ export const exploreSectionData = [
     songThumbnail: songImage2,
     songSubtitle: "Laufey",
     songDuration: "3:59",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/soundtrack.ogg",
   },
   {
     id: uuidv4(),
@@ -42,6 +44,7 @@ export const exploreSectionData = [
     songThumbnail: songImage3,
     songSubtitle: "Laufey",
     songDuration: "3:59",
+    song: "https://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
   },
   {
     id: uuidv4(),
@@ -52,6 +55,7 @@ export const exploreSectionData = [
     songThumbnail: songImage4,
     songSubtitle: "Laufey",
     songDuration: "3:59",
+    song: "https://codeskulptor-demos.commondatastorage.googleapis.com/pang/paza-moduless.mp3",
   },
   {
     id: uuidv4(),
@@ -62,6 +66,7 @@ export const exploreSectionData = [
     songThumbnail: songImage5,
     songSubtitle: "Laufey",
     songDuration: "3:59",
+    song: "https://codeskulptor-demos.commondatastorage.googleapis.com/descent/background%20music.mp3",
   },
   {
     id: uuidv4(),
@@ -72,6 +77,7 @@ export const exploreSectionData = [
     songThumbnail: songImage6,
     songSubtitle: "Laufey",
     songDuration: "3:59",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg",
   },
   {
     id: uuidv4(),
@@ -82,6 +88,7 @@ export const exploreSectionData = [
     songThumbnail: songImage7,
     songSubtitle: "Laufey",
     songDuration: "3:59",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-demos/pyman_assets/ateapill.ogg",
   },
   {
     id: uuidv4(),
@@ -92,5 +99,6 @@ export const exploreSectionData = [
     songThumbnail: songImage8,
     songSubtitle: "Laufey",
     songDuration: "3:59",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/race1.ogg",
   },
 ];

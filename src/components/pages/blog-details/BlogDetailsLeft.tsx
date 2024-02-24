@@ -1,5 +1,4 @@
 "use client";
-import AudioPlayer from "@/components/shared/AudioPlayer";
 import { handleLinkClick } from "@/utils/handleLinkClick";
 import {
   IconBrandFacebook,
@@ -11,13 +10,14 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
+import BlogDetailsThumb from "./BlogDetailsThumb";
 
 const BlogDetailsLeft = () => {
   return (
     <div className="col-lg-8">
       <div className="blog__leftwrap">
         <div className="latest__item overhid ralt">
-          <div className="thumb ralt mb-16 transition overhid">
+          {/* <div className="thumb ralt mb-16 transition overhid">
             <Image
               width={942}
               height={509}
@@ -28,8 +28,9 @@ const BlogDetailsLeft = () => {
             <AudioPlayer />
             <Link href="#0" className="l__badge">
               Features
-            </Link>
-          </div>
+            </Link> */}
+          <BlogDetailsThumb />
+          {/* </div> */}
           <div className="content">
             <div className="d-flex align-items-center justify-content-between">
               <span className="cmn__date ralt fw-500 bodyfont fs-14 base2 d-block mb-16">

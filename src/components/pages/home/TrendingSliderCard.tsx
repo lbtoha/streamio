@@ -28,23 +28,9 @@ const TrendingSliderCard = ({
   const audio = audioTrack?.url;
   const isPlaying = audioTrack?.isPlaying;
 
-  // const handlePlayButtonClick = (audioLink: string) => {
-  //   dispatch(setCustomModal(true));
-
-  //   if (isPlaying) {
-  //     if (audio === audioLink) {
-  //       dispatch(setTrack({ url: audioLink, isPlaying: false }));
-  //     } else {
-  //       dispatch(setTrack({ url: audioLink, isPlaying: true }));
-  //     }
-  //   } else {
-  //     dispatch(setTrack({ url: audioLink, isPlaying: true }));
-  //   }
-  // };
-
   return (
     <>
-      <div className="swiper-slide trending__item text-center round16 p-8">
+      <div className="swiper-slide trending__item text-center round16 p-8 play-button-container">
         <div className="thumb ralt overhid transition ">
           <Image src={image} className="transition h-auto" alt="img" />
 

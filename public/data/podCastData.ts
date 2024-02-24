@@ -9,7 +9,7 @@ export const podCastData = [
     image: image1,
     title: "Space Melody",
     views: 1.9,
-    song: "../audio/audio.mp3",
+    song: "https://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
     subTitle: "NLE Chappa",
   },
   {
@@ -17,7 +17,7 @@ export const podCastData = [
     image: image2,
     title: "Girls In The Hood",
     views: 1.9,
-    song: "../audio/audio.mp3",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-5.ogg",
     subTitle: "Florida Georgia",
   },
   {
@@ -25,7 +25,7 @@ export const podCastData = [
     image: image3,
     title: "Like That",
     views: 1.9,
-    song: "../audio/audio.mp3",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/thrust.ogg",
     subTitle: "Locash",
   },
   {
@@ -33,7 +33,7 @@ export const podCastData = [
     image: image4,
     title: "Space Melody",
     views: 1.9,
-    song: "../audio/audio.mp3",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/race1.ogg",
     subTitle: "NLE Chappa",
   },
   {
@@ -41,7 +41,7 @@ export const podCastData = [
     image: image2,
     title: "One Big Country",
     views: 1.9,
-    song: "../audio/audio.mp3",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-demos/pyman_assets/ateapill.ogg",
     subTitle: "Summer Walker",
   },
   {
@@ -49,7 +49,7 @@ export const podCastData = [
     image: image1,
     title: "Girls In The Hood",
     views: 1.9,
-    song: "../audio/audio.mp3",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg",
     subTitle: "Florida Georgia",
   },
   {
@@ -57,7 +57,7 @@ export const podCastData = [
     image: image4,
     title: "Like That",
     views: 1.9,
-    song: "../audio/audio.mp3",
+    song: "https://codeskulptor-demos.commondatastorage.googleapis.com/descent/background%20music.mp3",
     subTitle: "Locash",
   },
   {
@@ -65,7 +65,7 @@ export const podCastData = [
     image: image3,
     title: "",
     views: 1.9,
-    song: "../audio/audio.mp3",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/soundtrack.ogg",
     subTitle: "",
   },
   {
@@ -73,7 +73,7 @@ export const podCastData = [
     image: image1,
     title: "One Big Country",
     views: 1.9,
-    song: "../audio/audio.mp3",
+    song: "https://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
     subTitle: "Summer Walker",
   },
 ];

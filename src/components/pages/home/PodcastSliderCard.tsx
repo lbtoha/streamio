@@ -1,7 +1,10 @@
-import AudioPlayer from "@/components/shared/AudioPlayer";
+import usePlayButtonClick from "@/hooks/usePlayButtonClick";
+import { RootState } from "@/redux/store";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+import PlayButton from "./PlayButton";
 
 type Props = {
   image: StaticImageData;
@@ -11,9 +14,22 @@ type Props = {
   song: string;
 };
 const PodcastSliderCard = ({ image, views, title, subTitle, song }: Props) => {
+  const { handlePlayButtonClick } = usePlayButtonClick();
+
+  const audioTrack = useSelector((state: RootState) => state.track);
+
+  const audio = audioTrack?.url;
+  const isPlaying = audioTrack?.isPlaying;
+
   return (
-    <div className="thumb ralt overhid transition">
+    <div className="thumb ralt overhid transition play-button-container">
       <Image src={image} className="transition h-auto" alt="img" />
+
+      <PlayButton
+        audioTrack={audio === song}
+        isPlaying={isPlaying}
+        onClick={() => handlePlayButtonClick(song)}
+      />
       <div className="podcast__viwer d-flex align-items-center justify-content-between">
         <span className="live fs-16 bodyfont white">LIve</span>
         <span className="viewer fs-16 bodyfont white">{views}k Viewers</span>
@@ -31,7 +47,6 @@ const PodcastSliderCard = ({ image, views, title, subTitle, song }: Props) => {
           <IconArrowNarrowRight className="arrowrotate" />
         </Link>
       </div>
-      <AudioPlayer audio={song} />
     </div>
   );
 };

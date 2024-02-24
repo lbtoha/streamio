@@ -208,8 +208,12 @@ const ProfileSection = () => {
                     <div className="latest__songwrap moods__allsong">
                       <table className="table ctablemy align-middle align-center w-100">
                         <tbody>
-                          {exploreSectionData.map(({ id, ...props }) => (
-                            <ExploreSectionTableRow key={id} {...props} />
+                          {exploreSectionData.map(({ id, ...props }, index) => (
+                            <ExploreSectionTableRow
+                              key={id}
+                              {...props}
+                              index={index}
+                            />
                           ))}
                         </tbody>
                       </table>

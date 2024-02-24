@@ -1,7 +1,11 @@
-import AudioPlayer from "@/components/shared/AudioPlayer";
+"use client";
+import usePlayButtonClick from "@/hooks/usePlayButtonClick";
+import { RootState } from "@/redux/store";
 import { IconMessageMinus } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+import PlayButton from "./PlayButton";
 
 type Props = {
   image: StaticImageData;
@@ -9,10 +13,18 @@ type Props = {
   comment: number;
   title: string;
   type: string;
+  song: string;
 };
-const LatestPostCard = ({ image, date, comment, title, type }: Props) => {
+const LatestPostCard = ({ image, date, comment, title, type, song }: Props) => {
+  const { handlePlayButtonClick } = usePlayButtonClick();
+
+  const audioTrack = useSelector((state: RootState) => state.track);
+
+  const audio = audioTrack?.url;
+  const isPlaying = audioTrack?.isPlaying;
+
   return (
-    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 play-button-container">
       <div className="latest__item overhid ralt">
         <div className="thumb ralt mb-16 transition overhid">
           <Image
@@ -20,7 +32,11 @@ const LatestPostCard = ({ image, date, comment, title, type }: Props) => {
             className="w-100 transition overhid h-auto"
             alt="img"
           />
-          <AudioPlayer audio="" />
+          <PlayButton
+            audioTrack={audio === song}
+            isPlaying={isPlaying}
+            onClick={() => handlePlayButtonClick(song)}
+          />
           <Link href="#" className="l__badge">
             {type}
           </Link>

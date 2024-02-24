@@ -89,6 +89,10 @@ const ModalAudioPlayer = () => {
       ":$1 min"
     );
     setCurrentInMin(newCurrent);
+
+    if (currentInMin === durationInMin) {
+      dispatch(setTrack({ url: audio, isPlaying: false }));
+    }
   }, [currentTime, audio]);
 
   useEffect(() => {
@@ -128,11 +132,10 @@ const ModalAudioPlayer = () => {
       }
     }
   };
-  console.log({ isPlaying });
   return (
     <>
-      <div className="d-flex middle__audioboxes align-items-center ">
-        <div className="d-flex align-items-center switch">
+      <div className="d-flex middle__audioboxes align-items-center">
+        <div className="d-flex align-items-center  modal-switch">
           <Link href="#0" className="white" onClick={handleLinkClick}>
             <IconSwitch />
           </Link>
@@ -200,14 +203,14 @@ const ModalAudioPlayer = () => {
         </div>
         <Link
           href="#0"
-          className="white righttrun"
+          className="white righttrun-one"
           onClick={(e) => {
             handleLinkClick(e), handleFastForward();
           }}
         >
           <IconPlayerSkipForward className="pra" />
         </Link>
-        <Link href="#0" className="white righttrun">
+        <Link href="#0" className="white righttrun-two">
           <IconRepeat className="pra" />
         </Link>
       </div>

@@ -9,23 +9,27 @@ export const weeklytopTrackData = [
     image: image1,
     title: "What See Again",
     singer: "Laufey",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-8.ogg",
   },
   {
     id: uuidv4(),
     image: image2,
     title: "Rush",
     singer: "Laufey",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/fx/engine-5.ogg",
   },
   {
     id: uuidv4(),
     image: image3,
     title: "JR Overdosh Afro FLY",
     singer: "Mzik CG",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/thrust.ogg",
   },
   {
     id: uuidv4(),
     image: image3,
     title: "I Love My Country",
     singer: "Mzik CG",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-demos/riceracer_assets/music/race1.ogg",
   },
 ];

@@ -13,6 +13,7 @@ export const latestPostData = [
     comment: 15,
     title: "How Podcast Helps You to Gather Your Audience in a Platform",
     type: "Features",
+    song: "https://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/theme_01.mp3",
   },
   {
     id: uuidv4(),
@@ -22,6 +23,7 @@ export const latestPostData = [
     title:
       "Tom Grennan ‘breaks the internet’ as fans overload servers during virtual",
     type: "Music",
+    song: "https://codeskulptor-demos.commondatastorage.googleapis.com/pang/paza-moduless.mp3",
   },
   {
     id: uuidv4(),
@@ -30,6 +32,7 @@ export const latestPostData = [
     comment: 15,
     title: "How Podcast Helps You to Gather Your Audience in a Platform",
     type: "Features",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-assets/sounddogs/soundtrack.ogg",
   },
   {
     id: uuidv4(),
@@ -38,6 +41,7 @@ export const latestPostData = [
     comment: 10,
     title: "Foo Fighters share new live version of ‘No Son Of Mine’",
     type: "Features",
+    song: "https://codeskulptor-demos.commondatastorage.googleapis.com/descent/background%20music.mp3",
   },
   {
     id: uuidv4(),
@@ -46,6 +50,7 @@ export const latestPostData = [
     comment: 15,
     title: "How Podcast Helps You to Gather Your Audience in a Platform",
     type: "Music",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-assets/Epoq-Lepidoptera.ogg",
   },
   {
     id: uuidv4(),
@@ -54,5 +59,6 @@ export const latestPostData = [
     comment: 15,
     title: "How Podcast Helps You to Gather Your Audience in a Platform",
     type: "Music",
+    song: "https://commondatastorage.googleapis.com/codeskulptor-demos/pyman_assets/ateapill.ogg",
   },
 ];

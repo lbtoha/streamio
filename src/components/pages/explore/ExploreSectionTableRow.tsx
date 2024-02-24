@@ -1,3 +1,5 @@
+"use client";
+import usePlayButtonClick from "@/hooks/usePlayButtonClick";
 import {
   IconClockHour3,
   IconDots,
@@ -16,6 +18,7 @@ type Props = {
   songThumbnail: StaticImageData;
   songSubtitle: string;
   songDuration: string;
+  song: string;
   index: number;
 };
 const ExploreSectionTableRow = ({
@@ -26,8 +29,11 @@ const ExploreSectionTableRow = ({
   songThumbnail,
   songSubtitle,
   songDuration,
+  song,
   index,
 }: Props) => {
+  const { handlePlayButtonClick } = usePlayButtonClick();
+
   return (
     <>
       <tr className="bgnone__music">
@@ -104,7 +110,13 @@ const ExploreSectionTableRow = ({
           </div>
         </td>
       </tr>
-      <tr className="citem__border">
+
+      <tr
+        className="citem__border"
+        onClick={() => {
+          handlePlayButtonClick(song);
+        }}
+      >
         <td data-bs-toggle="modal" data-bs-target={`#exampleModalaudio`}>
           <Link href="#0" className="upgrade__left d-flex align-items-center">
             <Image src={songThumbnail} alt="img" />

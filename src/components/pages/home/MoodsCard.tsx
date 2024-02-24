@@ -1,6 +1,10 @@
-import AudioPlayer from "@/components/shared/AudioPlayer";
+"use client";
+import usePlayButtonClick from "@/hooks/usePlayButtonClick";
+import { RootState } from "@/redux/store";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+import PlayButton from "./PlayButton";
 
 type Props = {
   image: StaticImageData;
@@ -10,8 +14,14 @@ type Props = {
   link: string;
 };
 const MoodsCard = ({ image, title, subTitle, song, link }: Props) => {
+  const { handlePlayButtonClick } = usePlayButtonClick();
+
+  const audioTrack = useSelector((state: RootState) => state.track);
+
+  const audio = audioTrack?.url;
+  const isPlaying = audioTrack?.isPlaying;
   return (
-    <div className="moods__item">
+    <div className="moods__item play-button-container">
       <div className="thumb mb-16 ralt transition overhid">
         <Image
           width={200}
@@ -20,7 +30,11 @@ const MoodsCard = ({ image, title, subTitle, song, link }: Props) => {
           className="w-100 round50 transition overhid h-auto"
           alt="img"
         />
-        <AudioPlayer audio={song} />
+        <PlayButton
+          audioTrack={audio === song}
+          isPlaying={isPlaying}
+          onClick={() => handlePlayButtonClick(song)}
+        />
       </div>
       <div className="content">
         <h5 className="mb-2">

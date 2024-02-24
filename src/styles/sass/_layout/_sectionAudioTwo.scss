@@ -32,10 +32,16 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @media screen and (max-width: 850px) {
+    display: block;
+  }
+
   .middle__audioboxes {
     margin-left: -100px;
-    @include breakpoint(max-xl) {
-      margin-left: 3px;
+
+    @media screen and (max-width: 850px) {
+      margin-left: 0;
     }
   }
   .audioplayer-volume-adjust div div {
@@ -77,20 +83,23 @@
       background: var(--base);
     }
   }
-  .switch {
+  .modal-switch {
     position: absolute;
     right: 49%;
     gap: 32px;
+
+    @media screen and (max-width: 850px) {
+      right: 60%;
+    }
+
     svg {
       color: var(--pra);
-    }
-    @include breakpoint(max-xxl) {
-      right: 34%;
-    }
-    @include breakpoint(max-xxl) {
-      right: 42%;
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
     }
   }
+
   .audioplayer-playpause {
     order: 9;
     border: unset !important;
@@ -98,14 +107,76 @@
     width: 38px;
     height: 38px;
     color: var(--white);
+    @media screen and (max-width: 850px) {
+      margin-left: 250px;
+    }
+    @media screen and (max-width: 800px) {
+      margin-left: 220px;
+    }
+    @media screen and (max-width: 750px) {
+      margin-left: 180px;
+    }
+
+    @media screen and (max-width: 700px) {
+      margin-left: 150px;
+    }
+
+    @media screen and (max-width: 650px) {
+      margin-left: 130px;
+    }
+    @media screen and (max-width: 600px) {
+      margin-left: auto;
+      margin-right: 0px;
+    }
   }
-  .righttrun {
+  .righttrun-one {
     padding-left: 24px;
+
+    @media screen and (max-width: 850px) {
+      position: absolute;
+      right: 250px;
+    }
+    @media screen and (max-width: 750px) {
+      position: absolute;
+      right: 260px;
+    }
+
+    @media screen and (max-width: 650px) {
+      position: absolute;
+      right: 200px;
+    }
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+  .righttrun-two {
+    padding-left: 24px;
+
+    @media screen and (max-width: 850px) {
+      position: absolute;
+      right: 200px;
+    }
+
+    @media screen and (max-width: 650px) {
+      position: absolute;
+      right: 160px;
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
   .audioplayer-volume {
-    order: 1;
     position: absolute;
     right: 135px;
+
+    @media screen and (max-width: 850px) {
+      right: 24px;
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
   }
   .audioplayer-time {
     color: var(--white);
@@ -118,64 +189,12 @@
   }
   .audioplayer-time.audioplayer-time-duration {
     margin-right: 116px;
+
+    @media screen and (max-width: 850px) {
+      margin-right: 0px;
+    }
   }
   .audioplayer-time-current {
     margin-right: 7px;
-  }
-  @include breakpoint(max-lg) {
-    padding: 12px 20px;
-    text-align: center;
-    flex-wrap: wrap;
-    display: grid;
-    justify-content: flex-start;
-    width: 100%;
-    .leftside__text {
-      margin-bottom: 10px;
-    }
-    .small__center {
-      justify-content: flex-start;
-    }
-    .audioplayer-bar {
-      position: absolute;
-      width: 95%;
-    }
-    .audioplayer {
-      justify-content: flex-start;
-      gap: 5px;
-    }
-    .righttrun {
-      text-align: left;
-      margin: 10px 0;
-      padding-left: 0;
-      .pra {
-        margin-right: 29px;
-      }
-    }
-    .audioplayer-time-current {
-      margin-left: 0;
-    }
-    .audioplayer-playpause {
-      order: 1;
-      position: absolute;
-      top: 84px;
-      left: 20px;
-      color: var(--white);
-    }
-    .middle__audioboxes {
-      flex-wrap: wrap;
-    }
-    .audioplayer-volume {
-      position: initial;
-    }
-    .switch {
-      position: initial;
-      justify-content: flex-start;
-      width: 100%;
-      margin-top: 60px;
-      margin-bottom: 10px;
-    }
-    .audioplayer-time.audioplayer-time-duration {
-      margin-right: 0px;
-    }
   }
 }
